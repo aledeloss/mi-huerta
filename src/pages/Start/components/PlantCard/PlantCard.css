@@ -1,0 +1,47 @@
+.plant-container {
+    background-color: #ef476fff;
+    height: 270px;
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.plant-container:hover {
+    background-color:  rgb(241, 94, 129);
+}
+
+.plant-img-container {
+    height: 80px;
+    width: 100%;
+}
+
+.plant-container img {
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 100%;
+    background-color: #06d6a0ff;
+    /* border-radius: 100%; */
+}
+
+.plant-name {
+    font-size: 26px;
+}
+.plant-container button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ffd166ff;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 13px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.plant-container button:hover {
+    background-color: rgb(241, 213, 147);
+    cursor: pointer;
+}

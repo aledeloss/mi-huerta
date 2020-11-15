@@ -2,7 +2,7 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import animationCarrot from './carrot-rocket.json';
 
-const Carrot = () => {
+const Carrot = ({history}) => {
 
     const deafultOptions = {
         loop: true,
@@ -10,12 +10,13 @@ const Carrot = () => {
         animationData: animationCarrot 
     };
 
-    // function handleonClick() {
-    //     alert('bien!');
-    // };
+    function handleonClick() {
+        history.push('/start');
+    };
 
     return (
-        <div className='carrot-container'>
+        <div  onClick={handleonClick}
+        className='carrot-container'>
             <Lottie 
                 options= {deafultOptions}
             />

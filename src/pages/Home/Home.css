@@ -1,0 +1,12 @@
+.home-app-container {
+    height: 100vh;
+    background-color: #06d6a0ff;
+    color: #073b4cff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carrot-container {
+    height: 200px;
+}
