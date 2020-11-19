@@ -10,43 +10,16 @@ import CosechaData from '../CosechaData/CosechaData';
 import Modal from 'react-bootstrap/Modal';
 
 
-const PlantCard = ({ src, alt, nombre, planta }) => {
+const PlantCard = ({ src, alt, nombre, planta, saveRecord }) => {
 
-        const [show, setShow] = useState(false);
-        const [siembra, setSiembra] = useState({});
-        const [record, setRecord] = useState([]);
-      
-        const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);
+    
+    let [show, setShow] = useState(false);    
 
-        const saveRecord = () => {
-            handleClose();
-            console.log(planta.nombre);
+        let handleClose = () => setShow(false);
+        let handleShow = () => setShow(true);
 
 
-            setSiembra({
-                nombre: planta.nombre,
-                fechaSiembra:  'hoy'
-                // fechaSiembra: siembra,
-                // fechaInicioCosecha: cosechaInicio,
-                // fechaFinCosecha: cosechaFin
-            })
-
-            if(record){
-                setRecord([...record, siembra])      
-                }
-                else{
-                  setRecord([siembra])      
-                }
-            console.log(record);
-            // setTimeout(()=>{
-            //     setRecord([ ...record, siembra])
-            //     console.log(record);
-            // }, 2000);
             
-
-            };
-
 
     return (
         <>
@@ -59,7 +32,7 @@ const PlantCard = ({ src, alt, nombre, planta }) => {
                     <Card.Text className="plant-text">
                         <CosechaData planta={planta} />
                     </Card.Text>
-                    <Button className="btn-ver" onClick={handleShow}>Sembrar</Button>
+                    <Button className="btn-ver" onClick={handleShow} >Sembrar</Button>
                 </Card.Body>
             </Card>
 
@@ -72,7 +45,7 @@ const PlantCard = ({ src, alt, nombre, planta }) => {
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={saveRecord}>
+          <Button variant="primary" onClick= { (e) => saveRecord(planta) }>
             Guardar registro.
           </Button>
         </Modal.Footer>
