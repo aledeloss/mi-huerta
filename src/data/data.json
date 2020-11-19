@@ -1,20 +1,22 @@
-{
-    "acelga": {
-            "id": 1,
-            "distribución": {
-                "distancia entre plantas": [15, 20],        
-                "distancia entre lineas": [50, 70]        
-            },
-            "fecha de siembra": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
-            "días a cosecha": [60, 80],
-            "asociar con": [45, 27],
-            "rotar con": [],
-            "tolera sombra": true
+[
+    {       
+        "nombre": "acelga",
+        "id": 1,
+        "distribución": {
+        "distancia entre plantas": [15, 20],        
+        "distancia entre lineas": [50, 70]        
+        },
+        "fecha de siembra": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
+        "días a cosecha": [60, 80],
+        "asociar con": [45, 27],
+        "rotar con": [],
+        "tolera sombra": true
     },    
-    "ajo": {
+    {   
+        "nombre": "ajo",
         "id": 2,
         "distribución": {
-            "distancia entre plantas": [10, 15],        
+            "distancia entre plantas": [10, 15],           
             "distancia entre lineas": [35, 45]        
         },
         "fecha de siembra": [2, 3, 4],
@@ -23,8 +25,8 @@
         "rotar con": [],
         "tolera sombra": false
     },
-    
-    "albahaca": {
+    {
+        "nombre": "albahaca",
         "id": 3,
         "distribución": {
             "distancia entre plantas": [20, 25],        
@@ -37,4 +39,4 @@
         "tolera sombra": true,
         "consejo": "Si plantás en agosto, que sea en almácigo porque todavía hay heladas."
     }
-}
+]

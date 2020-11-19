@@ -1,9 +1,17 @@
+body {
+    background-color: #118ab2ff;
+    color: #073b4cff;
+}
 .comenzar-container {
     height: 100%;
-    background-color: #118ab2ff;
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .encabezado {
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

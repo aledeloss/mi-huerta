@@ -4,50 +4,19 @@
 /* eslint-disable no-restricted-globals */
 import React from 'react';
 import PlantCard from '../PlantCard/PlantCard';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './PlantsList.css';
-// import { jsonData } from '../../../../data/data'; //Importa la data.
+import data from '../../../../data/data';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-// import Palette from '../../data/palette';
 
-// Images imports
-import GarlicImg from './vegetables-imgs/svg/018-garlic.svg';
+// import Palette from '../../data/palette';
 
 
 
 
 const PlantsList = () => {
-
-    const data = [
-        {
-            nombre: 'Acelga',
-            siembra: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
-            cosecha: [60, 80],
-            img: {
-                src: GarlicImg,
-                alt: 'Garlic icon.'
-            }
-        },
-        {
-            nombre: 'Ajo',
-            siembra: [2, 3, 4],
-            cosecha: [250, 270],
-            img: {
-                src: GarlicImg,
-                alt: 'Garlic icon.'
-            }
-        },
-        {
-            nombre: 'Albahaca',
-            siembra: [7, 8, 9, 10],
-            cosecha: [80, 100],
-            img: {
-                src: GarlicImg,
-                alt: 'Garlic icon.'
-            }
-        }
-    ]
 
     const date = new Date();
     const month = date.getMonth();
@@ -59,8 +28,7 @@ const PlantsList = () => {
                 src={planta.img.src}
                 alt={planta.img.alt}
                 nombre={planta.nombre}
-                cosechaInicio={planta.cosecha[0]}
-                consechaFin={planta.cosecha[1]}
+                planta={planta}
             />
         </Col>
     );

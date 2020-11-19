@@ -1,7 +1,32 @@
 [
     {
-        "id": 1,
-        "nombre": "acelga"
+        "nombre": "acelga",
+        "distribución": {
+            "distanciaPlantas": [
+                15,
+                20
+            ],
+            "distanciaLineas": [
+                50,
+                70
+            ]
+        },
+        "siembra": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "cosecha": [
+            60,
+            80
+        ]
     },
     {
         "id": 2,

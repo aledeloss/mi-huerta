@@ -1,13 +1,22 @@
+import React from 'react';
+import DayJS from 'react-dayjs';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-    const siembra = new Date(Date.now());
+const CosechaData = ({planta}) => {
+    
+    const siembra = new Date();
+    const cosechaInicio = <DayJS format="DD/MM/YYYY"add={ { days: planta.cosecha[0] } }>{siembra}</DayJS>
+    const cosechaFin = <DayJS format="DD/MM/YYYY"add={ { days: planta.cosecha[1] } }>{siembra}</DayJS>
+    
+    // const cosechaFecha = siembra.setDate(siembra.getDate() + 51).toLocaleString("es-AR", options);
+    
 
-    function calcularCosechaInicio(planta) { 
-        let cosechaInicio = siembra + planta.cosecha[0] * 86400;
-    }
+    
+    return (
+        <div>
+        Podrás cosechar entre el {cosechaInicio} y el {cosechaFin}.
+        </div>
+        )
+}
 
-    function calcularCosechaFin(planta) {
-        let cosechaFin = siembra + planta.cosecha[1] * 86400;
-    }
-
-    calcularCosechaInicio(planta);
-    calcularCosechaFin(planta);
+export default CosechaData;
