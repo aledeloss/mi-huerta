@@ -3,8 +3,9 @@ import GarlicImg from './vegetables-imgs/svg/018-garlic.svg';
 
 const data = [
     {
+        //Agregué siembra en enero para hacer pruebas
         nombre: 'Acelga',
-        siembra: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
+        siembra: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
         cosecha: [60, 80],
         img: {
             src: GarlicImg,

@@ -15,8 +15,8 @@ const Start = () => {
 
         <div className='comenzar-container'>
             <div className="encabezado">
-                <h2>Estamos en {months[month]}.</h2>
-                <h2>Éstas plantas podés sembrar este mes:</h2>
+                <h2>Estamos en <span className='month'>{months[month]}</span>.</h2>
+                <h2>Estas plantas podés sembrar este mes:</h2>
                 <PlantsList />
             </div>
             

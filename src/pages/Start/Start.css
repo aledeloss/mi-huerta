@@ -2,6 +2,11 @@ body {
     background-color: #118ab2ff;
     color: #073b4cff;
 }
+
+.month {
+    color: #ef476fff;
+    font-weight: 1000;
+}
 .comenzar-container {
     height: 100%;
     padding: 10px;

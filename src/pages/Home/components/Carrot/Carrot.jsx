@@ -15,10 +15,12 @@ const Carrot = ({history}) => {
     };
 
     return (
-        <div  onClick={handleonClick}
+        <div onClick={handleonClick}
         className='carrot-container'>
             <Lottie 
                 options= {deafultOptions}
+                width={500}
+                height={500}
             />
         </div>
 

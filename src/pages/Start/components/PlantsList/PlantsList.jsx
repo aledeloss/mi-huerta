@@ -50,6 +50,7 @@ const PlantsList = () => {
         planta.siembra.includes(month) &&
         <Col>
             <PlantCard
+                key={index}
                 src={planta.img.src}
                 alt={planta.img.alt}
                 nombre={planta.nombre}
