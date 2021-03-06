@@ -1,5 +1,6 @@
 import React from 'react';
 import DayJS from 'react-dayjs';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CosechaData = ({planta}) => {
@@ -8,9 +9,6 @@ const CosechaData = ({planta}) => {
     const cosechaInicio = <DayJS format="DD/MM/YYYY"add={ { days: planta.cosecha[0] } }>{siembra}</DayJS>
     const cosechaFin = <DayJS format="DD/MM/YYYY"add={ { days: planta.cosecha[1] } }>{siembra}</DayJS>
     
-    // const cosechaFecha = siembra.setDate(siembra.getDate() + 51).toLocaleString("es-AR", options);
-    
-
     
     return (
         <div>

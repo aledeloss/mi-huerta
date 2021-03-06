@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
 import Routes from './Routes';
+import { RecordsProvider }  from './contexts/RecordsContext';
 
 function App() {
   return (
+    
     <div className="App">
-      <Routes/>
+      <RecordsProvider>
+      <Routes/>        
+      </RecordsProvider>
     </div>
   );
 }

@@ -1,0 +1,8 @@
+body {
+    background-color: #118ab2ff;
+    color: #073b4cff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
