@@ -1,25 +1,25 @@
-import React, { useContext } from 'react';
-import RecordsContext from '../../contexts/RecordsContext';
+import React, { useContext } from "react";
+import './Records';
+import RecordsContext from "../../contexts/RecordsContext";
 // import SeedCard from './components/SeedCard/SeedCard';
-import Nav from '../../commons/Nav/Nav';
-import Footer from '../../commons/Footer/Footer';
-
+import Header from "../Commons/Header/Header";
+import Footer from "../Commons/Footer/Footer";
 
 const Records = ({ history }) => {
+  let [records, setRecord] = useContext(RecordsContext);
 
-    let [records, setRecord] = useContext( RecordsContext );
+  return (
+    <div>
+      <Header history={history} />
+      <div className="records">
+        {records.map((record) => (
+          <div>{record.nombre}</div>
+        ))}
+      </div>
 
+      <Footer />
+    </div>
+  );
+};
 
-    return (    
-        <div>
-        <Nav  history={history}/>
-            
-            {records.map(record => 
-                <div>{record.nombre}</div>
-            )}
-            <Footer />
-        </div>        
-    )
-}
-
-export default Records
+export default Records;

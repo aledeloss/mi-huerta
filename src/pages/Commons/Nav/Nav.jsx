@@ -1,4 +1,5 @@
 import React from 'react';
+import './Nav.css';
 
 const Nav = ({ history }) => {
 
@@ -20,6 +21,9 @@ const Nav = ({ history }) => {
     //     </div>
     //   );
 
+    function handleonClickAbout() {
+        history.push('about');
+    };
     function handleonClickSembrar() {
         history.push('start');
     };
@@ -29,11 +33,11 @@ const Nav = ({ history }) => {
     };
 
     return (
-        <div>
+        <div className='nav-container'>
             <ul>
-                <li>Sobre este sitio</li>
-                <li  onClick={handleonClickSembrar} >Sembrar</li>
-                <li  onClick={handleonClickRegistros} >Registros</li>
+                <li onClick={handleonClickAbout} >Sobre este sitio</li>
+                <li onClick={handleonClickSembrar} >Sembrar</li>
+                <li onClick={handleonClickRegistros} >Registros</li>
             </ul>
         </div>
     )

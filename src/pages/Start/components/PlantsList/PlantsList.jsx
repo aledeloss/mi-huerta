@@ -3,14 +3,14 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable no-restricted-globals */
 
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //components and data imports
 import PlantCard from '../PlantCard/PlantCard';
 import './PlantsList.css';
 import data from '../../../../data/data';
-import RecordsContext, { RecordsProvider } from '../../../../contexts/RecordsContext';
+import RecordsContext from '../../../../contexts/RecordsContext';
 
 //react-bootstrap imports
 import Container from 'react-bootstrap/Container';
@@ -28,7 +28,7 @@ const PlantsList = () => {
     function saveRecord(planta) {
 
         let newSeed = {
-            planta: planta.nombre,
+            nombre: planta.nombre,
             siembra: new Date(),
             cosecha: planta.cosecha[0]
         }

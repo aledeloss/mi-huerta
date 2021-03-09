@@ -2,7 +2,13 @@ body {
     background-color: #118ab2ff;
     color: #073b4cff;
     height: 100vh;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around; */
+}
+
+.records {
+    position: absolute;
+    margin-top: 300px;
+    top: 1500px
 }

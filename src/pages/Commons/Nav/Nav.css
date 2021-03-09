@@ -1,0 +1,11 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+li {
+    width: 150px;
+}

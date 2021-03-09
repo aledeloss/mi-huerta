@@ -1,4 +1,6 @@
-body {
+.page-container {
+    width: 100vw;
+    height: 100vh;
     background-color: #118ab2ff;
     color: #073b4cff;
 }
@@ -15,9 +17,9 @@ body {
     justify-content: center;
 }
 
-.encabezado {
-    margin: 20px;
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* margin-top: 50px; */
 }
