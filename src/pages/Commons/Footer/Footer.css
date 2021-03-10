@@ -8,6 +8,7 @@
     position: fixed;
     bottom: 0;
     letter-spacing: .05em;
+    cursor: pointer;
 }
 
 a {

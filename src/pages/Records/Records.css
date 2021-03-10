@@ -1,14 +1,18 @@
-body {
-    background-color: #118ab2ff;
+.records-page-container {
+    background-color: #ef476fff;
     color: #073b4cff;
     height: 100vh;
-    /* display: flex;
+    cursor: pointer;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
 }
 
-.records {
+.records-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    margin-top: 300px;
-    top: 1500px
 }

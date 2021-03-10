@@ -4,8 +4,20 @@ ul {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
+    align-self: flex-end;
 }
 
 li {
     width: 150px;
+    font-weight: 700;
+}
+
+li:hover {
+    opacity: .7;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

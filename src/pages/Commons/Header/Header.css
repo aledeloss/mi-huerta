@@ -1,12 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .header-container {
     background-color: #06d6a0ff;
     position: fixed;
     top: 0;
     z-index:10;
+    cursor: pointer;
+    background-color: #06d6a0ff;
+    width: 100%;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    padding: 10px;
+}
+
+.brand {
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.brand:hover {
+    text-decoration: none;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    border: solid darkblue
 }

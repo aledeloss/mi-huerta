@@ -37,7 +37,6 @@ const PlantsList = () => {
         };
         console.log(records);
 
-
     // localStorage.setItem("calendario", JSON.stringify(records));
     };
 

@@ -1,0 +1,15 @@
+.about-page-container {
+    height: 100vh;
+    background-color: #ffd166ff;
+    color: #073b4cff;
+    display: flex;
+    align-items: space-around;
+}
+
+.about-content {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}

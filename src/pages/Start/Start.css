@@ -3,6 +3,7 @@
     height: 100vh;
     background-color: #118ab2ff;
     color: #073b4cff;
+    cursor: pointer;
 }
 
 .month {
