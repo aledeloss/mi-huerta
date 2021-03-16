@@ -1,8 +1,7 @@
-.PlantsList-container {
-    margin: 20px;
+.plantsList-container {
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    display: flex;
+    align-items: center;
+    border: solid salmon;
 }
 

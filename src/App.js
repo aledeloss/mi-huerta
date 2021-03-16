@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Routes from './Routes';
-import { RecordsProvider }  from './contexts/RecordsContext';
+import RecordsContext  from './contexts/RecordsContext';
+import {RecordsProvider}  from './contexts/RecordsContext';
 
 function App() {
   return (

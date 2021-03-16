@@ -1,6 +1,6 @@
 import React from "react";
 // import Nav from "../Nav/Nav";
-import Search from "../Search/Search";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //react-bootstrap imports
 import { Navbar, Nav, Form, FormControl, Button, Container } from 'react-bootstrap';
@@ -8,8 +8,9 @@ import { Navbar, Nav, Form, FormControl, Button, Container } from 'react-bootstr
 // import Col from "react-bootstrap/Col";
 // import Row from "react-bootstrap/Row";
 import "./Header.css";
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const Header = ({ history }) => {
+const Header = () => {
   return (
 
 <Navbar expand="lg" className="header-container" sticky="top">
@@ -19,7 +20,7 @@ const Header = ({ history }) => {
   <Navbar.Collapse id="basic-navbar-nav">
     <Form inline>
       <FormControl type="text" placeholder="Buscar" className="mr-sm-2" />
-      <Button className="submit-btn">Buscar</Button>
+      <Button className="submit-btn"><FontAwesomeIcon icon={faSearch} /></Button>
     </Form>
     <Nav className="mr-auto">
       <Nav.Link href="/about">Sobre este sitio</Nav.Link>

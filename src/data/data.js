@@ -3,9 +3,8 @@ import GarlicImg from './vegetables-imgs/svg/018-garlic.svg';
 
 const data = [
     {
-        //Agregué siembra en enero para hacer pruebas
         nombre: 'Acelga',
-        siembra: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
+        siembra: [2, 3, 4, 5, 7, 8, 9, 10, 11],
         cosecha: [60, 80],
         img: {
             src: GarlicImg,
@@ -83,7 +82,34 @@ const data = [
             src: GarlicImg,
             alt: 'Garlic icon.'
         }
-    }
+    },
+    {
+        nombre: 'Berenjena',
+        siembra: [6, 7, 8, 9],
+        cosecha: [150, 180],
+        img: {
+            src: GarlicImg,
+            alt: 'Garlic icon.'
+        }
+    },
+    {
+        nombre: 'Brócoli y coliflor',
+        siembra: [1, 2, 3, 8, 9],
+        cosecha: [250, 270],
+        img: {
+            src: GarlicImg,
+            alt: 'Garlic icon.'
+        }
+    },
+    {
+        nombre: 'Cebolla y cebolla de verdeo',
+        siembra: [1, 2, 3],
+        cosecha: [250, 270],
+        img: {
+            src: GarlicImg,
+            alt: 'Garlic icon.'
+        }
+    },
 ]
 
 export default data;

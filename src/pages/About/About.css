@@ -1,8 +1,9 @@
 .about-page-container {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #ffd166ff;
     color: #073b4cff;
     display: flex;
+    flex-direction: column;
     align-items: space-around;
 }
 
@@ -12,4 +13,6 @@
     flex-direction: column;
     justify-content: center;
     width: 50%;
+    height: 91vh;
 }
+//TODO: Hacer mediaquery para que cuando achicas el texto se haga más grande.

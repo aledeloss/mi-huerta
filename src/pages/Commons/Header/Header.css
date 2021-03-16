@@ -4,10 +4,9 @@
     background-color: #06d6a0ff;
     position: fixed;
     top: 0;
-    z-index:10;
     cursor: pointer;
-    background-color: #06d6a0ff;
     width: 100%;
+    height: 70px;
 }
 
 .header-content {
@@ -29,6 +28,16 @@
 
 .navbar-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-center;
     border: solid darkblue
+}
+
+#basic-navbar-nav {
+    border: solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mr-auto {
+    border: solid gold;
 }

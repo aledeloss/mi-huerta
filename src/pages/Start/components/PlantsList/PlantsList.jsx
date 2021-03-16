@@ -33,7 +33,7 @@ const PlantsList = () => {
             cosecha: planta.cosecha[0]
         }
         if(newSeed) {
-            setRecord([...records, newSeed]);
+           setRecord(records => [...records, newSeed]);;
         };
         console.log(records);
 
@@ -55,9 +55,11 @@ const PlantsList = () => {
     );
 
     return (
-            <Container className='PlantsList-container'>
-                <Row>
-                    {CardList}
+            <Container className="">
+                <Row className='plantsList-container'>
+                <RecordsContext.Consumer>
+                    {cardsList => (CardList)}
+                </RecordsContext.Consumer>
                 </Row>
             </Container>
     )

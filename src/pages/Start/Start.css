@@ -1,9 +1,10 @@
 .page-container {
     width: 100vw;
-    height: 100vh;
     background-color: #118ab2ff;
     color: #073b4cff;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .month {
@@ -22,5 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* margin-top: 50px; */
+    align-items: center;
+    margin-top: 130px;
+    margin-bottom: 200px;
 }

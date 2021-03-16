@@ -10,6 +10,9 @@ import CosechaData from "../CosechaData/CosechaData";
 import Modal from "react-bootstrap/Modal";
 import DayJS from "react-dayjs";
 
+
+//TODO: If plant.name.length < 13, achicar la letra. Y además hacer más espacio para que entre todo.
+
 const PlantCard = ({ src, alt, nombre, planta, saveRecord }) => {
   let [show, setShow] = useState(false);
   let handleClose = () => setShow(false);
