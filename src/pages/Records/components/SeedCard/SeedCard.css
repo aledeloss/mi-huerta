@@ -1,0 +1,12 @@
+.seedCard-container {
+    background-color: #ffd166ff;
+    width: 100%;
+    margin: 10px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}

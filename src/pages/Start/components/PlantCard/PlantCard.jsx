@@ -1,34 +1,19 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
+
 import React, { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./PlantCard.css";
-// import CosechaData from '../CosechaData/CosechaData';
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import {Card, Button, Modal } from "react-bootstrap";
 import CosechaData from "../CosechaData/CosechaData";
-import Modal from "react-bootstrap/Modal";
-import DayJS from "react-dayjs";
 
 
 //TODO: If plant.name.length < 13, achicar la letra. Y además hacer más espacio para que entre todo.
 
 const PlantCard = ({ src, alt, nombre, planta, saveRecord }) => {
+  
   let [show, setShow] = useState(false);
   let handleClose = () => setShow(false);
   let handleShow = () => setShow(true);
-
-  const fechaSiembra = new Date();
-  const cosechaInicio = (
-    <DayJS format="DD/MM/YYYY" add={{ days: planta.cosecha[0] }}>
-      {fechaSiembra}
-    </DayJS>
-  );
-  const cosechaFin = (
-    <DayJS format="DD/MM/YYYY" add={{ days: planta.cosecha[1] }}>
-      {fechaSiembra}
-    </DayJS>
-  );
 
   return (
     <>
@@ -61,7 +46,7 @@ const PlantCard = ({ src, alt, nombre, planta, saveRecord }) => {
           </Button>
           <Button
             variant="primary"
-            onClick={(e) => {
+            onClick={() => {
               saveRecord(planta);
               setShow(false);
             }}

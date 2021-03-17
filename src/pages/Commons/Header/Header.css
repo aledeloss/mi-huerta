@@ -35,9 +35,11 @@
 #basic-navbar-nav {
     border: solid red;
     display: flex;
-    justify-content: space-between;
+    align-items: space-between;
+    justify-content: center;
 }
 
 .mr-auto {
     border: solid gold;
+    align-self: flex-end;
 }

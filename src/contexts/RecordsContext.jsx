@@ -2,24 +2,13 @@ import React, { useState, createContext } from "react";
 
 const RecordsContext = createContext();
 
-export const RecordsProvider = (props) => {
-  let [records, setRecord] = useState([
-    {
-      nombre: "acelga",
-      siembra: "hoy",
-    },
-    {
-      nombre: "lechuga",
-      siembra: "ayer",
-    },
-  ]);
+export const RecordsProvider = ({children}) => {
+  const [records, setRecord] = useState([]); 
 
   return (
-    <div>
       <RecordsContext.Provider value={[records, setRecord]}>
-        {props.children}
+        {children}
       </RecordsContext.Provider>
-    </div>
   );
 };
 
