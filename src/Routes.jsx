@@ -3,13 +3,16 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useHistory
+    useHistory,
+    useParams
 } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
 import Start from './pages/Start/Start';
 import Records from './pages/Records/Records';
 import About from './pages/About/About';
+import Detail from './pages/Detail/Detail';
+import Page404 from './pages/Page404/Page404';
 
 const Routes = () => {
 
@@ -22,7 +25,8 @@ const Routes = () => {
                 <Route exact path='/about' component={About} />
                 <Route exact path='/start' component={Start} />
                 <Route exact path='/records' component={Records} />
-                {/* <Route exact path='/detail' component={Detail} /> */}
+                <Route exact path='/detail/:planta' component={Detail} />
+                <Route  component={Page404} />
             </Switch>
         </Router>
 

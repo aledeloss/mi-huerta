@@ -12,11 +12,7 @@ import "./PlantsList.css";
 import data from "../../../../data/data";
 import RecordsContext from "../../../../contexts/RecordsContext";
 import { RecordsProvider } from "../../../../contexts/RecordsContext";
-
-//react-bootstrap imports
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { Container, Col, Row } from "react-bootstrap";
 
 const PlantsList = () => {
   const date = new Date();
@@ -24,6 +20,8 @@ const PlantsList = () => {
 
   let [records, setRecord] = useContext(RecordsContext);
 
+  let keyword = 'acelga';
+  
   function saveRecord(planta) {
     let newSow = {
       name: planta.nombre,

@@ -1,13 +1,20 @@
-.plant-container {
+.card-container {
     background-color: #ef476fff;
     height: 330px;
     width: 230px;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 15px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}    
 
-.plant-container:hover {
+a:link {
+    text-decoration: none;
+  }
+
+.card-container:hover {
     background-color:  rgb(241, 94, 129);
 }
 
@@ -16,20 +23,19 @@
     width: 100%;
 }
 
-.plant-container img {
+.card-container img {
     height: 80px;
     width: 80px;
     padding: 10px;
     margin: 10px;
     border-radius: 100%;
     background-color: #06d6a0ff;
-    /* border-radius: 100%; */
 }
 
 .plant-name {
     font-size: 26px;
 }
-.plant-container button {
+.card-container button {
     padding: 10px;
     margin-top: 10px;
     background-color: #ffd166ff;
@@ -42,7 +48,7 @@
     color: #073b4cff;
 }
 
-.plant-container button:hover {
+.card-container button:hover {
     background-color: rgb(241, 213, 147);
     cursor: pointer;
 }

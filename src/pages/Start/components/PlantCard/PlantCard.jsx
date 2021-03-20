@@ -3,32 +3,33 @@
 
 import React, { useState, useEffect } from "react";
 import "./PlantCard.css";
-import {Card, Button, Modal } from "react-bootstrap";
+import { Card, Button, Modal } from "react-bootstrap";
 import CosechaData from "../CosechaData/CosechaData";
-
+import { Link } from "react-router-dom";
 
 //TODO: If plant.name.length < 13, achicar la letra. Y además hacer más espacio para que entre todo.
 
 const PlantCard = ({ src, alt, nombre, planta, saveRecord }) => {
-  
   let [show, setShow] = useState(false);
   let handleClose = () => setShow(false);
   let handleShow = () => setShow(true);
 
   return (
     <>
-      <Card className="plant-container">
-        <Card.Body>
-          <img src={src} alt={alt}></img>
-          <Card.Title className="plant-name">{nombre}</Card.Title>
-          <div className="plant-text">
-            <CosechaData planta={planta} />
-          </div>
-          <Button className="btn-ver" onClick={handleShow}>
-            Sembrar
-          </Button>
-        </Card.Body>
-      </Card>
+        <Card className="card-container">
+      <Link to={`/detail/${planta.nombre}`}>
+          <Card.Body>
+            <img src={src} alt={alt}></img>
+            <Card.Title className="plant-name">{nombre}</Card.Title>
+            <div className="plant-text">
+              <CosechaData planta={planta} />
+            </div>
+          </Card.Body>
+      </Link>
+          <Button className="btn-sembrar" onClick={handleShow}>
+              Sembrar
+            </Button>
+        </Card>
       {/* Fin card */}
 
       {/* Inicio modal de siembra */}

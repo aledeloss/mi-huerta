@@ -1,12 +1,12 @@
 .footer-container {
+    position: absolute;
+    bottom: 0px;
     background-color: #073b4cff;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    /* position: absolute; */
-    /* bottom: 0; */
     letter-spacing: .05em;
     cursor: pointer;
 }

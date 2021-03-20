@@ -1,0 +1,15 @@
+.detail-container {
+    background-color: #ef476fff;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+img {
+    height: 160px;
+    width: 160px;
+    padding: 10px;
+    margin: 10px;
+    /* border-radius: 100%; */
+    border-radius: 100%;
+    background-color: #06d6a0ff;
+}

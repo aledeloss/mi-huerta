@@ -18,6 +18,7 @@
 
 .brand {
     font-family: 'Pacifico', cursive;
+    color: #073b4cff; /* NOTA: No funciona este color... */
     text-decoration: none;
     font-size: 2em;
 }
@@ -29,17 +30,29 @@
 .navbar-container {
     display: flex;
     justify-content: space-center;
-    border: solid darkblue
+    /* border: solid darkblue */
 }
 
 #basic-navbar-nav {
-    border: solid red;
+    /* border: solid red; */
     display: flex;
     align-items: space-between;
     justify-content: center;
 }
 
 .mr-auto {
-    border: solid gold;
+    /* border: solid gold; */
     align-self: flex-end;
+}
+
+.submit-btn {
+    background-color: #073b4cff;
+    border: none;
+}
+
+
+.submit-btn:hover {
+    background-color: #073b4cff;
+    border: none;
+    opacity: .8;
 }

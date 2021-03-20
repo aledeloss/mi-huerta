@@ -39,7 +39,7 @@ const data = [
         }
     },
     {
-        nombre: 'Arveja',
+        nombre: 'Arvejas',
         siembra: [2, 3, 4, 5, 6, 7],
         cosecha: [120, 150],
         img: {

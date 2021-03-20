@@ -48,4 +48,6 @@ const Start = ({history}) => {
   );
 };
 
+//TODO: Revisar estructura porque se tapa media página y no se ve el footer.
+
 export default Start;
