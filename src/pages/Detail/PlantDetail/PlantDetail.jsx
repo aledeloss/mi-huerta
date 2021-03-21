@@ -37,8 +37,8 @@ const PlantDetail = () => {
     }
 
     let [records, setRecords] = useContext(RecordsContext);
-
-    const sembrado = records.find( e => e.name === plantaData.nombre) ? true : false ;
+    let plantaNombre = plantaData.nombre;
+    const sembrado = records.find( e => e.name === plantaData.nombre) ? records.find( e => e.name === plantaData.nombre).sowDate : '¡No todavía!' ;
 
     return (
         <div className="detail-container">
