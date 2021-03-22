@@ -4,8 +4,9 @@ import {useParams} from 'react-router-dom';
 import data from "../../../data/data.js";
 import CosechaData from "../../Start/components/CosechaData/CosechaData";
 import RecordsContext from '../../../contexts/RecordsContext';
+import AddButton from '../../Start/components/AddButton/AddButton';
 
-const PlantDetail = () => {
+const PlantDetail = ({handleShow}) => {
     
     const months = [
         "enero",
@@ -36,9 +37,10 @@ const PlantDetail = () => {
         return mesesArray;
     }
 
-    let [records, setRecords] = useContext(RecordsContext);
-    let plantaNombre = plantaData.nombre;
-    const sembrado = records.find( e => e.name === plantaData.nombre) ? records.find( e => e.name === plantaData.nombre).sowDate : '¡No todavía!' ;
+    let [records, setRecord] = useContext(RecordsContext);
+    const sembrado = records.find( e => e.name === plantaData.nombre) 
+    ? records.find( e => e.name === plantaData.nombre).sowDate 
+    : '¡No todavía!' ;
 
     return (
         <div className="detail-container">
@@ -49,10 +51,12 @@ const PlantDetail = () => {
                 <h1>{plantaData.nombre}</h1>
                 <h4>{`Meses de siembra: ${mesesSiembra().join(', ')}`}</h4>
                 <h4>{`Días a cosecha: de ${plantaData.cosecha[0]} a ${plantaData.cosecha[1]}`}</h4>
-                <CosechaData planta={plantaData} />
                 <p>{`Sembrado: ${sembrado}`}</p>
+                <p>{records.find( e => e.name === plantaData.nombre) ? '' : <CosechaData planta={plantaData} />}</p>
             </div>
-            
+            {/* <AddButton
+                planta={plantaData}
+            /> */}
         </div>
     )
 }

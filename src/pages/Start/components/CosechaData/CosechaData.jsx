@@ -12,7 +12,7 @@ const CosechaData = ({planta}) => {
     
     return (
         <div>
-        Podrás cosechar entre el {cosechaInicio} y el {cosechaFin}.
+        Si sembrás hoy podrás cosechar entre el {cosechaInicio} y el {cosechaFin}.
         </div>
         )
 }

@@ -6,6 +6,7 @@ import "./PlantCard.css";
 import { Card, Button, Modal } from "react-bootstrap";
 import CosechaData from "../CosechaData/CosechaData";
 import { Link } from "react-router-dom";
+import AddButton from '../AddButton/AddButton';
 
 //TODO: If plant.name.length < 13, achicar la letra. Y además hacer más espacio para que entre todo.
 
@@ -16,8 +17,8 @@ const PlantCard = ({ src, alt, nombre, planta, saveRecord }) => {
 
   return (
     <>
-        <Card className="card-container">
-      <Link to={`/detail/${planta.nombre}`}>
+      <Card className="card-container">
+        <Link to={`/detail/${planta.nombre}`}>
           <Card.Body>
             <img src={src} alt={alt}></img>
             <Card.Title className="plant-name">{nombre}</Card.Title>
@@ -25,11 +26,12 @@ const PlantCard = ({ src, alt, nombre, planta, saveRecord }) => {
               <CosechaData planta={planta} />
             </div>
           </Card.Body>
-      </Link>
-          <Button className="btn-sembrar" onClick={handleShow}>
-              Sembrar
-            </Button>
-        </Card>
+        </Link>
+        <Button className="btn-sembrar" planta={planta} onClick={handleShow} handleClose={handleClose} saveRecord={saveRecord}/>
+        {/* <Button className="btn-sembrar" onClick={handleShow}>
+          Sembrar
+        </Button> */}
+      </Card>
       {/* Fin card */}
 
       {/* Inicio modal de siembra */}

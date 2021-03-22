@@ -35,7 +35,7 @@ a:link {
 .plant-name {
     font-size: 26px;
 }
-.card-container button {
+/* .card-container button {
     padding: 10px;
     margin-top: 10px;
     background-color: #ffd166ff;
@@ -46,7 +46,7 @@ a:link {
     text-transform: uppercase;
     outline: none;
     color: #073b4cff;
-}
+} */
 
 .card-container button:hover {
     background-color: rgb(241, 213, 147);

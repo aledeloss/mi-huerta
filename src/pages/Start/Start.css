@@ -1,5 +1,4 @@
 .page-container {
-    width: 100vw;
     background-color: #118ab2ff;
     color: #073b4cff;
     display: flex;
@@ -10,13 +9,6 @@
     color: #ef476fff;
     font-weight: 1000;
 }
-.comenzar-container {
-    height: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .main {
     display: flex;
@@ -24,5 +16,4 @@
     justify-content: center;
     align-items: center;
     margin-top: 130px;
-    margin-bottom: 200px;
 }

@@ -5,21 +5,26 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Nav, Form, FormControl, Button, Container } from 'react-bootstrap';
 import "./Header.css";
 import { Link } from "react-router-dom";
+import data from '../../../data/data.js';
 
 const Header = ({ history }) => {
 
 
-  const [keyword, setkeyword] = useState('  ');
+  let [keyword, setKeyword] = useState('');
   //TODO: Hacer keyword context para poder buscar desde toda la app.
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    history.push('start')
-    console.log(keyword)
+    if(data.find( e => e.nombre === keyword)){
+    history.push(`/detail/${keyword}`);
+    }
+    else { console.log('Nop')}
+    // setKeyword(keyword.replace(keyword[0], keyword[0].toUpperCase()));
+    // console.log(keyword);
   }
 
   const handleChange = evt => {
-    setkeyword(evt.target.value)
+    setKeyword(evt.target.value)
   }
 
   function handleOnClickHome() {
@@ -48,8 +53,16 @@ const Header = ({ history }) => {
 
   <Navbar.Collapse id="basic-navbar-nav">
     <Form inline onSubmit={handleSubmit}>
-      <FormControl type="text" placeholder="Buscar" className="mr-sm-2" value={keyword} onChange={handleChange}/>
-      <Button className="submit-btn"><FontAwesomeIcon icon={faSearch} /></Button>
+      <FormControl 
+        type="text" 
+        placeholder="Buscar hortaliza" 
+        className="mr-sm-2" 
+        value={keyword} 
+        onChange={handleChange}
+      />
+      <Button className="submit-btn">
+        <FontAwesomeIcon icon={faSearch} />
+      </Button>
     </Form>
     <Nav className="mr-auto">
       <Nav.Link onClick={handleOnClickAbout}>Sobre este sitio</Nav.Link>
