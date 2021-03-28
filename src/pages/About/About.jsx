@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
-import Header from "../Commons/Header/Header";
-import Footer from "../Commons/Footer/Footer";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import Container from "react-bootstrap/Container";
 
 const About = ({ history }) => {

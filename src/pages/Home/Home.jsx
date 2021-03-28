@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 import React from "react";
 import Carrot from "./components/Carrot/Carrot";
-import Footer from '../Commons/Footer/Footer';
+import Footer from 'components/Footer/Footer';
 import "./Home.css";
 
 const Home = ({ history }) => {

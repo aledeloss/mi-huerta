@@ -2,9 +2,8 @@
 import "./Start.css";
 import React, { useContext } from "react";
 import PlantsList from "./components/PlantsList/PlantsList";
-import Nav from "../Commons/Nav/Nav";
-import Header from "../Commons/Header/Header";
-import Footer from "../Commons/Footer/Footer";
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 // import RecordsContext from '../../contexts/RecordsContext';
 // import Records from '../Records/Records';

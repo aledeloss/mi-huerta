@@ -4,7 +4,6 @@ import {useParams} from 'react-router-dom';
 import data from "../../../data/data.js";
 import CosechaData from "../../Start/components/CosechaData/CosechaData";
 import RecordsContext from '../../../contexts/RecordsContext';
-import AddButton from '../../Start/components/AddButton/AddButton';
 
 const PlantDetail = ({handleShow}) => {
     
@@ -52,7 +51,7 @@ const PlantDetail = ({handleShow}) => {
                 <h4>{`Meses de siembra: ${mesesSiembra().join(', ')}`}</h4>
                 <h4>{`Días a cosecha: de ${plantaData.cosecha[0]} a ${plantaData.cosecha[1]}`}</h4>
                 <p>{`Sembrado: ${sembrado}`}</p>
-                <p>{records.find( e => e.name === plantaData.nombre) ? '' : <CosechaData planta={plantaData} />}</p>
+                {/* <p>{records.find( e => e.name === plantaData.nombre) ? '' : <CosechaData planta={plantaData} />}</p> */}
             </div>
             {/* <AddButton
                 planta={plantaData}

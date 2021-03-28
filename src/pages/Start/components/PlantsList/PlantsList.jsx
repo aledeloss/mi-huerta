@@ -18,24 +18,24 @@ const PlantsList = () => {
   const date = new Date();
   const month = date.getMonth();
 
-  let [records, setRecord] = useContext(RecordsContext);
 
-  let keyword = 'acelga';
-  
-  function saveRecord(planta) {
-    let newSow = {
-      name: planta.nombre,
-      sowDate: new Date(),
-      harvestBegin: planta.cosecha[0],
-      harvestEnd: planta.cosecha[1],
-    };
-    if (records.length === 0) {
-      setRecord([newSow]);
-    } else {
-      setRecord([...records, newSow]);
-    }
-    console.log(records);
-  }
+let [records, setRecord] = useContext(RecordsContext);
+
+  // let [records, setRecord] = useContext(RecordsContext);
+  // function saveRecord(planta) {
+  //   let newSow = {
+  //     name: planta.nombre,
+  //     sowDate: new Date(),
+  //     harvestBegin: planta.cosecha[0],
+  //     harvestEnd: planta.cosecha[1],
+  //   };
+  //   if (records.length === 0) {
+  //     setRecord([newSow]);
+  //   } else {
+  //     setRecord([...records, newSow]);
+  //   }
+  //   console.log(records);
+  // }
 
   const CardList = data.map(
     (planta, index) =>
@@ -47,7 +47,6 @@ const PlantsList = () => {
             alt={planta.img.alt}
             nombre={planta.nombre}
             planta={planta}
-            saveRecord={saveRecord}
           />
         </Col>
       )
@@ -56,6 +55,7 @@ const PlantsList = () => {
   return (
     <Container className="plantsList-container">
       <RecordsProvider>
+        {records.length}
         <Row className="plantsList-content">{CardList}</Row>
       </RecordsProvider>
     </Container>
