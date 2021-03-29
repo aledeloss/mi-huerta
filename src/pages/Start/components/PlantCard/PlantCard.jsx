@@ -6,9 +6,9 @@ import "./PlantCard.css";
 import { Card } from "react-bootstrap";
 import CosechaData from "../CosechaData/CosechaData";
 import { Link } from "react-router-dom";
-import GenericButton from "components/GenericButton/GenericButton";
-import GenericModal from "components/GenericModal/GenericModal";
-import RecordsContext, { RecordsProvider } from "contexts/RecordsContext";
+import GenericButton from '../../../../components/GenericButton/GenericButton';
+import GenericModal from '../../../../components/GenericModal/GenericModal';
+import RecordsContext, { RecordsProvider } from "../../../../contexts/RecordsContext";
 
 //TODO: If plant.name.length < 13, achicar la letra. Y además hacer más espacio para que entre todo.
 
@@ -37,7 +37,6 @@ function PlantCard({ src, alt, nombre, planta }) {
 
   return (
     <>
-      <RecordsProvider>
         <Card className="card-container">
           <Link to={`/detail/${planta.nombre}`}>
             <Card.Body>
@@ -63,7 +62,6 @@ function PlantCard({ src, alt, nombre, planta }) {
             setShow(false);
           }}
         />
-      </RecordsProvider>
       {/*
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
