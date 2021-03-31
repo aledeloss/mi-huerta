@@ -28,20 +28,21 @@ const Records = ({ history }) => {
     <div className="records-page-container">
       <Header history={history} />
       <Container className="records-content">
-        {localRecords.length === 0 ? (
+        {!localRecords.length ?  
           <div className="alert">¡Parece que aún no sembraste nada!</div>
-        ) : (
+         : 
           localRecords.map((record) => {
             return (
                 <SeedCard
+                  key={record.name} 
                   name={record.name}
-                  sowDate={record.sowDate.toString()}
+                  sowDate={record.sowDate}
                   harvestBegin={record.harvestBegin}
                   harvestEnd={record.harvestEnd}
                   />
             );
           })
-        )}
+        }
       </Container>
       <Footer />
 

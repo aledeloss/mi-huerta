@@ -22,39 +22,39 @@ const PlantDetail = ({handleShow}) => {
         "diciembre",
       ];
 
-    const {planta} = useParams();
+    const {vegetable} = useParams();
 
-    const plantaData = data.find( e => {
-        return e.nombre === planta
+    const vegetableData = data.find( e => {
+        return e.name === vegetable
     });
 
     let mesesArray = [];
     const mesesSiembra = () => {
-        for (const mes in plantaData.siembra) {
-            mesesArray.push(months[plantaData.siembra[mes]])
+        for (const mes in vegetableData.siembra) {
+            mesesArray.push(months[vegetableData.siembra[mes]])
         }
         return mesesArray;
     }
 
     let [records, setRecord] = useContext(RecordsContext);
-    const sembrado = records.find( e => e.name === plantaData.nombre) 
-    ? records.find( e => e.name === plantaData.nombre).sowDate 
+    const sembrado = records.find( e => e.name === vegetableData.name) 
+    ? records.find( e => e.name === vegetableData.name).sowDate 
     : '¡No todavía!' ;
 
     return (
         <div className="detail-container">
             <div className="img-container">
-            <img src={plantaData.img.src} alt={plantaData.img.alt}></img>
+            <img src={vegetableData.img.src} alt={vegetableData.img.alt}></img>
             </div>
-            <div className="planta-main-info">
-                <h1>{plantaData.nombre}</h1>
+            <div className="vegetable-main-info">
+                <h1>{vegetableData.name}</h1>
                 <h4>{`Meses de siembra: ${mesesSiembra().join(', ')}`}</h4>
-                <h4>{`Días a cosecha: de ${plantaData.cosecha[0]} a ${plantaData.cosecha[1]}`}</h4>
+                <h4>{`Días a cosecha: de ${vegetableData.cosecha[0]} a ${vegetableData.cosecha[1]}`}</h4>
                 <p>{`Sembrado: ${sembrado}`}</p>
-                {/* <p>{records.find( e => e.name === plantaData.nombre) ? '' : <CosechaData planta={plantaData} />}</p> */}
+                {/* <p>{records.find( e => e.name === vegetableData.name) ? '' : <CosechaData vegetable={vegetableData} />}</p> */}
             </div>
             {/* <AddButton
-                planta={plantaData}
+                vegetable={vegetableData}
             /> */}
         </div>
     )

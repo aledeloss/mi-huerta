@@ -1,9 +1,9 @@
 // Images imports
-import GarlicImg from './vegetables-imgs/svg/018-garlic.svg';
+import GarlicImg from '../assets/vegetables-imgs/018-garlic.svg'
 
 const data = [
     {
-        nombre: 'Acelga',
+        name: 'Acelga',
         siembra: [2, 3, 4, 5, 7, 8, 9, 10, 11],
         cosecha: [60, 80],
         img: {
@@ -12,7 +12,7 @@ const data = [
         }
     },
     {
-        nombre: 'Ajo',
+        name: 'Ajo',
         siembra: [2, 3, 4],
         cosecha: [250, 270],
         img: {
@@ -21,7 +21,7 @@ const data = [
         }
     },
     {
-        nombre: 'Albahaca',
+        name: 'Albahaca',
         siembra: [7, 8, 9, 10],
         cosecha: [80, 100],
         img: {
@@ -30,7 +30,7 @@ const data = [
         }
     },
     {
-        nombre: 'Apio',
+        name: 'Apio',
         siembra: [0, 1, 2, 8, 9, 10, 11],
         cosecha: [120, 150],
         img: {
@@ -39,7 +39,7 @@ const data = [
         }
     },
     {
-        nombre: 'Arvejas',
+        name: 'Arvejas',
         siembra: [2, 3, 4, 5, 6, 7],
         cosecha: [120, 150],
         img: {
@@ -48,7 +48,7 @@ const data = [
         }
     },
     {
-        nombre: 'Batata',
+        name: 'Batata',
         siembra: [6, 7],
         cosecha: [250, 270],
         img: {
@@ -57,7 +57,7 @@ const data = [
         }
     },
     {
-        nombre: 'Berenjena',
+        name: 'Berenjena',
         siembra: [6, 7, 8, 9],
         cosecha: [150, 180],
         img: {
@@ -66,7 +66,7 @@ const data = [
         }
     },
     {
-        nombre: 'Batata',
+        name: 'Batata',
         siembra: [3, 4],
         cosecha: [250, 270],
         img: {
@@ -75,7 +75,7 @@ const data = [
         }
     },
     {
-        nombre: 'Batata',
+        name: 'Batata',
         siembra: [3, 4],
         cosecha: [250, 270],
         img: {
@@ -84,7 +84,7 @@ const data = [
         }
     },
     {
-        nombre: 'Berenjena',
+        name: 'Berenjena',
         siembra: [6, 7, 8, 9],
         cosecha: [150, 180],
         img: {
@@ -93,7 +93,7 @@ const data = [
         }
     },
     {
-        nombre: 'Brócoli y coliflor',
+        name: 'Brócoli y coliflor',
         siembra: [1, 2, 3, 8, 9],
         cosecha: [250, 270],
         img: {
@@ -102,7 +102,7 @@ const data = [
         }
     },
     {
-        nombre: 'Cebolla y cebolla de verdeo',
+        name: 'Cebolla y cebolla de verdeo',
         siembra: [1, 2, 3],
         cosecha: [250, 270],
         img: {

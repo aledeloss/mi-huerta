@@ -12,7 +12,7 @@ const SearchForm = ({ history }) => {
   
     const handleSubmit = evt => {
       evt.preventDefault()
-      if(data.find( e => e.nombre === keyword)){
+      if(data.find( e => e.name === keyword)){
       history.push(`/detail/${keyword}`);
       }
       else { console.log("Nop")}

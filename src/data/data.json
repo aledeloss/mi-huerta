@@ -1,9 +1,9 @@
 [
     {       
-        "nombre": "acelga",
+        "name": "acelga",
         "id": 1,
         "distribución": {
-        "distancia entre plantas": [15, 20],        
+        "distancia entre vegetables": [15, 20],        
         "distancia entre lineas": [50, 70]        
         },
         "fecha de siembra": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
@@ -13,10 +13,10 @@
         "tolera sombra": true
     },    
     {   
-        "nombre": "ajo",
+        "name": "ajo",
         "id": 2,
         "distribución": {
-            "distancia entre plantas": [10, 15],           
+            "distancia entre vegetables": [10, 15],           
             "distancia entre lineas": [35, 45]        
         },
         "fecha de siembra": [2, 3, 4],
@@ -26,10 +26,10 @@
         "tolera sombra": false
     },
     {
-        "nombre": "albahaca",
+        "name": "albahaca",
         "id": 3,
         "distribución": {
-            "distancia entre plantas": [20, 25],        
+            "distancia entre vegetables": [20, 25],        
             "distancia entre lineas": [40, 50]        
         },
         "fecha de siembra": [7, 8, 9, 10],

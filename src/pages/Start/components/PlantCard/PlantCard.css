@@ -18,7 +18,7 @@ a:link {
     background-color:  rgb(241, 94, 129);
 }
 
-.plant-img-container {
+.vegetable-img-container {
     height: 80px;
     width: 100%;
 }
@@ -32,7 +32,7 @@ a:link {
     background-color: #06d6a0ff;
 }
 
-.plant-name {
+.vegetable-name {
     font-size: 26px;
 }
 /* .card-container button {

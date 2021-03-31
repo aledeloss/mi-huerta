@@ -6,24 +6,25 @@ import "./PlantCard.css";
 import { Card } from "react-bootstrap";
 import CosechaData from "../CosechaData/CosechaData";
 import { Link } from "react-router-dom";
-import GenericButton from '../../../../components/GenericButton/GenericButton';
-import GenericModal from '../../../../components/GenericModal/GenericModal';
-import RecordsContext, { RecordsProvider } from "../../../../contexts/RecordsContext";
+import GenericButton from "../../../../components/GenericButton/GenericButton";
+import GenericModal from "../../../../components/GenericModal/GenericModal";
+import RecordsContext from "../../../../contexts/RecordsContext";
 
-//TODO: If plant.name.length < 13, achicar la letra. Y además hacer más espacio para que entre todo.
+//TODO: If vegetable.name.length < 13, achicar la letra. Y además hacer más espacio para que entre todo.
 
-function PlantCard({ src, alt, nombre, planta }) {
+function PlantCard({ src, alt, name, vegetable }) {
+
   let [show, setShow] = useState(false);
   let handleShow = () => setShow(true);
 
   let [records, setRecord] = useContext(RecordsContext);
 
-  function saveRecord(planta) {
+  function saveRecord(vegetable) {
     let newSow = {
-      name: planta.nombre,
+      name: vegetable.name,
       sowDate: new Date(),
-      harvestBegin: planta.cosecha[0],
-      harvestEnd: planta.cosecha[1],
+      harvestBegin: vegetable.cosecha[0],
+      harvestEnd: vegetable.cosecha[1],
     };
     if (records.length === 0) {
       setRecord([newSow]);
@@ -32,52 +33,36 @@ function PlantCard({ src, alt, nombre, planta }) {
     }
   }
 
-  let sowModalContent = `Vas a registrar tu siembra de ${planta.nombre.toLowerCase()} con fecha de hoy en tu calendario.`;
+  let sowModalContent = `Vas a registrar tu siembra de ${vegetable.name.toLowerCase()} con fecha de hoy en tu calendario.`;
   let sowModalActionLabel = "Sí, sembrar";
 
   return (
     <>
-        <Card className="card-container">
-          <Link to={`/detail/${planta.nombre}`}>
-            <Card.Body>
-              <img src={src} alt={alt}></img>
-              <Card.Title className="plant-name">{nombre}</Card.Title>
-              <div className="plant-text">
-                <CosechaData planta={planta} />
+      <Card className="card-container">
+        <Link to={`/detail/${vegetable.name}`}>
+          <Card.Body>
+            <img
+            // TODO ver imports de images.
+              src={src}
+              alt={alt}
+            ></img>
+            <Card.Title className="vegetable-name">{name}</Card.Title>
+            <CosechaData vegetable={vegetable} />
+          </Card.Body>
+        </Link>
+        <GenericButton label="SEMBRAR" handleClick={handleShow} />
+      </Card>
 
-                {records.length}
-              </div>
-            </Card.Body>
-          </Link>
-          <GenericButton label="SEMBRAR" handleClick={handleShow} />
-        </Card>
-
-        <GenericModal
-          show={show}
-          content={sowModalContent}
-          setShow={setShow}
-          actionLabel={sowModalActionLabel}
-          action={() => {
-            saveRecord(planta);
-            setShow(false);
-          }}
-        />
-      {/*
-            <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>¡Bravo! </Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                Vas a registrar tu siembra de {planta.nombre.toLowerCase()} con fecha
-                de hoy en tu calendario.
-              </Modal.Body>
-              <Modal.Footer>
-                <GenericButton label="Cancelar" handleClick={handleClose}/>
-                <GenericButton label="Guardar registro" handleClick={() => {
-                          saveRecord(planta);
-                          setShow(false)}}/>
-              </Modal.Footer>
-            </Modal> */}
+      <GenericModal
+        show={show}
+        content={sowModalContent}
+        setShow={setShow}
+        actionLabel={sowModalActionLabel}
+        action={() => {
+          saveRecord(vegetable);
+          setShow(false);
+        }}
+      />
     </>
   );
 }

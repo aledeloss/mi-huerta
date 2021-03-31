@@ -3,11 +3,11 @@ import DayJS from 'react-dayjs';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CosechaData = ({planta}) => {
+const CosechaData = ({vegetable}) => {
     
     const siembra = new Date();
-    const cosechaInicio = <DayJS format="DD/MM/YYYY"add={ { days: planta.cosecha[0] } }>{siembra}</DayJS>
-    const cosechaFin = <DayJS format="DD/MM/YYYY"add={ { days: planta.cosecha[1] } }>{siembra}</DayJS>
+    const cosechaInicio = <DayJS format="DD/MM/YY" add={ { days: vegetable.cosecha[0] } }>{siembra}</DayJS>
+    const cosechaFin = <DayJS format="DD/MM/YY" add={ { days: vegetable.cosecha[1] } }>{siembra}</DayJS>
     
     
     return (
