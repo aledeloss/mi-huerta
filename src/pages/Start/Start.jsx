@@ -4,14 +4,13 @@ import React, { useContext } from "react";
 import PlantsList from "./components/PlantsList/PlantsList";
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-
-// import RecordsContext from '../../contexts/RecordsContext';
-// import Records from '../Records/Records';
-
-//react-bootstrap imports
+import useLocalStorage from '../../hooks/useLocalStorage';
 import Container from "react-bootstrap/Container";
 
 const Start = ({history}) => {
+
+  let [records, setRecords] = useLocalStorage();
+
   const date = new Date();
   const month = date.getMonth();
   const months = [
@@ -37,7 +36,7 @@ const Start = ({history}) => {
           <h2>
             Estamos en <span className="month">{months[month]}</span>.
           </h2>
-          <h2>Estas vegetables podés sembrar este mes:</h2>
+          <h2>Estas plantas podés sembrar este mes:</h2>
           <PlantsList />
         </div>
       </Container>

@@ -5,12 +5,15 @@ import data from '../../data/data.js';
 import { useParams } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const Detail = ({ history }) => {
-  let { vegetable } = useParams();
+
+  let [records, setRecords] = useLocalStorage();
+  let { vegetableName } = useParams();
 
   const vegetableData = data.find((e) => {
-    return e.name === vegetable;
+    return e.name === vegetableName;
   });
 
   return (

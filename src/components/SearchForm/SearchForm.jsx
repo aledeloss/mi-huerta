@@ -29,7 +29,7 @@ const SearchForm = ({ history }) => {
         <Form inline onSubmit={handleSubmit}>
         <FormControl 
           type="text" 
-          placeholder="Buscar hortaliza" 
+          placeholder="Buscar planta" 
           className="mr-sm-2" 
           value={keyword} 
           onChange={handleChange}

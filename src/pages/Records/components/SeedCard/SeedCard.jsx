@@ -4,8 +4,6 @@ import DayJS from 'react-dayjs';
 
 const SeedCard = ({ name, sowDate, harvestBegin, harvestEnd}) => {
 
-    // const formattedSowDate = `${sowDate.getDate()}/${sowDate.getMonth()+1}/${sowDate.getFullYear()}`;
-
     const formattedSowDate = <DayJS format="DD/MM/YY">{ sowDate }</DayJS>
 
     const renderHarvestBegin = <DayJS format="DD/MM/YY" add={ { days: harvestBegin } }>{sowDate}</DayJS>
@@ -23,4 +21,3 @@ const SeedCard = ({ name, sowDate, harvestBegin, harvestEnd}) => {
 export default SeedCard;
 
 //TODO: Agregar botón de editar y de borrar
-//TODO: Actualizar fechas a cosecha real. Usar cosechaData?

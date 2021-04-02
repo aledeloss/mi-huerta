@@ -2,8 +2,9 @@ import React, {useContext} from 'react';
 import "./PlantDetail.css";
 import {useParams} from 'react-router-dom';
 import data from "../../../data/data.js";
-import CosechaData from "../../Start/components/CosechaData/CosechaData";
 import RecordsContext from '../../../contexts/RecordsContext';
+import SaveRecordButton from '../../../components/SaveRecordButton/SaveRecordButton';
+import DayJS from 'react-dayjs';
 
 const PlantDetail = ({handleShow}) => {
     
@@ -28,17 +29,21 @@ const PlantDetail = ({handleShow}) => {
         return e.name === vegetable
     });
 
-    let mesesArray = [];
-    const mesesSiembra = () => {
-        for (const mes in vegetableData.siembra) {
-            mesesArray.push(months[vegetableData.siembra[mes]])
+    let monthsArray = [];
+    const sowingMonths = () => {
+        for (const mes in vegetableData.sowing) {
+            monthsArray.push(months[vegetableData.sowing[mes]])
         }
-        return mesesArray;
+        return monthsArray;
     }
 
     let [records, setRecord] = useContext(RecordsContext);
-    const sembrado = records.find( e => e.name === vegetableData.name) 
-    ? records.find( e => e.name === vegetableData.name).sowDate 
+    const sowing = records.find( e => e.name === vegetableData.name)
+    // TODO: Ver si está tomando solo un registro o cómo hacer para que tome varios. 
+    ? <DayJS format="DD/MM/YY">
+        { records.find( e => e.name === vegetableData.name).sowDate.toString() }
+    </DayJS> 
+    // ? records.find( e => e.name === vegetableData.name).sowDate.toString() 
     : '¡No todavía!' ;
 
     return (
@@ -48,14 +53,17 @@ const PlantDetail = ({handleShow}) => {
             </div>
             <div className="vegetable-main-info">
                 <h1>{vegetableData.name}</h1>
-                <h4>{`Meses de siembra: ${mesesSiembra().join(', ')}`}</h4>
-                <h4>{`Días a cosecha: de ${vegetableData.cosecha[0]} a ${vegetableData.cosecha[1]}`}</h4>
-                <p>{`Sembrado: ${sembrado}`}</p>
-                {/* <p>{records.find( e => e.name === vegetableData.name) ? '' : <CosechaData vegetable={vegetableData} />}</p> */}
+                <div>Meses de siembra: {sowingMonths().join(', ')}</div>
+                <div>Días a cosecha: de {vegetableData.harvest.from} a {vegetableData.harvest.to}</div>
+                <div>Distancia entre plantas: de {vegetableData.design.plantsSpacing.from} a {vegetableData.design.plantsSpacing.to}</div>
+                <div>Distancia entre líneas: de {vegetableData.design.rowsSpacing.from} a {vegetableData.design.rowsSpacing.to}</div>
+                <div>Asociar con: {vegetableData.design.associate.join(', ')}</div>
+                <div>Rotar con con: {vegetableData.design.rotate.join(', ')}</div>
+                <div>Tolera sombra: {vegetableData.design.shadow}</div>
+                <p>Siembra: {sowing}</p>
+                {/* <p>{records.find( e => e.name === vegetableData.name) ? '' : <sowingData vegetable={vegetableData} />}</p> */}
             </div>
-            {/* <AddButton
-                vegetable={vegetableData}
-            /> */}
+            <SaveRecordButton vegetable={vegetableData} />
         </div>
     )
 }

@@ -4,11 +4,9 @@
 /* eslint-disable no-restricted-globals */
 
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-//components and data imports
-import PlantCard from "../PlantCard/PlantCard";
 import "./PlantsList.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import PlantCard from "../PlantCard/PlantCard";
 import data from "../../../../data/data";
 import { Container, Col, Row } from "react-bootstrap";
 
@@ -18,7 +16,7 @@ const PlantsList = () => {
 
   const CardList = data.map(
     (vegetable, index) =>
-      vegetable.siembra.includes(month) && (
+      vegetable.sowing.includes(month) && (
         <Col>
           <PlantCard
             key={index}

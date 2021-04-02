@@ -5,10 +5,11 @@ import SeedCard from "./components/SeedCard/SeedCard";
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Container from "react-bootstrap/Container";
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const Records = ({ history }) => {
-  let [records, setRecord] = useContext(RecordsContext);
-
+  let [records, setRecords] = useLocalStorage();
+  
   let localRecords = records;
   console.log(records);
 

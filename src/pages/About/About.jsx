@@ -3,12 +3,16 @@ import "./About.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Container from "react-bootstrap/Container";
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const About = ({ history }) => {
+
+  let [records, setRecords] = useLocalStorage();
+
   return (
     <div className="about-page-container">
       <Header history={history} />
-      
+
       <Container className="about-content">
         <div className="description">
           <p>

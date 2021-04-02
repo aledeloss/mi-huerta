@@ -1,10 +1,15 @@
 /* eslint-disable no-restricted-globals */
 import React from "react";
 import Carrot from "./components/Carrot/Carrot";
-import Footer from '../../components/Footer/Footer';
+import Footer from "../../components/Footer/Footer";
 import "./Home.css";
+import useLocalStorage from '../../hooks/useLocalStorage';
+
 
 const Home = ({ history }) => {
+
+  let [records, setRecords] = useLocalStorage();
+
   return (
     <div className="home-app-container">
       <div className="home-app-content">

@@ -3,18 +3,18 @@ import DayJS from 'react-dayjs';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CosechaData = ({vegetable}) => {
+const cosechaData = ({vegetable}) => {
     
-    const siembra = new Date();
-    const cosechaInicio = <DayJS format="DD/MM/YY" add={ { days: vegetable.cosecha[0] } }>{siembra}</DayJS>
-    const cosechaFin = <DayJS format="DD/MM/YY" add={ { days: vegetable.cosecha[1] } }>{siembra}</DayJS>
+    const sowingDate = new Date();
+    const harvestBegin = <DayJS format="DD/MM/YY" add={ { days: vegetable.harvest.from } }>{sowingDate}</DayJS>
+    const harvestEnd = <DayJS format="DD/MM/YY" add={ { days: vegetable.harvest.to } }>{sowingDate}</DayJS>
     
     
     return (
         <div>
-        Si sembrás hoy podrás cosechar entre el {cosechaInicio} y el {cosechaFin}.
+        Si sembrás hoy podrás cosechar entre el {harvestBegin} y el {harvestEnd}.
         </div>
         )
 }
 
-export default CosechaData;
+export default cosechaData;
