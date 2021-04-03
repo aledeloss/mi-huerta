@@ -56,3 +56,7 @@
     border: none;
     opacity: .8;
 }
+
+.navbar-collapse {
+    background-color: #06d6a0ff;
+}

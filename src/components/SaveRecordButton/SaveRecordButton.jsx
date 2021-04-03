@@ -8,20 +8,36 @@ const SaveRecordButton = ({ vegetable }) => {
     let [show, setShow] = useState(false);
     let handleShow = () => setShow(true);
   
-    let [records, setRecord] = useContext(RecordsContext);
-  
+    let [records, setRecords] = useContext(RecordsContext);
+    // const { state, dispatch } = useContext(RecordsContext)
+
+    //function saveRecord(planta) {
+    //     let newSeed = {
+    //       //id: records.length ? records[records.length-1].id + 1 : 1,
+    //       name: vegetable.name,
+    //       sowDate: new Date(),
+    //       harvestBegin: vegetable.harvest.from,
+    //       harvestEnd: vegetable.harvest.to,
+    //     }
+    //     dispatch({
+    //         type: "SOW",
+    //         value: newSeed
+    //     })
+    // };
+
     function saveRecord(vegetable) {
         console.log(vegetable)
       let newSow = {
+        id: records.length ? records[records.length-1].id + 1 : 1,
         name: vegetable.name,
         sowDate: new Date(),
         harvestBegin: vegetable.harvest.from,
         harvestEnd: vegetable.harvest.to,
       };
       if (records.length === 0) {
-        setRecord([newSow]);
+        setRecords([newSow]);
       } else {
-        setRecord([...records, newSow]);
+        setRecords([...records, newSow]);
       }
     }
     // TODO: Make sow a class.

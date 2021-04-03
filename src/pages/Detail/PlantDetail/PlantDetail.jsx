@@ -37,19 +37,23 @@ const PlantDetail = ({handleShow}) => {
         return monthsArray;
     }
 
-    let [records, setRecord] = useContext(RecordsContext);
+    let [records, setRecords] = useContext(RecordsContext);
     const sowing = records.find( e => e.name === vegetableData.name)
     // TODO: Ver si está tomando solo un registro o cómo hacer para que tome varios. 
     ? <DayJS format="DD/MM/YY">
         { records.find( e => e.name === vegetableData.name).sowDate.toString() }
     </DayJS> 
-    // ? records.find( e => e.name === vegetableData.name).sowDate.toString() 
+    // TODO: Hacer loop que muestre todas las siembras, no solamente la primera.
     : '¡No todavía!' ;
 
     return (
         <div className="detail-container">
             <div className="img-container">
-            <img src={vegetableData.img.src} alt={vegetableData.img.alt}></img>
+            <img
+            src={`vegetables-imgs/${vegetableData.img.src}.svg`}
+            //  src="vegetables-imgs/018-garlic.svg"
+                alt={vegetableData.img.alt}
+            ></img>
             </div>
             <div className="vegetable-main-info">
                 <h1>{vegetableData.name}</h1>
@@ -60,8 +64,8 @@ const PlantDetail = ({handleShow}) => {
                 <div>Asociar con: {vegetableData.design.associate.join(', ')}</div>
                 <div>Rotar con con: {vegetableData.design.rotate.join(', ')}</div>
                 <div>Tolera sombra: {vegetableData.design.shadow}</div>
+                <div>Dificultad: {vegetableData.difficulty}</div>
                 <p>Siembra: {sowing}</p>
-                {/* <p>{records.find( e => e.name === vegetableData.name) ? '' : <sowingData vegetable={vegetableData} />}</p> */}
             </div>
             <SaveRecordButton vegetable={vegetableData} />
         </div>

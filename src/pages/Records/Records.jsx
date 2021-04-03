@@ -1,38 +1,56 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import "./Records.css";
-import RecordsContext from "../../contexts/RecordsContext";
 import SeedCard from "./components/SeedCard/SeedCard";
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Container from "react-bootstrap/Container";
 import useLocalStorage from '../../hooks/useLocalStorage';
+import DeleteAllButton from '../../components/DeleteAllButton/DeleteAllButton';
 
 const Records = ({ history }) => {
   let [records, setRecords] = useLocalStorage();
+  let [sowList, setSowList] = useState();
   
-  let localRecords = records;
-  console.log(records);
+  const handleDeleteAllClick = () => {
+    setRecords([])
+    console.log('borraste todos')
+  }
 
-  let SowList = localRecords.map((sow, index) => (
-    <div>
-      {sow.name}
-      <SeedCard
-      // key={index}
-      // name={sow.name}
-      // sowDate={sow.sowDate}
-      />
-    </div>
-  ));
+  // useEffect(() => {
+  //   setSowList(<Container className="records-content">
+  //   {!records.length ?  
+  //     <div className="alert">¡Parece que aún no sembraste nada!</div>
+  //    : 
+  //     records.map((record) => {
+  //       return (
+  //           <SeedCard
+  //             key={record.name} 
+  //             name={record.name}
+  //             sowDate={record.sowDate}
+  //             harvestBegin={record.harvestBegin}
+  //             harvestEnd={record.harvestEnd}
+  //             id={record.id}
+  //             />
+  //       );
+  //     })
+  //   }
+  // </Container>);
+  //   },[records]);
+  
+  //   useEffect(() => {
+  //     console.log('records cambió')
+  //   }, [records])
 
 
   return (
     <div className="records-page-container">
       <Header history={history} />
+      {/* <div>{sowList}</div> */}
       <Container className="records-content">
-        {!localRecords.length ?  
+        {!records.length ?  
           <div className="alert">¡Parece que aún no sembraste nada!</div>
          : 
-          localRecords.map((record) => {
+          records.map((record) => {
             return (
                 <SeedCard
                   key={record.name} 
@@ -40,10 +58,13 @@ const Records = ({ history }) => {
                   sowDate={record.sowDate}
                   harvestBegin={record.harvestBegin}
                   harvestEnd={record.harvestEnd}
+                  id={record.id}
                   />
             );
           })
         }
+        {records.length? <DeleteAllButton /> : ''}
+        
       </Container>
       <Footer />
 

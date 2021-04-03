@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Detail.css';
 import PlantDetail from './PlantDetail/PlantDetail';
 import data from '../../data/data.js';
@@ -15,6 +15,7 @@ const Detail = ({ history }) => {
   const vegetableData = data.find((e) => {
     return e.name === vegetableName;
   });
+
 
   return (
     <div className='page-container'>

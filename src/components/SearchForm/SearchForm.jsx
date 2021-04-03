@@ -26,11 +26,11 @@ const SearchForm = ({ history }) => {
     }
   
     return (
-        <Form inline onSubmit={handleSubmit}>
+        <Form className="search-form-container" inline onSubmit={handleSubmit}>
         <FormControl 
           type="text" 
           placeholder="Buscar planta" 
-          className="mr-sm-2" 
+          className="search-input" 
           value={keyword} 
           onChange={handleChange}
         />

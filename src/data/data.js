@@ -1,5 +1,4 @@
 // Images imports
-import GarlicImg from '../assets/vegetables-imgs/018-garlic.svg'
 
 const data = [
     {
@@ -24,8 +23,8 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: 'chard',
+            alt: 'Ícono de acelga'
         }
     },
     {
@@ -50,8 +49,8 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: '018-garlic',
+            alt: 'Ícono de ajo'
         }
     },
     {
@@ -76,8 +75,8 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: 'basil',
+            alt: 'Ícono de albahaca'
         }
     },
     {
@@ -102,8 +101,8 @@ const data = [
         },
         difficulty: 'difícil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: '',
+            alt: 'Ícono de apio'
         }
     },
     {
@@ -128,8 +127,8 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: 'peas',
+            alt: 'Ícono de arvejas'
         }
     },
     {
@@ -154,8 +153,8 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: '031-sweet potato',
+            alt: 'Ícono de batata'
         }
     },
     {
@@ -180,8 +179,8 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: '006-eggplant',
+            alt: 'Ícono de berenjena'
         }
     },
     {
@@ -206,12 +205,12 @@ const data = [
         },
         difficulty: 'difícil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: '017-broccoli',
+            alt: 'Ícono de de brócoli y coliflor'
         }
     },
     {
-        name: 'Cebolla y cebolla de verdeo',
+        name: 'Cebolla y verdeo',
         sowing: [1, 2, 3],
         harvest: {
             from: 250,
@@ -232,8 +231,34 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: GarlicImg,
-            alt: 'Garlic icon.'
+            src: '036-onion',
+            alt: 'Ícono de cebolla y verdeo'
+        }
+    },
+    {
+        name: 'Chaucha',
+        sowing: [2, 3, 4, 6, 9, 10, 11],
+        harvest: {
+            from: 20,
+            to: 30
+        },
+        design: {
+            plantsSpacing: {
+                from: 70,
+                to: 80
+            },
+            rowsSpacing: {
+                from: 35,
+                to: 45
+            },
+            associate: ['maíz', 'hojas', 'bulbos', 'pimientos', 'berenjenas'],
+            rotate: ['frutos', 'bulbos', 'raíces'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: 'green-beans',
+            alt: 'Ícono de chaucha'
         }
     },
 ]

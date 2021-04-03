@@ -42,7 +42,7 @@ const About = ({ history }) => {
             Este sitio fue realizado con información tomada del Planificador
             ProHuerta 2020 del INTA.
           </p>
-          <p>Las ilustraciones fueron diseñadas por [Autor] de Flaticon.</p>
+          <p>Las ilustraciones fueron diseñadas por Freepik de Flaticon y la paleta de colores la tomé de Coolors.</p>
         </div>
       </Container>
 

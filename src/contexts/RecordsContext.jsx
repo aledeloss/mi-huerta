@@ -1,12 +1,15 @@
-import React, { useState, createContext } from "react";
+import React, { createContext, useState } from "react";
+// import { reducer, initialState } from '../reducers/reducer';
 
 const RecordsContext = createContext();
 
 export const RecordsProvider = ({children}) => {
-  const [records, setRecord] = useState([]); 
+  
+  //const [state, dispatch] = useReducer(reducer, initialState, undefined);
+  const [records, setRecords] = useState([]); 
 
   return (
-      <RecordsContext.Provider value={[records, setRecord]}>
+      <RecordsContext.Provider value={[ records, setRecords ]}>
         {children}
       </RecordsContext.Provider>
   );

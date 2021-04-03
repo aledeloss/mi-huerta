@@ -14,7 +14,7 @@ const Home = ({ history }) => {
     <div className="home-app-container">
       <div className="home-app-content">
         <div className="home-app-greeting">
-          <h1>¿Tenés ganar de armar una huerta?</h1>
+          <h1>¿Tenés ganas de armar una huerta?</h1>
           <h1> ¡Comencemos!</h1>
         </div>
         <div className="carrot-container">

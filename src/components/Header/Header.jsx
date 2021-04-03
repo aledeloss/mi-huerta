@@ -18,7 +18,7 @@ const Header = ({ history }) => {
   <Navbar.Brand className="brand" onClick={handleOnClickHome}>Mi Huerta</Navbar.Brand>
   <Navbar.Toggle className="nav-search-container" aria-controls="basic-navbar-nav" />
 
-  <Navbar.Collapse id="basic-navbar-nav">
+  <Navbar.Collapse id="basic-navbar-nav navbar-collapse">
     <SearchForm history={history}/>
     <NavBar />
   </Navbar.Collapse>
