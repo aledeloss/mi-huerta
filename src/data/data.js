@@ -339,7 +339,7 @@ const data = [
     //         src: 'green-beans',
     //         alt: 'Ícono de chaucha'
     //     }
-    },
+    //},
 ]
 
 export default data;
