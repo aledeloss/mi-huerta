@@ -2,9 +2,10 @@
     background-color: #ef476fff;
     border-radius: 15px;
     padding: 15px;
+    width: 400px;
 }
 
-img {
+img-container {
     height: 160px;
     width: 160px;
     padding: 10px;

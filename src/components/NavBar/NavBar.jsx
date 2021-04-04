@@ -19,9 +19,6 @@ const NavBar = () => {
         label="Mis registros"
       />      
     </Nav>
-    // <div className="navBar">
- 
-    //</div>
   );
 };
 

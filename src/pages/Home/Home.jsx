@@ -20,8 +20,8 @@ const Home = ({ history }) => {
         <div className="carrot-container">
           <Carrot history={history} />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

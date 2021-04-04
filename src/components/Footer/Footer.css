@@ -1,5 +1,5 @@
 .footer-container {
-    /* position: absolute; */
+    position: relative;
     bottom: 0px;
     background-color: #073b4cff;
     height: 70px;

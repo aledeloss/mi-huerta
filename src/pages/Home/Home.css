@@ -7,6 +7,19 @@
     justify-content: center;
 }
 
-/* .carrot-container {
-    height: 200px;
-} */
+.home-app-content {
+    min-height: 91vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: solid salmon; */
+    z-index: 10
+}
+
+.home-app-greeting {
+    padding-top: 150px;
+}
+
+.carrot-container {
+    /* border: solid firebrick; */
+}

@@ -30,8 +30,8 @@ const PlantsList = () => {
   );
 
   return (
-    <Container className="vegetablesList-container">
-        <Row className="vegetablesList-content">{CardList}</Row>
+    <Container className="PlantsList-container">
+        <Row className="PlantsList-content">{CardList}</Row>
     </Container>
   );
 };

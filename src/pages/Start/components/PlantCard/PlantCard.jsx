@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-import React, { useContext } from "react";
 import "./PlantCard.css";
 import { Card } from "react-bootstrap";
 import CosechaData from "../CosechaData/CosechaData";

@@ -39,7 +39,6 @@ const PlantDetail = ({handleShow}) => {
 
     let [records, setRecords] = useContext(RecordsContext);
     const sowing = records.find( e => e.name === vegetableData.name)
-    // TODO: Ver si está tomando solo un registro o cómo hacer para que tome varios. 
     ? <DayJS format="DD/MM/YY">
         { records.find( e => e.name === vegetableData.name).sowDate.toString() }
     </DayJS> 
@@ -50,8 +49,7 @@ const PlantDetail = ({handleShow}) => {
         <div className="detail-container">
             <div className="img-container">
             <img
-            src={`vegetables-imgs/${vegetableData.img.src}.svg`}
-            //  src="vegetables-imgs/018-garlic.svg"
+                src={`vegetables-imgs/${vegetableData.img.src}.svg`}
                 alt={vegetableData.img.alt}
             ></img>
             </div>

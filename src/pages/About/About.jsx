@@ -3,22 +3,22 @@ import "./About.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Container from "react-bootstrap/Container";
-import useLocalStorage from '../../hooks/useLocalStorage';
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const About = ({ history }) => {
-
   let [records, setRecords] = useLocalStorage();
 
   return (
     <div className="about-page-container">
       <Header history={history} />
 
-      <Container className="about-content">
+      <Container fluid="md" className="about-content">
         <div className="description">
           <p>
             Este sitio nació como un proyecto que cruzaba dos fuertes
-            inquietudes personales durante la primera etapa de la cuarentena:
-            Mantener la huerta y aprender programación.
+            inquietudes personales durante la primera etapa de la cuarentena en
+            2020: Mantener un pequeña huerta que tengo en mi terraza y aprender
+            programación, un gran desafío que asumí con mucho gusto.
           </p>
           <p>
             Surgió como respuesta a una necesidad real que tenía de saber qué
@@ -29,20 +29,19 @@ const About = ({ history }) => {
           <p>
             Mi Huerta fue una excusa ideal para buscar recursos, aprender nuevas
             tecnologías, trabajar mucho y con ganas. Estoy convencida de que
-            desarrollar Mi Huerta fue un proceso muy valioso.
-            {/* Por eso intenté registrarlo aquí */}
+            desarrollar Mi Huerta fue y es un proceso muy valioso.
           </p>
           <p>
             ¡Espero que lo disfrutes y te sirva tanto como a mí! Agradezco
-            cualquier feedback o comentario en aledeloss@gmail.com
+            cualquier feedback o comentario en <a href="mailto:aledeloss@gmail.com">aledeloss@gmail.com</a>.
           </p>
         </div>
         <div className="créditos">
           <p>
             Este sitio fue realizado con información tomada del Planificador
-            ProHuerta 2020 del INTA.
+            ProHuerta 2020 del INTA. Las ilustraciones fueron diseñadas por
+            Freepik de Flaticon y la paleta de colores la tomé de Coolors.
           </p>
-          <p>Las ilustraciones fueron diseñadas por Freepik de Flaticon y la paleta de colores la tomé de Coolors.</p>
         </div>
       </Container>
 

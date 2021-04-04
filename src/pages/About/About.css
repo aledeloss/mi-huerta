@@ -4,15 +4,14 @@
     color: #073b4cff;
     display: flex;
     flex-direction: column;
-    align-items: space-around;
 }
 
 .about-content {
+    min-height: 80.5vh;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    height: 91vh;
+    margin-top: 70px;
+    padding-top: 20px;
 }
-/* TODO: Hacer mediaquery para que cuando achicas el texto se haga más grande. */

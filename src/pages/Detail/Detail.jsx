@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import './Detail.css';
 import PlantDetail from './PlantDetail/PlantDetail';
 import data from '../../data/data.js';
@@ -18,10 +17,10 @@ const Detail = ({ history }) => {
 
 
   return (
-    <div className='page-container'>
+    <div className='detail-page-container'>
       <Header history={history} />
       
-      <div className='main'>
+      <div className='detail-content'>
         <PlantDetail vegetable={vegetableData} />
       </div>
 

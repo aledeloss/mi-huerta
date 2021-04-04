@@ -261,6 +261,85 @@ const data = [
             alt: 'Ícono de chaucha'
         }
     },
+    {
+        name: 'Choclo',
+        sowing: [0, 7, 8, 9, 10, 11],
+        harvest: {
+            from: 100,
+            to: 130
+        },
+        design: {
+            plantsSpacing: {
+                from: 30,
+                to: 35
+            },
+            rowsSpacing: {
+                from: 70,
+                to: 80
+            },
+            associate: ['batata', 'maní', 'poroto', 'chacra de verano'],
+            rotate: ['chacra de invierno', 'hojas', 'raíces'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: '003-corn',
+            alt: 'Ícono de choclo'
+        }
+    },
+    {
+        name: 'Espárrago',
+        sowing: [7, 8],
+        harvest: {
+            from: 1460,
+            to: 1490
+            // Consultar fecha de cierre.
+        },
+        design: {
+            plantsSpacing: {
+                from: 70,
+                to: 80
+            },
+            rowsSpacing: {
+                from: 35,
+                to: 45
+            },
+            associate: ['maíz', 'hojas', 'bulbos', 'pimientos', 'berenjenas'],
+            rotate: ['frutos', 'bulbos', 'raíces'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: 'green-beans',
+            alt: 'Ícono de chaucha'
+        }
+    },
+    // {
+    //     name: 'Chaucha',
+    //     sowing: [2, 3, 4, 6, 9, 10, 11],
+    //     harvest: {
+    //         from: 20,
+    //         to: 30
+    //     },
+    //     design: {
+    //         plantsSpacing: {
+    //             from: 70,
+    //             to: 80
+    //         },
+    //         rowsSpacing: {
+    //             from: 35,
+    //             to: 45
+    //         },
+    //         associate: ['maíz', 'hojas', 'bulbos', 'pimientos', 'berenjenas'],
+    //         rotate: ['frutos', 'bulbos', 'raíces'],
+    //         shadow: 'no',
+    //     },
+    //     difficulty: 'fácil',
+    //     img: {
+    //         src: 'green-beans',
+    //         alt: 'Ícono de chaucha'
+    //     }
+    },
 ]
 
 export default data;

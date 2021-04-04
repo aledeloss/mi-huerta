@@ -2,13 +2,12 @@
 import "./Start.css";
 import React, { useContext } from "react";
 import PlantsList from "./components/PlantsList/PlantsList";
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import useLocalStorage from '../../hooks/useLocalStorage';
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import Container from "react-bootstrap/Container";
 
-const Start = ({history}) => {
-
+const Start = ({ history }) => {
   let [records, setRecords] = useLocalStorage();
 
   const date = new Date();
@@ -29,9 +28,9 @@ const Start = ({history}) => {
   ];
 
   return (
-    <div className="page-container">
-      <Header history={history}/>
-      <Container className="comenzar-container">
+    <div className="start-container">
+      <Header history={history} />
+      <Container className="start-content">
         <div className="main">
           <h2>
             Estamos en <span className="month">{months[month]}</span>.
@@ -40,12 +39,9 @@ const Start = ({history}) => {
           <PlantsList />
         </div>
       </Container>
-
       <Footer />
     </div>
   );
 };
-
-//TODO: Revisar estructura porque se tapa media página y no se ve el footer.
 
 export default Start;
