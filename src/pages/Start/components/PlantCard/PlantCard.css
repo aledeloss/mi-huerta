@@ -35,6 +35,10 @@ a:link {
 .vegetable-name {
     font-size: 26px;
 }
+
+.long-veg-name {
+    font-size: 22px;
+}
 /* .card-container button {
     padding: 10px;
     margin-top: 10px;
@@ -48,7 +52,16 @@ a:link {
     color: #073b4cff;
 } */
 
+.save-button {
+    position: absolute;
+}
+
 .card-container button:hover {
     background-color: rgb(241, 213, 147);
     cursor: pointer;
+}
+
+.harvest-data-container {
+    height: 60px;
+    border: solid salmon
 }

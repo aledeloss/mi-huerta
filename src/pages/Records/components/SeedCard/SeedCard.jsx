@@ -13,13 +13,15 @@ const SeedCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick}) => {
 
 
     
+    // let handleDeleteClick = ({id}) => {
+    //     let index = records.findIndex((record) => record.id === id);
+    //     setRecords(records.splice(index, 1));
+    // }
+    
     let handleDeleteClick = ({id}) => {
-        let index = records.findIndex((record) => record.id === id);
-        records.filter(record => record.id !== id);
-        // let newRecords = records.splice(index, 1);
-        setRecords(records.splice(index, 1));
-        //setRecords(newRecords);
-        console.log(records)
+        let newRecords = records.filter(record => record.id !== id);
+        console.log(newRecords);
+        setRecords(newRecords)
     }
     
     return (
@@ -28,7 +30,7 @@ const SeedCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick}) => {
             <p className="sowDate">{renderSowDate}</p>               
             <p className="harvest" >Entre el {renderHarvestBegin} y el {renderHarvestEnd}</p>
             {/* <p>{id}</p> */}
-            <div className="delete-icon-container" onClick={handleDeleteClick}>X</div>
+            <div className="delete-icon-container" onClick={()=>handleDeleteClick({id})}>X</div>
         </div>
     )
 };

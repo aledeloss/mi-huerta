@@ -1,8 +1,10 @@
 .genBtn {
     background-color: #ffd166ff;
+    /* position: absolute;
+    bottom: 15px; */
     color: #073b4cff;
     width: 130px;
-    height: 70px;
+    height: 30px;
     border: none;
     border-radius: 15px;
 }

@@ -15,16 +15,16 @@ function PlantCard({ vegetable }) {
     
       <Card className="card-container">
         <Link to={`/detail/${vegetable.name}`}>
-          <Card.Body>
+          <Card.Body className="plant-card-body">
             <img
               src={`vegetables-imgs/${vegetable.img.src}.svg`}
               alt={vegetable.img.alt}
             ></img>
-            <Card.Title className="vegetable-name">{vegetable.name}</Card.Title>
-            <CosechaData vegetable={vegetable} />
+            <Card.Title className={`vegetable-name ${vegetable.name.length > 13 ? 'long-veg-name' : ''}`}>{vegetable.name}</Card.Title>
+            <CosechaData className="harvest-data-container" vegetable={vegetable} />
           </Card.Body>
         </Link>
-        <SaveRecordButton vegetable={vegetable}/>
+        <SaveRecordButton className="save-button" vegetable={vegetable}/>
       </Card>
       
   );
