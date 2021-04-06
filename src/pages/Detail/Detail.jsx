@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import useLocalStorage from '../../hooks/useLocalStorage';
+import GoBackButton from "../../components/GoBackButton/GoBackButton";
+import { Container } from 'react-bootstrap';
 
 const Detail = ({ history }) => {
 
@@ -19,7 +21,9 @@ const Detail = ({ history }) => {
   return (
     <div className='detail-page-container'>
       <Header history={history} />
-      
+      <Container>
+        <GoBackButton history={history} />
+      </Container>
       <div className='detail-content'>
         <PlantDetail vegetable={vegetableData} />
       </div>

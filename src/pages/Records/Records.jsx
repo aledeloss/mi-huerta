@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import Container from "react-bootstrap/Container";
 import useLocalStorage from '../../hooks/useLocalStorage';
 import DeleteAllButton from '../../components/DeleteAllButton/DeleteAllButton';
+import GoBackButton from '../../components/GoBackButton/GoBackButton';
 
 const Records = ({ history }) => {
   let [records, setRecords] = useLocalStorage();
@@ -45,8 +46,10 @@ const Records = ({ history }) => {
   return (
     <div className="records-page-container">
       <Header history={history} />
-      {/* <div>{sowList}</div> */}
       <Container className="records-content">
+
+      <GoBackButton history={history}/>
+
         {!records.length ?  
           <div className="alert">¡Parece que aún no sembraste nada!</div>
          : 

@@ -47,7 +47,7 @@ const SaveRecordButton = ({ vegetable }) => {
 
     return (
         <>
-        <GenericButton label="SEMBRAR" handleClick={handleShow} vegetable={vegetable}/>
+        <GenericButton label="Sembrar" handleClick={handleShow} vegetable={vegetable}/>
 
         <GenericModal
         show={show}

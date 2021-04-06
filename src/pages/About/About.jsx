@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Container from "react-bootstrap/Container";
 import useLocalStorage from "../../hooks/useLocalStorage";
+// import GoBackButton from "../../components/GoBackButton/GoBackButton";
 
 const About = ({ history }) => {
   let [records, setRecords] = useLocalStorage();
@@ -11,7 +12,7 @@ const About = ({ history }) => {
   return (
     <div className="about-page-container">
       <Header history={history} />
-
+      {/* <GoBackButton history={history} /> */}
       <Container fluid="md" className="about-content">
         <div className="description">
           <p>
@@ -33,7 +34,8 @@ const About = ({ history }) => {
           </p>
           <p>
             ¡Espero que lo disfrutes y te sirva tanto como a mí! Agradezco
-            cualquier feedback o comentario en <a href="mailto:aledeloss@gmail.com">aledeloss@gmail.com</a>.
+            cualquier feedback o comentario en{" "}
+            <a href="mailto:aledeloss@gmail.com">aledeloss@gmail.com</a>.
           </p>
         </div>
         <div className="créditos">

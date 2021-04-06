@@ -10,3 +10,9 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.delete-icon-container {
+    width: 25px;
+    background-color: rgb(252, 193, 57);
+    border-radius: 50%;
+}

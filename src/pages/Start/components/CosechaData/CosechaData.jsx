@@ -1,5 +1,6 @@
 import React from 'react';
 import DayJS from 'react-dayjs';
+import './CosechaData.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,7 +12,7 @@ const cosechaData = ({vegetable}) => {
     
     
     return (
-        <div>
+        <div className="harvest-data-container">
         Si sembrás hoy podrás cosechar entre el {harvestBegin} y el {harvestEnd}.
         </div>
         )
