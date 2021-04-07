@@ -239,17 +239,17 @@ const data = [
         name: 'Chaucha',
         sowing: [2, 3, 4, 6, 9, 10, 11],
         harvest: {
-            from: 20,
-            to: 30
+            from: 90,
+            to: 120
         },
         design: {
             plantsSpacing: {
-                from: 70,
-                to: 80
+                from: 20,
+                to: 30
             },
             rowsSpacing: {
-                from: 35,
-                to: 45
+                from: 70,
+                to: 80
             },
             associate: ['maíz', 'hojas', 'bulbos', 'pimientos', 'berenjenas'],
             rotate: ['frutos', 'bulbos', 'raíces'],
@@ -310,36 +310,270 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: 'green-beans',
-            alt: 'Ícono de chaucha'
+            src: '021-asparagus',
+            alt: 'Ícono de espárragos'
+        }
+    },
+    {
+        name: 'Espinaca',
+        sowing: [0, 1, 2, 3, 4, 5],
+        harvest: {
+            from: 80,
+            to: 90
+        },
+        design: {
+            plantsSpacing: {
+                from: 5,
+                to: 10
+            },
+            rowsSpacing: {
+                from: 35,
+                to: 45
+            },
+            associate: ['repollo', 'coliflor', 'brócoli', 'remolacha'],
+            rotate: ['bulbos', 'raíces', 'legumbres'],
+            shadow: 'sí',
+        },
+        difficulty: 'moderada, fácil',
+        img: {
+            src: '009-spinach',
+            alt: 'Ícono de espinaca'
+        }
+    },
+    {
+        name: 'Frutilla',
+        sowing: [3, 4],
+        harvest: {
+            from: 150,
+            to: 180
+        },
+        design: {
+            plantsSpacing: {
+                from: 25,
+                to: 30
+            },
+            rowsSpacing: {
+                from: 40,
+                to: 45
+            },
+            associate: ['hojas'],
+            rotate: ['bulbos', 'raíces', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'difícil',
+        img: {
+            src: '024-strawberry',
+            alt: 'Ícono de frutilla'
+        }
+    },
+    {
+        name: 'Haba',
+        sowing: [8, 9, 10, 11],
+        harvest: {
+            from: 180,
+            to: 200
+        },
+        design: {
+            plantsSpacing: {
+                from: 25,
+                to: 30
+            },
+            rowsSpacing: {
+                from: 70,
+                to: 80
+            },
+            associate: ['chacra de invierno', 'rabanito', 'lechuga'],
+            rotate: ['chacra de verano', 'hojas', 'frutos'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: '024-strawberry',
+            alt: 'Ícono de frutilla'
+        }
+    },
+    {
+        name: 'Hinojo',
+        sowing: [0, 1, 2, 3],
+        harvest: {
+            from: 150,
+            to: 180
+        },
+        design: {
+            plantsSpacing: {
+                from: 30,
+                to: 35
+            },
+            rowsSpacing: {
+                from: 60,
+                to: 70
+            },
+            associate: ['lechuga', 'acelga', 'bulbos'],
+            rotate: ['bulbos', 'raíces', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'difícil',
+        img: {
+            src: 'fennel',
+            alt: 'Ícono de hinojo'
+        }
+    },
+    {
+        name: 'Lechuga',
+        sowing: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        harvest: {
+            from: 60,
+            to: 90
+        },
+        design: {
+            plantsSpacing: {
+                from: 15,
+                to: 20
+            },
+            rowsSpacing: {
+                from: 25,
+                to: 40
+            },
+            associate: ['bulbos', 'raíces', 'coles', 'acelga'],
+            rotate: ['bulbos', 'raíces', 'legumbres'],
+            shadow: 'sí',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: '002-lettuce',
+            alt: 'Ícono de lechuga'
+        }
+    },
+    {
+        name: 'Melón',
+        sowing: [7, 8, 10],
+        harvest: {
+            from: 130,
+            to: 180
+        },
+        design: {
+            plantsSpacing: {
+                from: 80,
+                to: 90
+            },
+            rowsSpacing: {
+                from: 120,
+                to: 180
+            },
+            associate: ['chacra de verano', 'cercos'],
+            rotate: ['chacra de invierno', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: '016-melon',
+            alt: 'Ícono de melón'
+        }
+    },
+    {
+        name: 'Sandía',
+        sowing: [7, 8, 10],
+        harvest: {
+            from: 130,
+            to: 180
+        },
+        design: {
+            plantsSpacing: {
+                from: 80,
+                to: 90
+            },
+            rowsSpacing: {
+                from: 120,
+                to: 180
+            },
+            associate: ['chacra de verano', 'cercos'],
+            rotate: ['chacra de invierno', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: 'watermelon',
+            alt: 'Ícono de sandía'
+        }
+    },
+    {
+        name: 'Papa',
+        sowing: [0, 1, 7, 8],
+        harvest: {
+            from: 120,
+            to: 150
+        },
+        design: {
+            plantsSpacing: {
+                from: 20,
+                to: 30
+            },
+            rowsSpacing: {
+                from: 70,
+                to: 75
+            },
+            associate: ['lechuga', 'cardo blanco', 'alcaucil'],
+            rotate: ['bulbos', 'raíces', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'difícil',
+        img: {
+            src: '006-potato',
+            alt: 'Ícono de papa'
+        }
+    },
+    {
+        name: 'Pepino',
+        sowing: [7, 8, 9, 10],
+        harvest: {
+            from: 100,
+            to: 130
+        },
+        design: {
+            plantsSpacing: {
+                from: '-',
+                to: '-'
+            },
+            rowsSpacing: {
+                from: 30,
+                to: 40
+            },
+            associate: ['chacra de verano'],
+            rotate: ['chacra de invierno', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: '007-cucumber',
+            alt: 'Ícono de pepino'
         }
     },
     // {
-    //     name: 'Chaucha',
-    //     sowing: [2, 3, 4, 6, 9, 10, 11],
+    //     name: 'Frutilla',
+    //     sowing: [3, 4],
     //     harvest: {
-    //         from: 20,
-    //         to: 30
+    //         from: 150,
+    //         to: 180
     //     },
     //     design: {
     //         plantsSpacing: {
-    //             from: 70,
-    //             to: 80
+    //             from: 25,
+    //             to: 30
     //         },
     //         rowsSpacing: {
-    //             from: 35,
+    //             from: 40,
     //             to: 45
     //         },
-    //         associate: ['maíz', 'hojas', 'bulbos', 'pimientos', 'berenjenas'],
-    //         rotate: ['frutos', 'bulbos', 'raíces'],
+    //         associate: ['hojas'],
+    //         rotate: ['bulbos', 'raíces', 'legumbres'],
     //         shadow: 'no',
     //     },
-    //     difficulty: 'fácil',
+    //     difficulty: 'difícil',
     //     img: {
-    //         src: 'green-beans',
-    //         alt: 'Ícono de chaucha'
+    //         src: '024-strawberry',
+    //         alt: 'Ícono de frutilla'
     //     }
-    //},
+    // },
 ]
 
 export default data;

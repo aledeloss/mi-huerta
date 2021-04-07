@@ -17,32 +17,6 @@ const Records = ({ history }) => {
     console.log('borraste todos')
   }
 
-  // useEffect(() => {
-  //   setSowList(<Container className="records-content">
-  //   {!records.length ?  
-  //     <div className="alert">¡Parece que aún no sembraste nada!</div>
-  //    : 
-  //     records.map((record) => {
-  //       return (
-  //           <SeedCard
-  //             key={record.name} 
-  //             name={record.name}
-  //             sowDate={record.sowDate}
-  //             harvestBegin={record.harvestBegin}
-  //             harvestEnd={record.harvestEnd}
-  //             id={record.id}
-  //             />
-  //       );
-  //     })
-  //   }
-  // </Container>);
-  //   },[records]);
-  
-  //   useEffect(() => {
-  //     console.log('records cambió')
-  //   }, [records])
-
-
   return (
     <div className="records-page-container">
       <Header history={history} />

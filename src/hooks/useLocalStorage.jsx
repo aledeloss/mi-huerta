@@ -20,7 +20,6 @@ const useLocalStorage = () => {
   window.onunload = function () {
     records.length > 0 &&
       localStorage.setItem('records', JSON.stringify(records));
-    records.length > 1 && localStorage.removeItem('records');
   };
   return [records, setRecords];
 };
