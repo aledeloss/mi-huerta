@@ -1,10 +1,15 @@
-import React from "react";
+import { useContext }from "react";
 import { Navbar, Container } from "react-bootstrap";
 import "./Header.css";
 import NavBar from '../NavBar/NavBar';
 import SearchForm from "../SearchForm/SearchForm";
+import RecordsContext from '../../contexts/RecordsContext';
+import LocalStorageModal from '../../components/LocalStorageModal/LocalStorageModal';
+
 
 const Header = ({ history }) => {
+
+  let [records, setRecords] = useContext(RecordsContext);
 
 
   function handleOnClickHome() {
@@ -12,6 +17,7 @@ const Header = ({ history }) => {
 };
 
   return (
+    <>
 <Navbar expand="lg" className="header-container" sticky="top">
   <Container className="navbar-container d-flex justify-content-center">
 
@@ -25,6 +31,8 @@ const Header = ({ history }) => {
 
   </Container>
 </Navbar>
+<LocalStorageModal />
+</>
 
   );
 };

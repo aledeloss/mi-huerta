@@ -21,6 +21,7 @@ function PlantCard({ vegetable}) {
       <Card className="card-container">
           <Card.Body className="plant-card-body">
             <img
+              className="plantcard-img"
               src={`vegetables-imgs/${vegetable.img.src}.svg`}
               alt={vegetable.img.alt}
             ></img>

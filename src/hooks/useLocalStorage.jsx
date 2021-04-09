@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
 import RecordsContext from '../contexts/RecordsContext';
-// import GenericModal from '../components/GenericModal';
+import LocalStorageModal from '../components/LocalStorageModal/LocalStorageModal';
 
 const useLocalStorage = () => {
   let [records, setRecords] = useContext(RecordsContext);

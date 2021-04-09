@@ -9,8 +9,9 @@ const SaveRecordButton = ({ vegetable }) => {
     let handleShow = () => setShow(true);
   
     let [records, setRecords] = useContext(RecordsContext);
-    // const { state, dispatch } = useContext(RecordsContext)
 
+    //USEREDUCER:
+    // const { state, dispatch } = useContext(RecordsContext)
     //function saveRecord(planta) {
     //     let newSeed = {
     //       //id: records.length ? records[records.length-1].id + 1 : 1,

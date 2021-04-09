@@ -1,40 +1,53 @@
-import React, { useState,useContext } from 'react';
-import './SeedCard.css';
-import DayJS from 'react-dayjs';
-import RecordsContext from '../../../../contexts/RecordsContext';
+import React, { useState, useContext } from "react";
+import "./SeedCard.css";
+import DayJS from "react-dayjs";
+import RecordsContext from "../../../../contexts/RecordsContext";
+import { Link } from "react-router-dom";
 
-const SeedCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick}) => {
+const SeedCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) => {
+  const [records, setRecords] = useContext(RecordsContext);
 
-    const renderSowDate = <DayJS format="DD/MM/YY">{ sowDate }</DayJS>
-    const renderHarvestBegin = <DayJS format="DD/MM/YY" add={ { days: harvestBegin } }>{sowDate}</DayJS>
-    const renderHarvestEnd = <DayJS format="DD/MM/YY" add={ { days: harvestEnd } }>{sowDate}</DayJS>
+  const renderSowDate = <DayJS format="DD/MM/YY">{sowDate}</DayJS>;
 
-    const [records, setRecords] = useContext(RecordsContext);
+  const renderHarvestBegin = (
+    <DayJS format="DD/MM/YY" add={{ days: harvestBegin }}>
+      {sowDate}
+    </DayJS>
+  );
 
+  const renderHarvestEnd = (
+    <DayJS format="DD/MM/YY" add={{ days: harvestEnd }}>
+      {sowDate}
+    </DayJS>
+  );
 
-    
-    // let handleDeleteClick = ({id}) => {
-    //     let index = records.findIndex((record) => record.id === id);
-    //     setRecords(records.splice(index, 1));
-    // }
-    
-    let handleDeleteClick = ({id}) => {
-        let newRecords = records.filter(record => record.id !== id);
-        console.log(newRecords);
-        setRecords(newRecords)
-    }
-    
-    return (
-        <div className="seedCard-container">
-            <h5 className="name">{name}</h5>
-            <p className="sowDate">{renderSowDate}</p>               
-            <p className="harvest" >Entre el {renderHarvestBegin} y el {renderHarvestEnd}</p>
-            {/* <p>{id}</p> */}
-            <div className="delete-icon-container" onClick={()=>handleDeleteClick({id})}>X</div>
-        </div>
-    )
+  const handleDeleteClick = ({ id }) => {
+    let newRecords = records.filter((record) => record.id !== id);
+    setRecords(newRecords);
+  };
+
+  let today = new Date(2021, 12, 25)
+  //TODO hacer que ande el color según la fecha. Revisar cuenta de los días.
+
+  return (
+    <div className={`seedCard-container ${(sowDate+harvestBegin) < today < (sowDate+harvestEnd) ? 'green' : ''}`}>
+      <Link to={`/detail/${name}`}>
+        <h5 className="name">{name}</h5>
+      </Link>
+      <p className="sowDate">{renderSowDate}</p>
+      <p className="harvest">
+        Entre el {renderHarvestBegin} y el {renderHarvestEnd}
+      </p>
+      <div
+        className="delete-icon-container"
+        onClick={() => handleDeleteClick({ id })}
+      >
+        X
+      </div>
+    </div>
+  );
 };
 
 export default SeedCard;
 
-//TODO: Agregar botón de editar y de borrar y color verde cuando está para cosechar y rojo cuando se esta por pasar.
+//TODO: color verde cuando está para cosechar y rojo cuando se esta por pasar.

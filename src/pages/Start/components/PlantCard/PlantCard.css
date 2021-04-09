@@ -14,18 +14,19 @@ a:link {
     text-decoration: none;
 }
 
-.vegetable-img-container {
+/* .vegetable-img-container {
     height: 80px;
     width: 100%;
-}
+} */
 
 .card-container img {
-    height: 80px;
-    width: 80px;
-    padding: 10px;
-    margin: 10px;
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    /* margin: 10px; */
     border-radius: 100%;
     background-color: #06d6a0ff;
+    /* object-fit: contain; */
 }
 
 .vegetable-name {

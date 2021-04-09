@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./Records.css";
 import SeedCard from "./components/SeedCard/SeedCard";
 import Header from '../../components/Header/Header';
@@ -7,18 +7,18 @@ import Container from "react-bootstrap/Container";
 import useLocalStorage from '../../hooks/useLocalStorage';
 import DeleteAllButton from '../../components/DeleteAllButton/DeleteAllButton';
 import GoBackButton from '../../components/GoBackButton/GoBackButton';
+import LocalStorageModal from '../../components/LocalStorageModal/LocalStorageModal';
+import RecordsContext from '../../contexts/RecordsContext';
 
 const Records = ({ history }) => {
-  let [records, setRecords] = useLocalStorage();
-  let [sowList, setSowList] = useState();
+  // let [records, setRecords] = useLocalStorage();
+  // let [sowList, setSowList] = useState();
+    let [records, setRecords] = useContext(RecordsContext);
   
-  const handleDeleteAllClick = () => {
-    setRecords([])
-    console.log('borraste todos')
-  }
 
   return (
     <div className="records-page-container">
+      <LocalStorageModal />
       <Header history={history} />
       <Container className="records-content">
 

@@ -17,7 +17,6 @@ const Detail = ({ history }) => {
     return e.name === vegetableName;
   });
 
-
   return (
     <div className='detail-page-container'>
       <Header history={history} />

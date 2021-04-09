@@ -2,7 +2,8 @@ import React from "react";
 import { Modal } from "react-bootstrap";
 import GenericButton from "../GenericButton/GenericButton";
 
-const GenericModal = ({ content, setShow, show, actionLabel, action, }) => {
+const GenericModal = ({ content, setShow, show, actionLabel, action }) => {
+  
   let handleClose = () => setShow(false);
 
   return (
