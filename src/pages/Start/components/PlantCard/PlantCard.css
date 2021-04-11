@@ -14,15 +14,11 @@ a:link {
     text-decoration: none;
 }
 
-/* .vegetable-img-container {
-    height: 80px;
-    width: 100%;
-} */
-
 .card-container img {
     height: 70px;
     width: 70px;
     padding: 5px;
+    margin: 5px;
     /* margin: 10px; */
     border-radius: 100%;
     background-color: #06d6a0ff;
@@ -36,26 +32,11 @@ a:link {
 .long-veg-name {
     font-size: 22px;
 }
-/* .card-container button {
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #ffd166ff;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
-    font-size: 13px;
-    text-transform: uppercase;
-    outline: none;
-    color: #073b4cff;
-} */
-
-.save-button {
-    position: absolute;
-}
 
 .card-container button:hover, .see-more-button:hover {
     background-color: rgb(241, 213, 147);
     cursor: pointer;
+    color:#073b4cff;
 }
 
 .see-more-button {

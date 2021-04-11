@@ -1,15 +1,13 @@
 import React from 'react';
+import Layout from '../../components/Layout/Layout';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
 const Page404 = ({ history }) => {
-
+    const mainContent = 'Parece que la página que estás buscando no existe :('
     return (
-        <div className="page404-container">
-        <Header history={history} />
-            <h1>Parece que la página que estás buscando no existe :(</h1>
-        <Footer />
-        </div>
+        <Layout history={history} mainContent={mainContent} history={history}/>  
+
     )
 }
 

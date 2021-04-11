@@ -9,6 +9,10 @@ const SearchForm = ({ history }) => {
 
     let [keyword, setKeyword] = useState("");
     //TODO: Hacer keyword context para poder buscar desde toda la app.
+    
+    const handleChange = evt => {
+      setKeyword(evt.target.value)
+    }
   
     const handleSubmit = evt => {
       evt.preventDefault()
@@ -20,11 +24,7 @@ const SearchForm = ({ history }) => {
       // console.log(keyword);
     }
   // TODO: Agregar mensaje de no se encontró.
-  
-    const handleChange = evt => {
-      setKeyword(evt.target.value)
-    }
-  
+
     return (
         <Form className="search-form-container" inline onSubmit={handleSubmit}>
         <FormControl 

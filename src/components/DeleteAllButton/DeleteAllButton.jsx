@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import useLocalStorage from '../../hooks/useLocalStorage';
+import { useContext } from 'react';
 import GenericButton from '../GenericButton/GenericButton';
+import RecordsContext from '../../contexts/RecordsContext';
 
 const DeleteAllButton = () => {
 
-    let [records, setRecords] = useLocalStorage();
+    let [records, setRecords] = useContext(RecordsContext);
 
     const handleDeleteAllClick = () => {
       setRecords([])

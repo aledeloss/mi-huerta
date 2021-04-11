@@ -1,54 +1,60 @@
 import React, { useContext } from "react";
 import "./Records.css";
+import Layout from "../../components/Layout/Layout";
 import SeedCard from "./components/SeedCard/SeedCard";
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import Container from "react-bootstrap/Container";
-import useLocalStorage from '../../hooks/useLocalStorage';
-import DeleteAllButton from '../../components/DeleteAllButton/DeleteAllButton';
-import GoBackButton from '../../components/GoBackButton/GoBackButton';
-import LocalStorageModal from '../../components/LocalStorageModal/LocalStorageModal';
-import RecordsContext from '../../contexts/RecordsContext';
+import { Container, Col, Row } from "react-bootstrap/";
+import DeleteAllButton from "../../components/DeleteAllButton/DeleteAllButton";
+import GoBackButton from "../../components/GoBackButton/GoBackButton";
+import RecordsContext from "../../contexts/RecordsContext";
 
 const Records = ({ history }) => {
-  // let [records, setRecords] = useLocalStorage();
-  // let [sowList, setSowList] = useState();
-    let [records, setRecords] = useContext(RecordsContext);
-  
+  let [records, setRecords] = useContext(RecordsContext);
+
+  const recordsHeader = (
+    <Row className="records-header-container">
+      <Col xs={12} md={4} className="plant-name-container">
+        <h5>Planta</h5>
+      </Col>
+      <Col>
+        <h5>Siembra</h5>
+      </Col>
+      <Col>
+        <h5>Cosecha</h5>
+      </Col>
+    </Row>
+  );
+
+  const recordsList = records.map((record) => {
+    return (
+      <SeedCard
+        key={record.name}
+        name={record.name}
+        sowDate={record.sowDate}
+        harvestBegin={record.harvestBegin}
+        harvestEnd={record.harvestEnd}
+        id={record.id}
+      />
+    );
+  });
+
+  const recordsPageContent = (
+    <Container fluid="md" className="records-page-content">
+      <GoBackButton history={history} />
+      <div className="records-list">
+        {records.length ? recordsHeader : ""}
+        {!records.length ? (
+          <div className="alert">¡Parece que aún no sembraste nada!</div>
+        ) : (
+          recordsList
+        )}
+        {records.length ? <DeleteAllButton /> : ""}
+      </div>
+    </Container>
+  );
 
   return (
-    <div className="records-page-container">
-      <LocalStorageModal />
-      <Header history={history} />
-      <Container className="records-content">
-
-      <GoBackButton history={history}/>
-
-        {!records.length ?  
-          <div className="alert">¡Parece que aún no sembraste nada!</div>
-         : 
-          records.map((record) => {
-            return (
-                <SeedCard
-                  key={record.name} 
-                  name={record.name}
-                  sowDate={record.sowDate}
-                  harvestBegin={record.harvestBegin}
-                  harvestEnd={record.harvestEnd}
-                  id={record.id}
-                  />
-            );
-          })
-        }
-        {records.length? <DeleteAllButton /> : ''}
-        
-      </Container>
-      <Footer />
-
-    </div>
+    <Layout mainContent={recordsPageContent} bgColor="#ef476fff" history={history}/>
   );
 };
 
 export default Records;
-
-//TODO: Ver overflow y scroll.

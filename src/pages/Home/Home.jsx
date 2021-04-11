@@ -24,3 +24,5 @@ const Home = ({ history }) => {
 };
 
 export default Home;
+
+//TODO: ver diseño en el celular que se ve muy feo.

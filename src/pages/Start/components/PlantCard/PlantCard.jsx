@@ -1,23 +1,12 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-restricted-globals */
-
 import "./PlantCard.css";
 import { Card } from "react-bootstrap";
 import CosechaData from "../CosechaData/CosechaData";
 import { Link } from "react-router-dom";
 import SaveRecordButton from '../../../../components/SaveRecordButton/SaveRecordButton';
-import GenericButton from '../../../../components/GenericButton/GenericButton';
-
-//TODO: If vegetable.name.length < 13, achicar la letra. Y además hacer más espacio para que entre todo.
 
 function PlantCard({ vegetable}) {
 
-  const handleSeeMoreClick = () => {
-    history.push(`/detail/${vegetable.name}`);
-  }
-
-  return (
-    
+  return (    
       <Card className="card-container">
           <Card.Body className="plant-card-body">
             <img
@@ -30,8 +19,7 @@ function PlantCard({ vegetable}) {
           </Card.Body>
         <Link to={`/detail/${vegetable.name}`} className="see-more-button">Ver más</Link>
         <SaveRecordButton className="save-button" vegetable={vegetable}/>
-      </Card>
-      
+      </Card> 
   );
 }
 

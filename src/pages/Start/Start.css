@@ -1,20 +1,10 @@
-.start-container {
-    min-height: 100vh;
-    background-color: #118ab2ff;
-    color: #073b4cff;
+.start-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .month {
     font-weight: 800;
 }
 
-.start-content {
-    min-height: 80.5vh;
-    margin-top: 90px;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}

@@ -1,17 +1,6 @@
-.about-page-container {
-    min-height: 100vh;
-    background-color: #ffd166ff;
-    color: #073b4cff;
-    display: flex;
-    flex-direction: column;
-}
-
 .about-content {
-    min-height: 80.5vh;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 70px;
-    padding-top: 20px;
 }

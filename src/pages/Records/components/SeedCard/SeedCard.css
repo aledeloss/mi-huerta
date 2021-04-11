@@ -1,22 +1,30 @@
 .seedCard-container {
     background-color: #ffd166ff;
     width: 100%;
+    height: 35px;
     margin: 10px;
-    height: 40px;
     border-radius: 25px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .delete-icon-container {
     width: 25px;
     background-color: rgb(252, 193, 57);
     border-radius: 50%;
+    align-self: center;
 }
 
 .green {
     background-color: #06d6a0ff;
 }
+
+a {
+    text-decoration: none
+}
+
+/* TODO: hacer height responsive para que en mobile se vea bien. */

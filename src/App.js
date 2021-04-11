@@ -5,18 +5,13 @@ import Routes from "./Routes";
 import { RecordsProvider } from "./contexts/RecordsContext";
 
 function App() {
-
   return (
     <div className="App">
-      {/* <SearchContext> */}
       <RecordsProvider>
-        <Routes />
-      </RecordsProvider>        
-      {/* </SearchContext> */}
-
+          <Routes />
+      </RecordsProvider>
     </div>
   );
 }
 
 export default App;
-
