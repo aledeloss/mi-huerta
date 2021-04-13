@@ -5,7 +5,7 @@ import NavigationLink from "../NavigationLink/NavigationLink";
 
 const NavBar = () => {
   return (
-    <Nav className="mr-auto navBar">
+    <Nav className="navBar">
      <NavigationLink
         to="/about"
         label="Sobre este sitio"

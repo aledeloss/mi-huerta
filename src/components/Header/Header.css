@@ -11,7 +11,6 @@
 .brand {
     font-family: 'Pacifico', cursive;
     color: #073b4cff; /* NOTA: No funciona este color... */
-    color: red;
     text-decoration: none;
     font-size: 2em;
 }
@@ -34,9 +33,18 @@
     justify-content: center;
 }
 
-.mr-auto {
-    /* border: solid gold; */
-    align-self: flex-end;
+.navbar-elements {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .submit-btn {

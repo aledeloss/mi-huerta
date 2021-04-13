@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Navbar, Container } from "react-bootstrap";
+import { Container, Navbar, Row, Col } from "react-bootstrap";
 import "./Header.css";
 import NavBar from "../NavBar/NavBar";
 import SearchForm from "../SearchForm/SearchForm";
@@ -25,9 +25,15 @@ const Header = ({ history }) => {
             aria-controls="basic-navbar-nav"
           />
 
-          <Navbar.Collapse id="basic-navbar-nav navbar-collapse">
-            <SearchForm history={history} />
-            <NavBar />
+          <Navbar.Collapse id="basic-navbar-nav navbar-collapse" className="navbar-elements">
+            <Row>
+            <Col xs={12} lg={6} >
+              <SearchForm history={history} />
+            </Col>
+            <Col xs={12} lg={6} className="nav-menu">
+              <NavBar />
+            </Col>
+            </Row>
           </Navbar.Collapse>
         </Container>
       </Navbar>

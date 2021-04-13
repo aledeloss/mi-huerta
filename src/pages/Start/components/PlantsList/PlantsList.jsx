@@ -1,8 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable array-callback-return */
-/* eslint-disable react/jsx-no-duplicate-props */
-/* eslint-disable no-restricted-globals */
-
 import React from "react";
 import "./PlantsList.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -30,8 +25,8 @@ const PlantsList = () => {
   );
 
   return (
-    <Container className="PlantsList-container">
-        <Row className="PlantsList-content">{CardList}</Row>
+    <Container className="plants-list-container justify-content-md-center ">
+        <Row className="plants-list-content">{CardList}</Row>
     </Container>
   );
 };

@@ -548,32 +548,58 @@ const data = [
             alt: 'Ícono de pepino'
         }
     },
-    // {
-    //     name: 'Frutilla',
-    //     sowing: [3, 4],
-    //     harvest: {
-    //         from: 150,
-    //         to: 180
-    //     },
-    //     design: {
-    //         plantsSpacing: {
-    //             from: 25,
-    //             to: 30
-    //         },
-    //         rowsSpacing: {
-    //             from: 40,
-    //             to: 45
-    //         },
-    //         associate: ['hojas'],
-    //         rotate: ['bulbos', 'raíces', 'legumbres'],
-    //         shadow: 'no',
-    //     },
-    //     difficulty: 'difícil',
-    //     img: {
-    //         src: '024-strawberry',
-    //         alt: 'Ícono de frutilla'
-    //     }
-    // },
+    {
+        name: 'Pimiento',
+        sowing: [6, 7, 8],
+        harvest: {
+            from: 180,
+            to: 200
+        },
+        design: {
+            plantsSpacing: {
+                from: 40,
+                to: 45
+            },
+            rowsSpacing: {
+                from: 70,
+                to: 80
+            },
+            associate: ['zanahora', 'rabanito', 'albahaca'],
+            rotate: ['bulbos', 'hojas', 'legumbres'],
+            shadow: 'sí',
+        },
+        difficulty: 'moderada',
+        img: {
+            src: '30-green chili pepper',
+            alt: 'Ícono de pimiento'
+        }
+    },
+    {
+        name: 'Puerro',
+        sowing: [1, 2, 3, 7, 8],
+        harvest: {
+            from: 120,
+            to: 150
+        },
+        design: {
+            plantsSpacing: {
+                from: 5,
+                to: 10
+            },
+            rowsSpacing: {
+                from: 40,
+                to: 45
+            },
+            associate: ['zanahora', 'apio', 'lechuga'],
+            rotate: ['bulbos', 'hojas', 'legumbres'],
+            shadow: 'sí',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: 'leek',
+            alt: 'Ícono de pimiento'
+        }
+    },
 ]
 
 export default data;

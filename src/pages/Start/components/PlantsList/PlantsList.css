@@ -1,5 +1,5 @@
-.PlantsList-content {
-    /* display: flex;
+.plants-list-container {
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 }

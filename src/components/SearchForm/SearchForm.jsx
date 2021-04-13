@@ -34,7 +34,7 @@ const SearchForm = ({ history }) => {
           value={keyword} 
           onChange={handleChange}
         />
-        <Button className="submit-button" onClick={handleSubmit}>
+        <Button className="submit-button ml-1" onClick={handleSubmit}>
           <FontAwesomeIcon icon={faSearch} />
         </Button>
       </Form>
