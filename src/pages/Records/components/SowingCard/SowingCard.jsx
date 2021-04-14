@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import "./SeedCard.css";
+import "./SowingCard.css";
 import DayJS from "react-dayjs";
 import RecordsContext from "../../../../contexts/RecordsContext";
 import { Link } from "react-router-dom";
 import { Col, Row } from "react-bootstrap";
 
-const SeedCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) => {
+const SowingCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) => {
   const [records, setRecords] = useContext(RecordsContext);
 
   const renderSowDate = <DayJS format="DD/MM/YY">{sowDate}</DayJS>;
@@ -34,27 +34,29 @@ const SeedCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) => {
         sowDate + harvestBegin < today < sowDate + harvestEnd ? "green" : ""
       }`}
     >
-      <Col xs={12} md={4} className="sowing-name-container">
+      <Col xs={12} md={3} className="sowing-name-container">
         <Link to={`/detail/${name}`}>
           <h5 className="name">{name}</h5>
         </Link>
       </Col>
-      <Col>
+      <Col xs={3} md={2}>
       {renderSowDate}
       </Col>
-      <Col>
+      <Col xs={6} md={6}>
           Entre el {renderHarvestBegin} y el {renderHarvestEnd}
       </Col>
-      <div
-        className="delete-icon-container"
-        onClick={() => handleDeleteClick({ id })}
+      <Col xs={1}
       >
+        <div
+          className="delete-icon-container"
+          onClick={() => handleDeleteClick({ id })}>
         X
-      </div>
+        </div>
+      </Col>
     </Row>
   );
 };
 
-export default SeedCard;
+export default SowingCard;
 
 //TODO: color verde cuando está para cosechar y rojo cuando se esta por pasar.

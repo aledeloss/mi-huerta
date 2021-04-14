@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Records.css";
 import Layout from "../../components/Layout/Layout";
-import SeedCard from "./components/SeedCard/SeedCard";
+import SowingCard from "./components/SowingCard/SowingCard";
 import { Container, Col, Row } from "react-bootstrap/";
 import DeleteAllButton from "../../components/DeleteAllButton/DeleteAllButton";
 import GoBackButton from "../../components/GoBackButton/GoBackButton";
@@ -12,21 +12,22 @@ const Records = ({ history }) => {
 
   const recordsHeader = (
     <Row className="records-header-container">
-      <Col xs={12} md={4} className="plant-name-container">
+      <Col  xs={12} md={3}  className="plant-name-container">
         <h5>Planta</h5>
       </Col>
-      <Col>
+      <Col xs={3} md={2}>
         <h5>Siembra</h5>
       </Col>
-      <Col>
+      <Col xs={6} md={6}>
         <h5>Cosecha</h5>
       </Col>
+      <Col xs={1}></Col>
     </Row>
   );
 
   const recordsList = records.map((record) => {
     return (
-      <SeedCard
+      <SowingCard
         key={record.name}
         name={record.name}
         sowDate={record.sowDate}

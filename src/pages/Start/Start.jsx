@@ -23,7 +23,7 @@ const Start = ({ history }) => {
   ];
 
   const startPageContent = (
-    <Container className="start-content">
+    <Container fluid="md" className="start-content">
       <div className="main">
         <h2>
           Estamos en <span className="month">{months[month]}</span>.

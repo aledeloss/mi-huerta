@@ -600,6 +600,240 @@ const data = [
             alt: 'Ícono de pimiento'
         }
     },
+    {
+        name: 'Rabanito',
+        sowing: [1, 2, 3, 4, 5, 8, 9, 10, 11],
+        harvest: {
+            from: 30,
+            to: 40
+        },
+        design: {
+            plantsSpacing: {
+                from: 5,
+                to: 5
+            },
+            rowsSpacing: {
+                from: 30,
+                to: 40
+            },
+            associate: ['taco de reina', 'ajenjo', 'zanahoria', 'hojas', 'arvejas'],
+            rotate: ['raíces', 'hojas', 'legumbres'],
+            shadow: 'sí',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: '028-radishes',
+            alt: 'Ícono de rabanito'
+        }
+    },
+    {
+        name: 'Radicheta',
+        sowing: [1, 2, 3, 4, 7, 8, 9],
+        harvest: {
+            from: 80,
+            to: 100
+        },
+        design: {
+            plantsSpacing: {
+                from: 'chorrillo apretado',
+                to: '-'
+            },
+            rowsSpacing: {
+                from: 30,
+                to: 35
+            },
+            associate: ['coles', 'bulbos', 'raíces'],
+            rotate: ['bulbos', 'hojas', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'moderada',
+        img: {
+            src: '',
+            alt: 'Ícono de radicheta'
+        }
+    },
+    {
+        name: 'Remolacha',
+        sowing: [2, 3, 4, 5, 7, 8, 9, 10, 11],
+        harvest: {
+            from: 100,
+            to: 130
+        },
+        design: {
+            plantsSpacing: {
+                from: 8,
+                to: 10
+            },
+            rowsSpacing: {
+                from: 35,
+                to: 45
+            },
+            associate: ['repollo', 'coliflor', 'lechuga', 'ajo'],
+            rotate: ['bulbos', 'hojas', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'moderada',
+        img: {
+            src: 'beet',
+            alt: 'Ícono de remolacha'
+        }
+    },
+    {
+        name: 'Repollo',
+        sowing: [1, 2, 3, 8, 9, 10],
+        harvest: {
+            from: 120,
+            to: 150
+        },
+        design: {
+            plantsSpacing: {
+                from: 40,
+                to: 50
+            },
+            rowsSpacing: {
+                from: 70,
+                to: 80
+            },
+            associate: ['zanahora', 'romero', 'salvia', 'taco de reina', 'ajenjo', 'lechuga'],
+            rotate: ['bulbos', 'hojas', 'raíces'],
+            shadow: 'no',
+        },
+        difficulty: 'moderada',
+        img: {
+            src: 'cabbage',
+            alt: 'Ícono de repollo'
+        }
+    },
+    {
+        name: 'Rúcula',
+        sowing: [7, 8, 9],
+        harvest: {
+            from: 60,
+            to: 80
+        },
+        design: {
+            plantsSpacing: {
+                from: 'chorrillo apretado',
+                to: '-'
+            },
+            rowsSpacing: {
+                from: 30,
+                to: 40
+            },
+            associate: ['zanahora', 'taco de reina', 'ajenjo', 'apio', 'diente de león'],
+            rotate: ['bulbos', 'raíces', 'raíces'],
+            shadow: 'sí',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: 'arugula',
+            alt: 'Ícono de rúcula'
+        }
+    },
+    {
+        name: 'Tomate',
+        sowing: [6, 7, 8, 9],
+        harvest: {
+            from: 120,
+            to: 150
+        },
+        design: {
+            plantsSpacing: {
+                from: 20,
+                to: 40
+            },
+            rowsSpacing: {
+                from: 80,
+                to: 90
+            },
+            associate: ['tabaco', 'repollo', 'borraja', 'copete', 'albahaca','hojas'],
+            rotate: ['bulbos', 'hojas', 'raíces'],
+            shadow: 'no',
+        },
+        difficulty: 'moderada',
+        img: {
+            src: 'tomato',
+            alt: 'Ícono de tomate'
+        }
+    },
+    {
+        name: 'Zanahoria',
+        sowing: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        harvest: {
+            from: 150,
+            to: 180
+        },
+        design: {
+            plantsSpacing: {
+                from: 'chorrillo ralo',
+                to: '-'
+            },
+            rowsSpacing: {
+                from: 40,
+                to: 45
+            },
+            associate: ['repollo', 'romero', 'salvia', 'cebolla', 'ajenjo', 'puerro', 'lechuga'],
+            rotate: ['bulbos', 'hojas', 'raíces'],
+            shadow: 'no',
+        },
+        difficulty: 'moderada',
+        img: {
+            src: 'carrot',
+            alt: 'Ícono de zanahoria'
+        }
+    },
+    {
+        name: 'Zapallo',
+        sowing: [7, 8, 9, 10],
+        harvest: {
+            from: 150,
+            to: 180
+        },
+        design: {
+            plantsSpacing: {
+                from: 100,
+                to: 150
+            },
+            rowsSpacing: {
+                from: 200,
+                to: 250
+            },
+            associate: ['taco de reina', 'chacra de verano'],
+            rotate: ['chacra de invierno', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: '008-pumpkin',
+            alt: 'Ícono de calabaza'
+        }
+    },
+    {
+        name: 'Zapallito y zuccini',
+        sowing: [0, 7, 8, 9, 10, 11],
+        harvest: {
+            from: 90,
+            to: 100
+        },
+        design: {
+            plantsSpacing: {
+                from: 80,
+                to: 100
+            },
+            rowsSpacing: {
+                from: 80,
+                to: 100
+            },
+            associate: ['taco de reina', 'maíz (surco)'],
+            rotate: ['chacra de invierno', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: 'zucchini',
+            alt: 'Ícono de zapallito'
+        }
+    }
 ]
 
 export default data;

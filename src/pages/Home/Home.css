@@ -21,5 +21,6 @@
 }
 
 .carrot-container {
-    /* border: solid firebrick; */
+    position: relative;
+    left: -50px;
 }
