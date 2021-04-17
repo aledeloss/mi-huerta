@@ -13,6 +13,7 @@ import Records from './pages/Records/Records';
 import About from './pages/About/About';
 import Detail from './pages/Detail/Detail';
 import Page404 from './pages/Page404/Page404';
+import NoResults from './pages/NoResults/NoResults';
 
 const Routes = () => {
 
@@ -25,6 +26,7 @@ const Routes = () => {
                 <Route exact path='/about' component={About} />
                 <Route exact path='/start' component={Start} />
                 <Route exact path='/records' component={Records} />
+                <Route exact path='/noresults' component={NoResults} />
                 <Route exact path='/detail/:vegetable' component={Detail} />
                 <Route  component={Page404} />
             </Switch>

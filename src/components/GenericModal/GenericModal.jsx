@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import GenericButton from "../GenericButton/GenericButton";
 
-const GenericModal = ({ content, setShow, show, actionLabel, action }) => {
+const GenericModal = ({ content, setShow, show, actionLabel, action, secondaryLabel, secondaryHandleAction }) => {
   
   let handleClose = () => setShow(false);
 
@@ -10,11 +10,14 @@ const GenericModal = ({ content, setShow, show, actionLabel, action }) => {
     <Modal show={show} onHide={handleClose}>
       <Modal.Body>{content}</Modal.Body>
       <Modal.Footer>
-        <GenericButton label="Cancelar" handleClick={handleClose} />
+        <GenericButton 
+          label={secondaryLabel || 'Cancelar'}
+          handleClick={secondaryHandleAction || handleClose} />
         <GenericButton label={actionLabel} handleClick={action}/>
       </Modal.Footer> 
     </Modal>
   );
 };
+
 
 export default GenericModal;

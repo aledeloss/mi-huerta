@@ -184,7 +184,7 @@ const data = [
         }
     },
     {
-        name: 'Brócoli y coliflor',
+        name: 'Brócoli',
         sowing: [1, 2, 3, 8, 9],
         harvest: {
             from: 250,
@@ -206,11 +206,37 @@ const data = [
         difficulty: 'difícil',
         img: {
             src: '017-broccoli',
-            alt: 'Ícono de de brócoli y coliflor'
+            alt: 'Ícono de brócoli'
         }
     },
     {
-        name: 'Cebolla y verdeo',
+        name: 'Coliflor',
+        sowing: [1, 2, 3, 8, 9],
+        harvest: {
+            from: 250,
+            to: 270
+        },
+        design: {
+            plantsSpacing: {
+                from: 40,
+                to: 50
+            },
+            rowsSpacing: {
+                from: 70,
+                to: 80
+            },
+            associate: ['taco de reina', 'ajenjo', 'remolacha'],
+            rotate: ['bulbos', 'raíces', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'difícil',
+        img: {
+            src: '015-cauliflower',
+            alt: 'Ícono de coliflor'
+        }
+    },
+    {
+        name: 'Cebolla',
         sowing: [1, 2, 3],
         harvest: {
             from: 250,
@@ -232,7 +258,33 @@ const data = [
         difficulty: 'fácil',
         img: {
             src: '036-onion',
-            alt: 'Ícono de cebolla y verdeo'
+            alt: 'Ícono de cebolla'
+        }
+    },
+    {
+        name: 'Cebolla de verdeo',
+        sowing: [1, 2, 3],
+        harvest: {
+            from: 250,
+            to: 270
+        },
+        design: {
+            plantsSpacing: {
+                from: 10,
+                to: 15
+            },
+            rowsSpacing: {
+                from: 35,
+                to: 45
+            },
+            associate: ['zanahoria', 'lechuga', 'repollo', 'remolacha'],
+            rotate: ['raíces', 'hojas', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: 'green-onion',
+            alt: 'Ícono de cebolla de verdeo'
         }
     },
     {
@@ -809,7 +861,33 @@ const data = [
         }
     },
     {
-        name: 'Zapallito y zuccini',
+        name: 'Zapallito',
+        sowing: [0, 7, 8, 9, 10, 11],
+        harvest: {
+            from: 90,
+            to: 100
+        },
+        design: {
+            plantsSpacing: {
+                from: 80,
+                to: 100
+            },
+            rowsSpacing: {
+                from: 80,
+                to: 100
+            },
+            associate: ['taco de reina', 'maíz (surco)'],
+            rotate: ['chacra de invierno', 'legumbres'],
+            shadow: 'no',
+        },
+        difficulty: 'fácil',
+        img: {
+            src: '',
+            alt: 'Ícono de zapallito'
+        }
+    },
+    {
+        name: 'Zuccini',
         sowing: [0, 7, 8, 9, 10, 11],
         harvest: {
             from: 90,
@@ -831,7 +909,7 @@ const data = [
         difficulty: 'fácil',
         img: {
             src: 'zucchini',
-            alt: 'Ícono de zapallito'
+            alt: 'Ícono de zuccini'
         }
     }
 ]
