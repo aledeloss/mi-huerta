@@ -2,6 +2,7 @@ import "./Start.css";
 import Layout from "../../components/Layout/Layout";
 import PlantsList from "./components/PlantsList/PlantsList";
 import Container from "react-bootstrap/Container";
+import { SowingsProvider} from "../../contexts/SowingsContext";
 
 const Start = ({ history }) => {
 
@@ -30,6 +31,8 @@ const Start = ({ history }) => {
         </h2>
         <h2>Estas plantas podés sembrar este mes:</h2>
         <PlantsList />
+        <SowingsProvider>
+        </SowingsProvider>
       </div>
     </Container>
   );

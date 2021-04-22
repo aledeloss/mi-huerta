@@ -1,17 +1,18 @@
 import { useContext, useState } from "react";
-import RecordsContext from "../../contexts/RecordsContext";
+import SowingsContext from "../../contexts/SowingsContext";
 import GenericModal from "../GenericModal/GenericModal";
 
 const LocalStorageModal = () => {
   let [show, setShow] = useState(false);
-  let [records, setRecords] = useContext(RecordsContext);
+  let { state, dispatch} = useContext(SowingsContext);
 
   let handleRecoverClick = () => {
-    setRecords(JSON.parse(localStorage.getItem("records")));
+    dispatch({ type: "RECOVER_ALL" })
     setShow(false);
   };
 
   let handleEraseRecords = () => {
+    dispatch({ type: "DELETE_ALL" })
     localStorage.removeItem("records");
     setShow(false);
   };
@@ -23,8 +24,8 @@ const LocalStorageModal = () => {
   };
 
   window.onunload = function () {
-    records.length > 0 &&
-      localStorage.setItem("records", JSON.stringify(records));
+    state.records.length > 0 &&
+      localStorage.setItem("records", JSON.stringify(state.records));
   };
 
   return (

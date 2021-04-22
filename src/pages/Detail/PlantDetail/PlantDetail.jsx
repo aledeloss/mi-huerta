@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./PlantDetail.css";
 import { useParams } from "react-router-dom";
 import data from "../../../data/data.js";
-import RecordsContext from "../../../contexts/RecordsContext";
+import SowingsContext from "../../../contexts/SowingsContext";
 import SaveRecordButton from "../../../components/SaveRecordButton/SaveRecordButton";
 import DayJS from "react-dayjs";
 
@@ -34,13 +34,14 @@ const PlantDetail = ({ handleShow }) => {
     return monthsArray;
   };
 
-  let [records, setRecords] = useContext(RecordsContext);
+  // let [records, setRecords] = useContext(RecordsContext);
+  let { state } = useContext(SowingsContext);
 
-  const vegSowings = records.filter(
+  const vegSowings = state.records.filter(
     (record) => record.name === vegetableData.name
   );
 
-  const sowingsRender = records.find((e) => e.name === vegetableData.name)
+  const sowingsRender = state.records.find((e) => e.name === vegetableData.name)
     ? vegSowings.map((sowing) => (
         <p>
           <DayJS format="DD/MM/YY">{sowing.sowDate.toString()}</DayJS>

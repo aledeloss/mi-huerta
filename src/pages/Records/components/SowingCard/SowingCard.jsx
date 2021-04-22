@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import "./SowingCard.css";
 import DayJS from "react-dayjs";
-import RecordsContext from "../../../../contexts/RecordsContext";
+import SowingsContext from "../../../../contexts/SowingsContext";
 import { Link } from "react-router-dom";
 import { Col, Row } from "react-bootstrap";
 
 const SowingCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) => {
-  const [records, setRecords] = useContext(RecordsContext);
+  const { dispatch } = useContext(SowingsContext);
 
   const renderSowDate = <DayJS format="DD/MM/YY">{sowDate}</DayJS>;
   const renderHarvestBegin = (
@@ -20,9 +20,9 @@ const SowingCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) =>
     </DayJS>
   );
 
-  const handleDeleteClick = ({ id }) => {
-    let newRecords = records.filter((record) => record.id !== id);
-    setRecords(newRecords);
+  const handleDeleteClick = ({id}) => {
+    console.log(`borraste el ${id}`)
+    dispatch({ type: "DELETE_RECORD", payload: id })
   };
 
   let today = new Date(2021, 12, 25);
@@ -49,7 +49,7 @@ const SowingCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) =>
       >
         <div
           className="delete-icon-container"
-          onClick={() => handleDeleteClick({ id })}>
+          onClick={()=>handleDeleteClick({id})}>
         X
         </div>
       </Col>

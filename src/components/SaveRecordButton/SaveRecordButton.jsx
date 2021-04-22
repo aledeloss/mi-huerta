@@ -1,66 +1,48 @@
-import { useState, useContext } from 'react';
-import GenericButton from '../GenericButton/GenericButton';
-import GenericModal from '../GenericModal/GenericModal';
-import RecordsContext from '../../contexts/RecordsContext'
+import { useState, useContext } from "react";
+import GenericButton from "../GenericButton/GenericButton";
+import GenericModal from "../GenericModal/GenericModal";
+import SowingsContext from "../../contexts/SowingsContext";
+import { SowingsProvider } from "../../contexts/SowingsContext";
 
 const SaveRecordButton = ({ vegetable }) => {
+  let [show, setShow] = useState(false);
+  let handleShow = () => setShow(true);
 
-    let [show, setShow] = useState(false);
-    let handleShow = () => setShow(true);
-  
-    let [records, setRecords] = useContext(RecordsContext);
+  const { state, dispatch } = useContext(SowingsContext);
 
-    //USEREDUCER:
-    // const { state, dispatch } = useContext(RecordsContext)
-    //function saveRecord(planta) {
-    //     let newSeed = {
-    //       //id: records.length ? records[records.length-1].id + 1 : 1,
-    //       name: vegetable.name,
-    //       sowDate: new Date(),
-    //       harvestBegin: vegetable.harvest.from,
-    //       harvestEnd: vegetable.harvest.to,
-    //     }
-    //     dispatch({
-    //         type: "SOW",
-    //         value: newSeed
-    //     })
-    // };
+    let newSowing = {
+      id: state.records.length ? state.records[state.records.length - 1].id + 1 : 1,
+      name: vegetable.name,
+      sowDate: new Date(),
+      harvestBegin: vegetable.harvest.from,
+      harvestEnd: vegetable.harvest.to,
+    };
 
-    function saveRecord(vegetable) {
-        console.log(vegetable)
-      let newSow = {
-        id: records.length ? records[records.length-1].id + 1 : 1,
-        name: vegetable.name,
-        sowDate: new Date(),
-        harvestBegin: vegetable.harvest.from,
-        harvestEnd: vegetable.harvest.to,
-      };
-      if (records.length === 0) {
-        setRecords([newSow]);
-      } else {
-        setRecords([...records, newSow]);
-      }
-    }
-    // TODO: Make sow a class.
+  // TODO: Make sow a class.
 
   let sowingModalContent = `Vas a registrar tu siembra de ${vegetable.name.toLowerCase()} con fecha de hoy en tu calendario.`;
   let sowingModalActionLabel = "Sí, sembrar";
 
-    return (
-        <>
-        <GenericButton label="Sembrar" handleClick={handleShow} vegetable={vegetable}/>
-
-        <GenericModal
-        show={show}
-        content={sowingModalContent}
-        setShow={setShow}
-        actionLabel={sowingModalActionLabel}
-        action={() => {
-          saveRecord(vegetable);
-          setShow(false);
-        }}
+  return (
+    <>
+      <GenericButton
+        label="Sembrar"
+        handleClick={handleShow}
+        vegetable={vegetable}
       />
+      <SowingsProvider>
+        <GenericModal
+          show={show}
+          content={sowingModalContent}
+          setShow={setShow}
+          actionLabel={sowingModalActionLabel}
+          action={() => {
+            dispatch({ type: "ADD", payload: newSowing })
+            setShow(false);
+          }}
+        />
+      </SowingsProvider>
     </>
-    )
-}
+  );
+};
 export default SaveRecordButton;

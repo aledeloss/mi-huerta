@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import GenericButton from '../GenericButton/GenericButton';
-import RecordsContext from '../../contexts/RecordsContext';
+import SowingsContext from '../../contexts/SowingsContext';
 
 const DeleteAllButton = () => {
 
-    let [records, setRecords] = useContext(RecordsContext);
+    let { dispatch} = useContext(SowingsContext);
 
     const handleDeleteAllClick = () => {
-      setRecords([])
+      dispatch({ type: "DELETE_ALL" })
       console.log('borraste todos')
     }
 

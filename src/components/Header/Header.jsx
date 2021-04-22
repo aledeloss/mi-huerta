@@ -1,13 +1,10 @@
-import { useContext } from "react";
 import { Container, Navbar, Row, Col } from "react-bootstrap";
 import "./Header.css";
 import NavBar from "../NavBar/NavBar";
 import SearchForm from "../SearchForm/SearchForm";
-import RecordsContext from "../../contexts/RecordsContext";
 import LocalStorageModal from "../../components/LocalStorageModal/LocalStorageModal";
 
 const Header = ({ history }) => {
-  let [records, setRecords] = useContext(RecordsContext);
 
   function handleOnClickHome() {
     history.push("/");

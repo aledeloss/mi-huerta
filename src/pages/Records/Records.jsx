@@ -5,10 +5,10 @@ import SowingCard from "./components/SowingCard/SowingCard";
 import { Container, Col, Row } from "react-bootstrap/";
 import DeleteAllButton from "../../components/DeleteAllButton/DeleteAllButton";
 import GoBackButton from "../../components/GoBackButton/GoBackButton";
-import RecordsContext from "../../contexts/RecordsContext";
+import SowingsContext from "../../contexts/SowingsContext";
 
 const Records = ({ history }) => {
-  let [records, setRecords] = useContext(RecordsContext);
+  let { state } = useContext(SowingsContext);
 
   const recordsHeader = (
     <Row className="records-header-container">
@@ -25,15 +25,15 @@ const Records = ({ history }) => {
     </Row>
   );
 
-  const recordsList = records.map((record) => {
+  const sowingsList = state.records.map((sowing) => {
     return (
       <SowingCard
-        key={record.name}
-        name={record.name}
-        sowDate={record.sowDate}
-        harvestBegin={record.harvestBegin}
-        harvestEnd={record.harvestEnd}
-        id={record.id}
+        key={sowing.name}
+        name={sowing.name}
+        sowDate={sowing.sowDate}
+        harvestBegin={sowing.harvestBegin}
+        harvestEnd={sowing.harvestEnd}
+        id={sowing.id}
       />
     );
   });
@@ -42,13 +42,13 @@ const Records = ({ history }) => {
     <Container fluid="md" className="records-page-content">
       <GoBackButton history={history} />
       <div className="records-list">
-        {records.length ? recordsHeader : ""}
-        {!records.length ? (
+        {state.records.length ? recordsHeader : ""}
+        {!state.records.length ? (
           <div className="alert">¡Parece que aún no sembraste nada!</div>
         ) : (
-          recordsList
+          sowingsList
         )}
-        {records.length ? <DeleteAllButton /> : ""}
+        {state.records.length ? <DeleteAllButton /> : ""}
       </div>
     </Container>
   );

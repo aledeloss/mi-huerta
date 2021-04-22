@@ -4,7 +4,7 @@ import CosechaData from "../CosechaData/CosechaData";
 import { Link } from "react-router-dom";
 import SaveRecordButton from '../../../../components/SaveRecordButton/SaveRecordButton';
 
-function PlantCard({ vegetable}) {
+const PlantCard = ({ vegetable}) => {
 
   return (    
       <Card className="card-container">
