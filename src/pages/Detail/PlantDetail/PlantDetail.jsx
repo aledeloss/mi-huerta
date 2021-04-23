@@ -7,34 +7,11 @@ import SaveRecordButton from "../../../components/SaveRecordButton/SaveRecordBut
 import DayJS from "react-dayjs";
 
 const PlantDetail = ({ handleShow }) => {
-  const months = [
-    "enero",
-    "febrero",
-    "marzo",
-    "abril",
-    "mayo",
-    "junio",
-    "julio",
-    "agosto",
-    "septiembre",
-    "octubre",
-    "noviembre",
-    "diciembre",
-  ];
 
   const { vegetable } = useParams();
 
   const vegetableData = data.find((e) => e.name === vegetable);
 
-  let monthsArray = [];
-  const sowingMonths = () => {
-    for (const month in vegetableData.sowing) {
-      monthsArray.push(months[vegetableData.sowing[month]]);
-    }
-    return monthsArray;
-  };
-
-  // let [records, setRecords] = useContext(RecordsContext);
   let { state } = useContext(SowingsContext);
 
   const vegSowings = state.records.filter(
@@ -60,7 +37,7 @@ const PlantDetail = ({ handleShow }) => {
       </div>
       <div className="veg-info-block">
         <h1>{vegetableData.name}</h1>
-        <div>Meses de siembra: {sowingMonths().join(", ")}</div>
+        <div>Meses de siembra: {vegetableData.sowing.join(", ")}</div>
         <div>
           Días a cosecha: de {vegetableData.harvest.from} a{" "}
           {vegetableData.harvest.to}

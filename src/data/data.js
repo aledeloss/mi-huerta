@@ -3,7 +3,7 @@
 const data = [
     {
         name: 'Acelga',
-        sowing: [2, 3, 4, 5, 7, 8, 9, 10, 11],
+        sowing: ['febrero', 'marzo', 'abril', 'mayo', 'junio', 'agosto', 'septiembre', 'octubre', 'diciembre'],
         harvest: {
             from: 60,
             to: 80            
@@ -29,7 +29,7 @@ const data = [
     },
     {
         name: 'Ajo',
-        sowing: [2, 3, 4],
+        sowing: ['marzo', 'abril', 'mayo'],
         harvest: {
             from: 250,
             to: 270
@@ -55,7 +55,7 @@ const data = [
     },
     {
         name: 'Albahaca',
-        sowing: [7, 8, 9, 10],
+        sowing: ['agosto', 'septiembre', 'octubre', 'noviembre'],
         harvest: {
             from: 80, 
             to: 100
@@ -81,7 +81,7 @@ const data = [
     },
     {
         name: 'Apio',
-        sowing: [0, 1, 2, 8, 9, 10, 11],
+        sowing: ['enero', 'febrero', 'marzo', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 120,
             to: 150
@@ -107,7 +107,7 @@ const data = [
     },
     {
         name: 'Arvejas',
-        sowing: [2, 3, 4, 5, 6, 7],
+        sowing: ['marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto'],
         harvest: {
             from: 120, 
             to: 150
@@ -133,7 +133,7 @@ const data = [
     },
     {
         name: 'Batata',
-        sowing: [6, 7],
+        sowing: ['julio', 'agosto'],
         harvest: {
             from: 250,
             to: 270
@@ -159,7 +159,7 @@ const data = [
     },
     {
         name: 'Berenjena',
-        sowing: [6, 7, 8, 9],
+        sowing: ['julio', 'agosto', 'septiembre', 'octubre'],
         harvest: {
             from: 150,
             to: 180
@@ -185,7 +185,7 @@ const data = [
     },
     {
         name: 'Brócoli',
-        sowing: [1, 2, 3, 8, 9],
+        sowing: ['febrero', 'marzo', 'abril', 'septiembre', 'octubre'],
         harvest: {
             from: 250,
             to: 270
@@ -211,7 +211,7 @@ const data = [
     },
     {
         name: 'Coliflor',
-        sowing: [1, 2, 3, 8, 9],
+        sowing: ['febrero', 'marzo', 'abril', 'septiembre', 'octubre'],
         harvest: {
             from: 250,
             to: 270
@@ -237,7 +237,7 @@ const data = [
     },
     {
         name: 'Cebolla',
-        sowing: [1, 2, 3],
+        sowing: ['febrero', 'marzo', 'abril'],
         harvest: {
             from: 250,
             to: 270
@@ -263,7 +263,7 @@ const data = [
     },
     {
         name: 'Cebolla de verdeo',
-        sowing: [1, 2, 3],
+        sowing: ['febrero', 'marzo', 'abril'],
         harvest: {
             from: 250,
             to: 270
@@ -289,7 +289,7 @@ const data = [
     },
     {
         name: 'Chaucha',
-        sowing: [2, 3, 4, 6, 9, 10, 11],
+        sowing: ['marzo', 'abril', 'mayo', 'julio', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 90,
             to: 120
@@ -315,7 +315,7 @@ const data = [
     },
     {
         name: 'Choclo',
-        sowing: [0, 7, 8, 9, 10, 11],
+        sowing: ['enero', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 100,
             to: 130
@@ -341,7 +341,7 @@ const data = [
     },
     {
         name: 'Espárrago',
-        sowing: [7, 8],
+        sowing: ['agosto', 'septiembre'],
         harvest: {
             from: 1460,
             to: 1490
@@ -368,7 +368,7 @@ const data = [
     },
     {
         name: 'Espinaca',
-        sowing: [0, 1, 2, 3, 4, 5],
+        sowing: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio'],
         harvest: {
             from: 80,
             to: 90
@@ -394,7 +394,7 @@ const data = [
     },
     {
         name: 'Frutilla',
-        sowing: [3, 4],
+        sowing: ['abril', 'mayo'],
         harvest: {
             from: 150,
             to: 180
@@ -420,7 +420,7 @@ const data = [
     },
     {
         name: 'Haba',
-        sowing: [8, 9, 10, 11],
+        sowing: ['septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 180,
             to: 200
@@ -446,7 +446,7 @@ const data = [
     },
     {
         name: 'Hinojo',
-        sowing: [0, 1, 2, 3],
+        sowing: ['enero', 'febrero', 'marzo', 'abril'],
         harvest: {
             from: 150,
             to: 180
@@ -472,7 +472,7 @@ const data = [
     },
     {
         name: 'Lechuga',
-        sowing: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        sowing: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 60,
             to: 90
@@ -524,7 +524,7 @@ const data = [
     },
     {
         name: 'Sandía',
-        sowing: [7, 8, 10],
+        sowing: ['agosto', 'septiembre', 'noviembre'],
         harvest: {
             from: 130,
             to: 180
@@ -550,7 +550,7 @@ const data = [
     },
     {
         name: 'Papa',
-        sowing: [0, 1, 7, 8],
+        sowing: ['enero', 'febrero', 'agosto', 'septiembre'],
         harvest: {
             from: 120,
             to: 150
@@ -576,7 +576,7 @@ const data = [
     },
     {
         name: 'Pepino',
-        sowing: [7, 8, 9, 10],
+        sowing: ['agosto', 'septiembre', 'octubre', 'noviembre'],
         harvest: {
             from: 100,
             to: 130
@@ -602,7 +602,7 @@ const data = [
     },
     {
         name: 'Pimiento',
-        sowing: [6, 7, 8],
+        sowing: ['julio', 'agosto', 'septiembre'],
         harvest: {
             from: 180,
             to: 200
@@ -628,7 +628,7 @@ const data = [
     },
     {
         name: 'Puerro',
-        sowing: [1, 2, 3, 7, 8],
+        sowing: ['febrero', 'marzo', 'abril', 'agosto', 'septiembre'],
         harvest: {
             from: 120,
             to: 150
@@ -654,7 +654,7 @@ const data = [
     },
     {
         name: 'Rabanito',
-        sowing: [1, 2, 3, 4, 5, 8, 9, 10, 11],
+        sowing: ['febrero', 'marzo', 'abril', 'mayo', 'junio', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 30,
             to: 40
@@ -680,7 +680,7 @@ const data = [
     },
     {
         name: 'Radicheta',
-        sowing: [1, 2, 3, 4, 7, 8, 9],
+        sowing: ['febrero', 'marzo', 'abril', 'mayo', 'agosto', 'septiembre', 'octubre'],
         harvest: {
             from: 80,
             to: 100
@@ -706,7 +706,7 @@ const data = [
     },
     {
         name: 'Remolacha',
-        sowing: [2, 3, 4, 5, 7, 8, 9, 10, 11],
+        sowing: ['marzo', 'abril', 'mayo', 'junio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 100,
             to: 130
@@ -732,7 +732,7 @@ const data = [
     },
     {
         name: 'Repollo',
-        sowing: [1, 2, 3, 8, 9, 10],
+        sowing: ['febrero', 'marzo', 'abril', 'septiembre', 'octubre', 'noviembre'],
         harvest: {
             from: 120,
             to: 150
@@ -758,7 +758,7 @@ const data = [
     },
     {
         name: 'Rúcula',
-        sowing: [7, 8, 9],
+        sowing: ['agosto', 'septiembre', 'octubre'],
         harvest: {
             from: 60,
             to: 80
@@ -784,7 +784,7 @@ const data = [
     },
     {
         name: 'Tomate',
-        sowing: [6, 7, 8, 9],
+        sowing: ['julio', 'agosto', 'septiembre', 'octubre'],
         harvest: {
             from: 120,
             to: 150
@@ -810,7 +810,7 @@ const data = [
     },
     {
         name: 'Zanahoria',
-        sowing: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        sowing: ['febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 150,
             to: 180
@@ -836,7 +836,7 @@ const data = [
     },
     {
         name: 'Zapallo',
-        sowing: [7, 8, 9, 10],
+        sowing: ['agosto', 'septiembre', 'octubre', 'noviembre'],
         harvest: {
             from: 150,
             to: 180
@@ -862,7 +862,7 @@ const data = [
     },
     {
         name: 'Zapallito',
-        sowing: [0, 7, 8, 9, 10, 11],
+        sowing: ['enero', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 90,
             to: 100
@@ -888,7 +888,7 @@ const data = [
     },
     {
         name: 'Zuccini',
-        sowing: [0, 7, 8, 9, 10, 11],
+        sowing: ['enero', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
         harvest: {
             from: 90,
             to: 100

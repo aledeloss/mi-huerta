@@ -3,8 +3,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useHistory,
-    useParams
+    useHistory
 } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
