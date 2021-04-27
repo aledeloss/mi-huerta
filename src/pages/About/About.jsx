@@ -4,48 +4,51 @@ import Container from "react-bootstrap/Container";
 import Layout from "../../components/Layout/Layout";
 
 const About = ({ history }) => {
-
   const aboutPageContent = (
     <Container fluid="md" className="about-content">
-      <div className="description">
+      <div className="about-content">
         <p>
-          Este sitio nació como un proyecto que cruzaba dos fuertes inquietudes
-          personales durante la primera etapa de la cuarentena en 2020: Mantener
-          un pequeña huerta que tengo en mi terraza y aprender programación, un
-          gran desafío que asumí con mucho gusto.
+          En Mi Huerta podrás encontrar una guía para comenzar tu siembra en tu
+          terraza, balcón o jardín. No necesitás saber mucho ni tener mucho
+          lugar. Alcanza con tener un rinconcito con luz y, sobre todo, ¡muchas
+          ganas! :)
         </p>
         <p>
-          Surgió como respuesta a una necesidad real que tenía de saber qué
-          podía sembrar en qué momento, y captó mi interés lo suficiente como
-          para dedicar muchas horas a pensar el diseño, probarla y volverla
-          hacer.
+          En la sección ¿Qué sembrar? encontrarás una lista con todo lo que
+          podés sembrar este mes en la zona de Buenos Aires y alrededores. Si
+          querés, podés usar los filtros para ver tus opciones para otros
+          momentos del año (próximamente). Cuando decidas Sembrar, Mi Huerta
+          guardará un registro con la fecha estimada de cosecha. Podrás
+          consultarlo cuando quieras en la sección Mi Registros. Esta
+          información se guarda en el navegador, así que ¡ojo! si borrás los
+          datos o cambias de navegador tendrás que volver a registrar tu
+          siembra.
         </p>
         <p>
-          Mi Huerta fue una excusa ideal para buscar recursos, aprender nuevas
-          tecnologías, trabajar mucho y con ganas. Estoy convencida de que
-          desarrollar Mi Huerta fue y es un proceso muy valioso.
+          Créditos: Mi Huerta fue realizado con información tomada del
+          Planificador ProHuerta 2020 del INTA. Las ilustraciones fueron
+          diseñadas por Freepik de Flaticon, la animación es de 白寒 de Lottie y
+          la paleta de colores la tomé de Coolors.
         </p>
         <p>
-          ¡Espero que lo disfrutes y te sirva tanto como a mí! Agradezco
-          cualquier feedback o comentario en{" "}
+          ¡Espero que lo disfrutes! Cualquier feedback o comentario podés
+          enviarlo a{" "}
           <a href="mailto:aledeloss@gmail.com" target="blank">
             aledeloss@gmail.com
           </a>
           .
         </p>
-      </div>
-      <div className="créditos">
-        <p>
-          Este sitio fue realizado con información tomada del Planificador
-          ProHuerta 2020 del INTA. Las ilustraciones fueron diseñadas por
-          Freepik de Flaticon y la paleta de colores la tomé de Coolors.
-        </p>
+        <p>¡Gracias por visitar! 🙌🏽</p>
       </div>
     </Container>
   );
 
   return (
-    <Layout mainContent={aboutPageContent} bgColor="#ffd166ff" history={history} />
+    <Layout
+      mainContent={aboutPageContent}
+      bgColor="#ffd166ff"
+      history={history}
+    />
   );
 };
 

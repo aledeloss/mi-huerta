@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <span>
-        Hecho con ☕ 👶🏻 💪 y mucho ❤️ por{" "}
+        Hecho por{" "}
         <a href="https://github.com/aledeloss">Ale DeLos</a>
       </span>
     </div>
