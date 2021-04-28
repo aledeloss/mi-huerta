@@ -9,12 +9,14 @@ const PlantCard = ({ vegetable}) => {
   return (    
       <Card className="card-container">
           <Card.Body className="plant-card-body">
-            <img
-              loading="lazy"
-              className="plantcard-img"
-              src={`vegetables-imgs/${vegetable.img.src}.svg`}
-              alt={vegetable.img.alt}
-            ></img>
+            <div className="image-container">
+              <img
+                loading="lazy"
+                className="plantcard-img"
+                src={`vegetables-imgs/${vegetable.img.src}.svg`}
+                alt={vegetable.img.alt}
+                ></img>
+              </div>
             <Card.Title className={`vegetable-name ${vegetable.name.length > 13 ? 'long-veg-name' : ''}`}>{vegetable.name}</Card.Title>
             <CosechaData className="harvest-data-container" vegetable={vegetable} />
           </Card.Body>

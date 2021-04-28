@@ -15,7 +15,9 @@
 a:link {
     text-decoration: none;
 }
-
+.image-container {
+    height: 70px;
+}
 .card-container img {
     height: 70px;
     width: 70px;
