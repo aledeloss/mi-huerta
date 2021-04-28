@@ -2,7 +2,7 @@ import "./FilterTag.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const FilterTag = ({ tagName }) => {
+const FilterTag = ({ tagName, handleDeleteTagCLick }) => {
 
     const handleClick = () => {
         alert('click')

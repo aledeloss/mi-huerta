@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./FiltersForm.css";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import FilterTag from "../FilterTag/FilterTag";
+// import FiltersContext from "../../contexts/FiltersContext";
 
-const FiltersForm = () => {
+const FiltersForm = ({ handleInputChange, filters }) => {
+
   const months = [
     "enero",
     "febrero",
@@ -19,26 +22,13 @@ const FiltersForm = () => {
     "noviembre",
     "diciembre",
   ];
-  const date = new Date();
-  const [filters, setFilters] = useState([date.toLocaleString('default', { month: 'long' })]);
+  const [visibleFilters, setVisibleFilters] = useState(false);
 
-  // const handleDifficultyChange = (evt) => {
-  //   console.log(evt.target.value);
-  // };
+  const handleClickHideFilters = () => {
+    setVisibleFilters(!visibleFilters)
+  }
 
-  const handleInputChange = (evt) => {
-    if (filters.includes(evt.target.name)) {
-      setFilters(filters.filter((filter) => filter !== evt.target.name));
-    } else {
-      setFilters([...filters, evt.target.name]);
-    }
-  };
-
-  const handleSubmit = () => {
-    console.log(filters);
-  };
-
-  const checkBoxesList = months.map((month, index) => (
+  const renderCheckBoxes = months.map((month, index) => (
     <Form.Check
       key={index}
       type="checkbox"
@@ -50,42 +40,26 @@ const FiltersForm = () => {
     />
   ));
 
-  console.log(checkBoxesList);
+  const renderTags = filters.map((filter,index) => (
+    <FilterTag tagName={filter} key={index} />
+  ))
 
   return (
     <div className="filters-container">
-      <div className="filter-title">
+      <div className="filter-title" onClick={handleClickHideFilters}>
       Filtros - Próximamente <FontAwesomeIcon icon={faFilter} />
       </div>
-      <Form className="filters-items">
-        {/* <Form.Group
-        controlId="exampleForm.ControlSelect1"
-        className="difficulty-filter-container"
-      >
-        <Form.Label>Dificultad</Form.Label>
-        <Form.Control as="select" onChange={handleDifficultyChange}>
-          <option>Fácil</option>
-          <option>Moderada</option>
-          <option>Difícil</option>
-        </Form.Control>
-      </Form.Group> */}
+      <Form className={`filters-items ${visibleFilters && 'visible-filters'}`} >
         <Form.Group controlId="formBasicCheckbox">
           <Form.Label>Mes</Form.Label>
           <div className="checkboxes-container">
-            {checkBoxesList}
-            <Form.Check
-              type="checkbox"
-              inline
-              name="Todos"
-              label="Todos"
-              onChange={handleInputChange}
-            />
+            {renderCheckBoxes}
           </div>
         </Form.Group>
-        <Button className="submit-button ml-1" onClick={handleSubmit}>
-          Aceptar
-        </Button>
       </Form>
+      <div className="tags-container">
+        {renderTags}
+      </div>
     </div>
   );
 };

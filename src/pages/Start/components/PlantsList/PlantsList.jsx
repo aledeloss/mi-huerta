@@ -1,31 +1,17 @@
-import React from "react";
+import { useState } from "react";
 import "./PlantsList.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PlantCard from "../PlantCard/PlantCard";
 import data from "../../../../data/data";
 import { Container, Col, Row } from "react-bootstrap";
 
-const PlantsList = () => {
-  const date = new Date();
-  const month = date.getMonth();
+const PlantsList = ({ filters }) => {
 
-  const filters = ['enero', 'febrero' ]
+  const [filteredData, setFilteredData] = useState([]);
+  //const [filters, setFilters] = useState([]);
 
-  //randomize list
-  //   var arr1 = ["a", "b", "c", "d"];
-  // arr1.sort(function() { return Math.random() - 0.5 });
-  // console.log(arr1)
-
-  // let filteredVegetables = (data) => {
-  //   let list = [];
-  //   for(let item in data) {
-  //     !list.includes(item.name === filter) && list.push()
-  //   }
-  
-
-  const CardList = data.map(
+  const renderCards = filteredData.length && filteredData.map(
     (vegetable, index) =>
-      vegetable.sowing.includes('abril') && (
         <Col>
           <PlantCard
             key={index}
@@ -35,11 +21,25 @@ const PlantsList = () => {
             vegetable={vegetable}
           />
         </Col>
-      )
-  );
+  );  
+
+  const filterData = () => {
+    data.forEach(vegetable => {
+      vegetable.sowing.forEach(month => {
+        if(filters.includes(month) && !filteredData.includes(vegetable)){  
+        setFilteredData([...filteredData, vegetable])
+        }
+      })
+    });
+    console.log(filteredData.length)
+    console.log(filters.map(filter => filter))
+  }
+
+  filterData();
+
   return (
     <Container className="plants-list-container justify-content-md-center ">
-        <Row className="plants-list-content">{CardList}</Row>
+        <Row className="plants-list-content">{renderCards}</Row>
     </Container>
   );
 };
