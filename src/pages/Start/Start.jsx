@@ -9,7 +9,7 @@ const Start = ({ history }) => {
   const date = new Date();
 
   const [filters, setFilters] = useState([
-    date.toLocaleString("default", { month: "long" }),
+    date.toLocaleString("default", { month: "long" })
   ]);
 
   const handleInputChange = (evt) => {

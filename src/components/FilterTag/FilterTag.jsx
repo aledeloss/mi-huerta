@@ -11,9 +11,9 @@ const FilterTag = ({ tagName, handleDeleteTagCLick }) => {
   return (
     <span className="tagname-container">
       {tagName}
-      <div className="delete-filter-icon-container" onClick={handleClick}>
-        <FontAwesomeIcon icon={faTimes} />
-      </div>
+      {/*<div className="delete-filter-icon-container" onClick={handleClick}>
+         <FontAwesomeIcon icon={faTimes} />
+      </div> */}
     </span>
   );
 };

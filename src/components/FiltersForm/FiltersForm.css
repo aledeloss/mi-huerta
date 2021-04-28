@@ -10,15 +10,20 @@
 
 .filter-title {
     justify-self: flex-end;
+    text-align: left;
     margin: 5px;
     border: .5px solid black;
     padding: 5px;
-    border-radius: 25px;;
-    width: 230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 25px;
+    width: fit-content;
 }
 
 .visible-filters {
-    display: inline-block
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
 }
 
 .tags-container {
