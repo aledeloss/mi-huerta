@@ -13,6 +13,7 @@ import About from './pages/About/About';
 import Detail from './pages/Detail/Detail';
 import Page404 from './pages/Page404/Page404';
 import NoResults from './pages/NoResults/NoResults';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 const Routes = () => {
 
@@ -20,6 +21,7 @@ const Routes = () => {
 
     return (
         <Router>
+            <ScrollToTop/>
             <Switch history={history}>
                 <Route exact path='/' component={Home}/>
                 <Route exact path='/about' component={About} />

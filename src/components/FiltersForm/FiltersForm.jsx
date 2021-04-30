@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./FiltersForm.css";
-import { Form, Col, Row } from "react-bootstrap";
+import { Form, Col, Row, Badge } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import FilterTag from "../FilterTag/FilterTag";

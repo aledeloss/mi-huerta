@@ -30,7 +30,6 @@ const SaveRecordButton = ({ vegetable }) => {
         handleClick={handleShow}
         vegetable={vegetable}
       />
-      <SowingsProvider>
         <GenericModal
           show={show}
           content={sowingModalContent}
@@ -41,7 +40,6 @@ const SaveRecordButton = ({ vegetable }) => {
             setShow(false);
           }}
         />
-      </SowingsProvider>
     </>
   );
 };
