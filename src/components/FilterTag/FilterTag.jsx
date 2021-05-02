@@ -1,6 +1,6 @@
-import "./FilterTag.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import "./FilterTag.scss";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const FilterTag = ({ tagName, handleDeleteTagCLick }) => {
 
@@ -9,9 +9,9 @@ const FilterTag = ({ tagName, handleDeleteTagCLick }) => {
     }
 
   return (
-    <span className="tagname-container">
+    <span className="filter-tag">
       {tagName}
-      {/*<div className="delete-filter-icon-container" onClick={handleClick}>
+      {/*<div className="filter-tag__delete-icon" onClick={handleClick}>
          <FontAwesomeIcon icon={faTimes} />
       </div> */}
     </span>

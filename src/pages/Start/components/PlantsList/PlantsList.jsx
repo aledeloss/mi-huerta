@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./PlantsList.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PlantCard from "../PlantCard/PlantCard";
-import data from "../../../../data/data";
+import data from "../../../../assets/data/data";
 import { Container, Col, Row } from "react-bootstrap";
 
 const PlantsList = ({ filters }) => {

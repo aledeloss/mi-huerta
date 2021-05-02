@@ -1,5 +1,5 @@
 import React from "react";
-import "./GenericButton.css";
+import "./GenericButton.scss";
 
 const GenericButton = ({ label, handleClick }) => {
   return (

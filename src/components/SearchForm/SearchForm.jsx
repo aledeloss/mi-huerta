@@ -3,7 +3,7 @@ import "./SearchForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Form, FormControl, Button } from "react-bootstrap";
-import data from "../../data/data.js";
+import data from "../../assets/data/data.js";
 
 const SearchForm = ({ history }) => {
 

@@ -1,5 +1,5 @@
 import { Container, Navbar, Row, Col } from "react-bootstrap";
-import "./Header.css";
+import "./Header.scss";
 import NavBar from "../NavBar/NavBar";
 import SearchForm from "../SearchForm/SearchForm";
 import LocalStorageModal from "../../components/LocalStorageModal/LocalStorageModal";

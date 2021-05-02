@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.header-container {
+  background-color: #06d6a0ff;
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 10vh;
+}
+
+.brand {
+  font-family: "Pacifico", cursive;
+  color: #073b4cff;
+  /* NOTA: No funciona este color... */
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-center;
+}
+
+#basic-navbar-nav {
+  /* border: solid red; */
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+}
+
+.navbar-elements {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.submit-btn {
+  background-color: #073b4cff;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #073b4cff;
+  border: none;
+  opacity: 0.8;
+}
+
+.navbar-collapse {
+  background-color: #06d6a0ff;
+}
+
+.app-name {
+  color: salmon;
+}
+
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.css.map */
+
+/*# sourceMappingURL=Header.css.map */

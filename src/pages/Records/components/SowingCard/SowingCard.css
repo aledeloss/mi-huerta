@@ -17,7 +17,8 @@
     background-color: rgb(252, 193, 57);
     border-radius: 50%;
     align-self: center;
-    margin-right: 100px
+    margin-right: 100px;
+    cursor: pointer;
 }
 
 .green {

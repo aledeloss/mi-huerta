@@ -1,7 +1,7 @@
 import "./Detail.css";
 import Layout from "../../components/Layout/Layout";
 import PlantDetail from "./PlantDetail/PlantDetail";
-import data from "../../data/data.js";
+import data from "../../assets/data/data.js";
 import { useParams } from "react-router-dom";
 import GoBackButton from "../../components/GoBackButton/GoBackButton";
 import { Container } from "react-bootstrap";

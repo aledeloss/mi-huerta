@@ -1,0 +1,16 @@
+@import '../../assets/styles/mainStyles.scss';
+
+.navigationLink {
+    width: 150px;
+}
+
+.navigacionLink__label {
+    color: white;
+
+    &:hover {
+        color: white;
+        padding-bottom: 5px;
+        border-bottom: .5px solid white;
+    }
+}
+

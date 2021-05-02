@@ -1,0 +1,23 @@
+@import '../../assets/styles/mainStyles.scss';
+
+.footer-container {
+    position: static;
+    bottom: 0px;
+    background-color: $azul;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: .05em;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    a:hover {
+        text-decoration: none;
+        color: $rosa
+    }
+}

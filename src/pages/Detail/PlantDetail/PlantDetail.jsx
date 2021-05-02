@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./PlantDetail.css";
 import { useParams } from "react-router-dom";
-import data from "../../../data/data.js";
+import data from "../../../assets/data/data.js";
 import SowingsContext from "../../../contexts/SowingsContext";
 import SaveRecordButton from "../../../components/SaveRecordButton/SaveRecordButton";
 import DayJS from "react-dayjs";

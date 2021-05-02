@@ -1,0 +1,46 @@
+.filters {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filters__items {
+  display: none;
+}
+
+.filters__title {
+  justify-self: flex-end;
+  text-align: left;
+  margin: 5px;
+  border: 0.5px solid black;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 25px;
+  width: fit-content;
+}
+
+.filters__items--visible {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.filters__tags {
+  display: flex;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+/*# sourceMappingURL=FiltersForm.css.map */
+
+/*# sourceMappingURL=FiltersForm.css.map */
