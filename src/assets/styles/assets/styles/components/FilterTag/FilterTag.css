@@ -1,4 +1,6 @@
 .filter-tag {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   height: 30px;
@@ -6,9 +8,18 @@
   padding-right: 10px;
   margin: 5px;
   background-color: #f17f9a;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -17,8 +28,14 @@
   width: 20px;
   border-radius: 50%;
   margin-left: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -27,6 +44,7 @@
   color: #ef476fff;
 }
 
+/*# sourceMappingURL=FilterTag.css.map */
 /*# sourceMappingURL=FilterTag.css.map */
 
 /*# sourceMappingURL=FilterTag.css.map */

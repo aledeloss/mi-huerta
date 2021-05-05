@@ -127,7 +127,7 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: 'peas',
+            src: '002-peas',
             alt: 'Ícono de arvejas'
         }
     },
@@ -335,7 +335,7 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: '003-corn',
+            src: '005-corn',
             alt: 'Ícono de choclo'
         }
     },
@@ -362,7 +362,7 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: '021-asparagus',
+            src: '029-asparagus',
             alt: 'Ícono de espárragos'
         }
     },
@@ -414,7 +414,7 @@ const data = [
         },
         difficulty: 'difícil',
         img: {
-            src: '024-strawberry',
+            src: 'strawberry',
             alt: 'Ícono de frutilla'
         }
     },
@@ -830,7 +830,7 @@ const data = [
         },
         difficulty: 'moderada',
         img: {
-            src: 'carrot',
+            src: '022-carrot',
             alt: 'Ícono de zanahoria'
         }
     },
@@ -856,7 +856,7 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: '008-pumpkin',
+            src: '001-pumpkin',
             alt: 'Ícono de calabaza'
         }
     },

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Records.css";
 import Layout from "../../components/Layout/Layout";
-import SowingCard from "./components/SowingCard/SowingCard";
+import SowingCard from "../../components/SowingCard/SowingCard";
 import { Container, Col, Row } from "react-bootstrap/";
 import DeleteAllButton from "../../components/DeleteAllButton/DeleteAllButton";
 import GoBackButton from "../../components/GoBackButton/GoBackButton";

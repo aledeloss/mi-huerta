@@ -1,6 +1,6 @@
 import "./Detail.css";
 import Layout from "../../components/Layout/Layout";
-import PlantDetail from "./PlantDetail/PlantDetail";
+import PlantDetail from "../../components/PlantDetail/PlantDetail";
 import data from "../../assets/data/data.js";
 import { useParams } from "react-router-dom";
 import GoBackButton from "../../components/GoBackButton/GoBackButton";

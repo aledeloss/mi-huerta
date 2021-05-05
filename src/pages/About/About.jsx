@@ -6,7 +6,7 @@ import Layout from "../../components/Layout/Layout";
 const About = ({ history }) => {
   const aboutPageContent = (
     <Container fluid="md" className="about-content">
-      <div className="about-content">
+      <div className="about__content">
         <p>
           En Mi Huerta podrás encontrar una guía para comenzar tu siembra en tu
           terraza, balcón o jardín. No necesitás saber mucho ni tener mucho

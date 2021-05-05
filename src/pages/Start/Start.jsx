@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Start.css";
 import Layout from "../../components/Layout/Layout";
-import PlantsList from "./components/PlantsList/PlantsList";
+import PlantsList from "../../components/PlantsList/PlantsList";
 import Container from "react-bootstrap/Container";
 import FiltersForm from "../../components/FiltersForm/FiltersForm";
 

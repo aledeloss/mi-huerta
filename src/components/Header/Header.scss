@@ -1,65 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import '../../assets/styles/mainStyles.scss';
 
-.header-container {
-    background-color: #06d6a0ff;
+.header {
+    background-color: $verde;
     position: fixed;
     top: 0;
     cursor: pointer;
     width: 100%;
     height: 10vh;
 }
-.brand {
+.header__brand {
     font-family: 'Pacifico', cursive;
-    color: #073b4cff; /* NOTA: No funciona este color... */
+    color: $azul;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
-.brand:hover {
-    text-decoration: none;
-}
-
-.navbar-container {
+.header__navbar {
     display: flex;
     justify-content: space-center;
 }
 
-#basic-navbar-nav {
-    /* border: solid red; */
-    display: flex;
-    align-items: space-between;
-    justify-content: center;
-}
-
-.navbar-elements {
+.header__collapse {
+    background-color: #06d6a0ff;
+    width: fit-content;
     height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     padding: 5px;
 }
 
-.nav-menu {
+.header__menu {
+    padding: 5px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.submit-btn {
-    background-color: #073b4cff;
-    border: none;
-}
-
-
-.submit-btn:hover {
-    background-color: #073b4cff;
-    border: none;
-    opacity: .8;
-}
-
-.navbar-collapse {
-    background-color: #06d6a0ff;
-}
-.app-name {
-    color: salmon
 }

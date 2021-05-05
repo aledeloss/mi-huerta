@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-import Carrot from "./components/Carrot/Carrot";
+import RollingCarrotAnimation from "../../components/RollingCarrotAnimation/RollingCarrotAnimation";
 import Footer from "../../components/Footer/Footer";
 import "./Home.css";
 import LocalStorageModal from '../../components/LocalStorageModal/LocalStorageModal';
@@ -14,7 +14,7 @@ const Home = ({ history }) => {
           <h1>¡Tocá la zanahoria y comencemos!</h1>
         </div>
         <div className="carrot-container">
-          <Carrot history={history} />
+          <RollingCarrotAnimation history={history} />
         </div>
       </div>
       <Footer />

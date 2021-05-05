@@ -12,22 +12,21 @@ const Header = ({ history }) => {
 
   return (
     <>
-      <Navbar expand="lg" className="header-container" sticky="top">
-        <Container className="navbar-container d-flex justify-content-center">
-          <Navbar.Brand className="brand app-name" onClick={handleOnClickHome}>
-            <h2>Mi Huerta</h2>
+      <Navbar expand="lg" className="header" sticky="top">
+        <Container className="header__navbar d-flex justify-content-center">
+          <Navbar.Brand className="brand" onClick={handleOnClickHome}>
+            <h2 className="header__brand">Mi Huerta</h2>
           </Navbar.Brand>
           <Navbar.Toggle
-            className="nav-search-container"
             aria-controls="basic-navbar-nav"
           />
 
-          <Navbar.Collapse id="basic-navbar-nav navbar-collapse" className="navbar-elements">
+          <Navbar.Collapse id="basic-navbar-nav " className="header__collapse">
             <Row>
             <Col xs={12} lg={6} >
               <SearchForm history={history} />
             </Col>
-            <Col xs={12} lg={6} className="nav-menu">
+            <Col xs={12} lg={6} className="header__menu">
               <NavBar />
             </Col>
             </Row>

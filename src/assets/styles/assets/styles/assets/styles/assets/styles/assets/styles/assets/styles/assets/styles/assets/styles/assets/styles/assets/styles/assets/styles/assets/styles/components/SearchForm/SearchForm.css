@@ -1,7 +1,12 @@
-.search-input {
+.search__input {
   max-width: 250px;
 }
 
+.search__button {
+  background-color: #073b4cff;
+}
+
+/*# sourceMappingURL=SearchForm.css.map */
 /*# sourceMappingURL=SearchForm.css.map */
 /*# sourceMappingURL=SearchForm.css.map */
 /*# sourceMappingURL=SearchForm.css.map */

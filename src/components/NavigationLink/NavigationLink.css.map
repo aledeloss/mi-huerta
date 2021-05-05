@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;EACZ,KAAK,EAAE,KAAK;CACf;;AAED,AAAA,sBAAsB,CAAC;EACnB,KAAK,EAAE,KAAK;CAOf;;AARD,AAGI,sBAHkB,AAGjB,MAAM,CAAC;EACJ,KAAK,EAAE,KAAK;EACZ,cAAc,EAAE,GAAG;EACnB,aAAa,EAAE,gBAAgB;CAClC",
+    "sources": [
+        "NavigationLink.scss",
+        "../../assets/styles/_mainStyles.scss"
+    ],
+    "names": [],
+    "file": "NavigationLink.css"
+}

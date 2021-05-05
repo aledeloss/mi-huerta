@@ -6,10 +6,6 @@
     flex-direction: column;
 }
 
-.filters__items {
-    display: none;
-}
-
 .filters__title {
     justify-self: flex-end;
     text-align: left;
@@ -20,12 +16,18 @@
     padding-right: 15px;
     border-radius: 25px;
     width: fit-content;
+    cursor: pointer;
+}
+
+.filters__items {
+    display: none;
+    padding: 5px;
+    justify-content: flex-start;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .filters__items--visible {
     display: flex;
-    justify-content: flex-start;
-    padding: 5px;
 }
 
 .filters__tags {

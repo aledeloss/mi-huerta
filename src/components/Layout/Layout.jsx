@@ -5,9 +5,9 @@ import Footer from '../Footer/Footer';
 const Layout = ({ history, mainContent, bgColor }) => {
 
     return (
-        <div className="layout-container">
+        <div className="layout">
         <Header history={history} />
-        <div className="main-page-container"  style={{backgroundColor: bgColor}}>
+        <div className="layout__main-page"  style={{backgroundColor: bgColor}}>
         {mainContent}
         </div>  
         <Footer />          

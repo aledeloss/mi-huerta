@@ -1,5 +1,5 @@
 import React, { useState, useContext }  from "react";
-import "./SearchForm.css";
+import "./SearchForm.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Form, FormControl, Button } from "react-bootstrap";
@@ -25,15 +25,15 @@ const SearchForm = ({ history }) => {
     }
 
     return (
-        <Form className="search-form-container" inline onSubmit={handleSubmit}>
+        <Form className="searchr" inline onSubmit={handleSubmit}>
         <FormControl 
           type="text" 
           placeholder="Buscar planta" 
-          className="search-input" 
+          className="search__input" 
           value={keyword} 
           onChange={handleChange}
         />
-        <Button className="submit-button ml-1" onClick={handleSubmit}>
+        <Button className="submit-button search__button ml-1" onClick={handleSubmit}>
           <FontAwesomeIcon icon={faSearch} />
         </Button>
       </Form>

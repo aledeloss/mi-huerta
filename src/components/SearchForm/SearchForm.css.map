@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,cAAc,CAAC;EACX,SAAS,EAAE,KAAK;CACnB;;AAED,AAAA,eAAe,CAAC;EACZ,gBAAgB,ECFb,SAAS;CDGf",
+    "sources": [
+        "SearchForm.scss",
+        "../../assets/styles/_mainStyles.scss"
+    ],
+    "names": [],
+    "file": "SearchForm.css"
+}
