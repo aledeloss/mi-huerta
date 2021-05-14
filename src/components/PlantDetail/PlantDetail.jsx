@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import data from "../../assets/data/data.js";
 import SowingsContext from "../../contexts/SowingsContext";
 import SaveRecordButton from "../SaveRecordButton/SaveRecordButton";
+import PlantImage from "../../components/PlantImage/PlantImage";
 import DayJS from "react-dayjs";
 
 const PlantDetail = ({ handleShow }) => {
@@ -28,6 +29,7 @@ const PlantDetail = ({ handleShow }) => {
 
   return (
     <div className="plant-detail">
+      {/* <PlantImage vegetable={vegetableData} /> */}
       <div className="plant-detail__img-container">
         <img
           className="plant-detail-img"
@@ -58,7 +60,7 @@ const PlantDetail = ({ handleShow }) => {
         <div>Rotar con con: {vegetableData.design.rotate.join(", ")}</div>
         <div>Tolera sombra: {vegetableData.design.shadow}</div>
       </div>
-      <div className="veg-info-block">
+      <div className="sowing-info-block">
         <h4>Registros de siembra:</h4>
         {sowingsRender}
       </div>

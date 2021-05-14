@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PlantCard from "../PlantCard/PlantCard";
 import data from "../../assets/data/data";
 import { Container, Col, Row } from "react-bootstrap";
+import PlantImage from '../../components/PlantImage/PlantImage';
 
 const PlantsList = ({ filters }) => {
 

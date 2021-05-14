@@ -1,0 +1,24 @@
+.plant-card__img-container {
+  height: 80px;
+  width: 80px;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 100%;
+  background-color: #06d6a0ff;
+  max-width: 100%;
+  max-height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+img {
+  height: 55px;
+  width: 55px;
+  overflow-y: visible;
+}
+/*# sourceMappingURL=PlantImage.css.map */

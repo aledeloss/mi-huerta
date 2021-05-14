@@ -1,11 +1,18 @@
 import { useContext } from "react";
-import "./SowingCard.css";
+import "./SowingCard.scss";
 import DayJS from "react-dayjs";
 import SowingsContext from "../../contexts/SowingsContext";
 import { Link } from "react-router-dom";
 import { Col, Row } from "react-bootstrap";
 
-const SowingCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) => {
+const SowingCard = ({
+  id,
+  name,
+  sowDate,
+  harvestBegin,
+  harvestEnd,
+  onClick,
+}) => {
   const { dispatch } = useContext(SowingsContext);
 
   const renderSowDate = <DayJS format="DD/MM/YY">{sowDate}</DayJS>;
@@ -20,40 +27,40 @@ const SowingCard = ({ id, name, sowDate, harvestBegin, harvestEnd, onClick }) =>
     </DayJS>
   );
 
-  const handleDeleteClick = ({id}) => {
-    console.log(`borraste el ${id}`)
-    dispatch({ type: "DELETE_RECORD", payload: id })
+  const handleDeleteClick = ({ id }) => {
+    console.log(`borraste el ${id}`);
+    dispatch({ type: "DELETE_RECORD", payload: id });
   };
 
   let today = new Date(2021, 12, 25);
   //TODO hacer que ande el color según la fecha. Revisar cuenta de los días.
 
   return (
-    <Row
-      className={`seedCard-container ${
+    <div
+      className={`sowingCard ${
         sowDate + harvestBegin < today < sowDate + harvestEnd ? "green" : ""
       }`}
     >
-      <Col xs={12} md={3} className="sowing-name-container">
-        <Link to={`/detail/${name}`}>
-          <h5 className="name">{name}</h5>
-        </Link>
-      </Col>
-      <Col xs={3} md={2}>
-      {renderSowDate}
-      </Col>
-      <Col xs={6} md={6}>
-          Entre el {renderHarvestBegin} y el {renderHarvestEnd}
-      </Col>
-      <Col xs={1}
-      >
+      <Row className="sowingCard__content">
+        <Col xs={12} md={3}>
+          <Link to={`/detail/${name}`} className="sowingCard__name">
+            {name}
+          </Link>
+        </Col>
+        <Col xs={12} md={2} className="sowingCard__title">
+          Siembra: {renderSowDate}
+        </Col>
+        <Col xs={12} md={6}>
+          Cosecha: entre el {renderHarvestBegin} y el {renderHarvestEnd}
+        </Col>
+      </Row>
         <div
-          className="delete-icon-container"
-          onClick={()=>handleDeleteClick({id})}>
-        X
+          className="sowingCard__deleteIcon"
+          onClick={() => handleDeleteClick({ id })}
+        >
+          X
         </div>
-      </Col>
-    </Row>
+    </div>
   );
 };
 

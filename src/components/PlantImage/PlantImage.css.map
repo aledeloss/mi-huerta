@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,0BAA0B,CAAC;EACvB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,GAAG;EACZ,aAAa,EAAE,GAAG;EAClB,aAAa,EAAE,IAAI;EACnB,gBAAgB,ECLZ,SAAS;EDMb,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,MAAM;EAClB,YAAY,EAAE,MAAM;EACpB,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,GAAG,CAAC;EACA,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,OAAO;CACtB",
+    "sources": [
+        "PlantImage.scss",
+        "../../assets/styles/_mainStyles.scss"
+    ],
+    "names": [],
+    "file": "PlantImage.css"
+}

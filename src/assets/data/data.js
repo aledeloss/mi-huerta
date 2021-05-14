@@ -492,7 +492,7 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: '002-lettuce',
+            src: 'lettuce',
             alt: 'Ícono de lechuga'
         }
     },
@@ -674,7 +674,7 @@ const data = [
         },
         difficulty: 'fácil',
         img: {
-            src: '028-radishes',
+            src: '010-radish',
             alt: 'Ícono de rabanito'
         }
     },

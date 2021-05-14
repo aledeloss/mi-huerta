@@ -1,0 +1,60 @@
+.plant-detail {
+  background-color: #ef476fff;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 15px;
+  min-width: 200px;
+  max-width: 500px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.plant-detail__img-container {
+  height: 130px;
+  width: 130px;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 100%;
+  background-color: #06d6a0ff;
+  max-width: 100%;
+  max-height: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.plant-detail__img-container img {
+  height: 95px;
+  width: 95px;
+  overflow-y: visible;
+}
+
+.plant-detail__info-block {
+  margin: 10px;
+}
+
+.sowing-info-block {
+  padding-bottom: 5px;
+}
+/*# sourceMappingURL=PlantDetail.css.map */

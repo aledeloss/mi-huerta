@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Records.css";
+import "./Records.scss";
 import Layout from "../../components/Layout/Layout";
 import SowingCard from "../../components/SowingCard/SowingCard";
 import { Container, Col, Row } from "react-bootstrap/";
@@ -9,21 +9,6 @@ import SowingsContext from "../../contexts/SowingsContext";
 
 const Records = ({ history }) => {
   let { state } = useContext(SowingsContext);
-
-  const recordsHeader = (
-    <Row className="records-header-container">
-      <Col  xs={12} md={3}  className="plant-name-container">
-        <h5>Planta</h5>
-      </Col>
-      <Col xs={3} md={2}>
-        <h5>Siembra</h5>
-      </Col>
-      <Col xs={6} md={6}>
-        <h5>Cosecha</h5>
-      </Col>
-      <Col xs={1}></Col>
-    </Row>
-  );
 
   const sowingsList = state.records.map((sowing) => {
     return (
@@ -39,16 +24,17 @@ const Records = ({ history }) => {
   });
 
   const recordsPageContent = (
-    <Container fluid="md" className="records-page-content">
+    <Container fluid="md" className="records">
       <GoBackButton history={history} />
-      <div className="records-list">
-        {state.records.length ? recordsHeader : ""}
+      <div className="records__list">
         {!state.records.length ? (
           <div className="alert">¡Parece que aún no sembraste nada!</div>
         ) : (
           sowingsList
         )}
+        <div className="records__deleteAll-container">
         {state.records.length ? <DeleteAllButton /> : ""}
+        </div>
       </div>
     </Container>
   );

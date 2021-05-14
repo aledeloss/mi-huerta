@@ -13,26 +13,33 @@
     align-items: center;
     justify-content: center;
 }
-
 .plant-detail__img-container {
-    height: 160px;
-    width: 160px;
-    padding: 10px;
-    margin: 10px;
+    height: 130px;
+    width: 130px;
+    padding: 5px;
+    margin-bottom: 5px;
     border-radius: 100%;
     background-color: $verde;
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+    justify-self: center;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    
+    img {
+        height: 95px;
+        width: 95px;
+        overflow-y: visible;
+    }
 }
 
-.plant-detail__img {
-    width: 120px;
-    width: 120px;
-    padding: 5px;
-    object-fit: contain;
-}
 
 .plant-detail__info-block {
     margin: 10px
+}
+
+.sowing-info-block {
+    padding-bottom: 5px;
 }

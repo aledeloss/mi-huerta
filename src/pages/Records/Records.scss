@@ -1,0 +1,36 @@
+@import '../../assets/styles/mainStyles.scss';
+
+.records {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.records__list {
+    margin-top: 15px;
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.plant-name-container {
+    align-self: center;
+    width: 30%;
+}
+
+.delete-icon-container {
+    width: 25px;
+    background-color: rgb(252, 193, 57);
+    border-radius: 50%;
+}
+
+.green {
+    background-color: $verde;
+}
+
+.records__deleteAll-container {
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-end;
+}

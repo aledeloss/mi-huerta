@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Start.css";
+import "./Start.scss";
 import Layout from "../../components/Layout/Layout";
 import PlantsList from "../../components/PlantsList/PlantsList";
 import Container from "react-bootstrap/Container";

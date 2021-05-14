@@ -1,47 +1,53 @@
-/* .records-page-container {
-    background-color: #ef476fff;
-    color: #073b4cff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    
-
-.records-page-content {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.records {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.records-list {
-    margin-top: 15px;
-}
-
-.records-header-container {
-    background-color: rgb(245, 191, 67);
-    width: 100%;
-    height: auto;
-    margin: 10px;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+.records__list {
+  margin-top: 15px;
+  display: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .plant-name-container {
-    align-self: center;
-    width: 30%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 30%;
 }
 
 .delete-icon-container {
-    width: 25px;
-    background-color: rgb(252, 193, 57);
-    border-radius: 50%;
+  width: 25px;
+  background-color: #fcc139;
+  border-radius: 50%;
 }
 
 .green {
-    background-color: #06d6a0ff;
+  background-color: #06d6a0ff;
 }
+
+.records__deleteAll-container {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*# sourceMappingURL=Records.css.map */

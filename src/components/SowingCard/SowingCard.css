@@ -1,32 +1,52 @@
-.seedCard-container {
-    background-color: #ffd166ff;
-    width: 100%;
-    /* height: 100px; */
-    height: auto;
-    margin: 10px;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 20px;
+.sowingCard {
+  background-color: #ffd166ff;
+  max-width: 1050px;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  font-size: 14px;
 }
 
-.delete-icon-container {
-    width: 25px;
-    background-color: rgb(252, 193, 57);
-    border-radius: 50%;
-    align-self: center;
-    margin-right: 100px;
-    cursor: pointer;
+.sowingCard__content {
+  width: 97%;
+}
+
+.sowingCard__name {
+  width: 100%;
+  text-align: left;
+  font-size: 1.2em;
+  color: #073b4cff;
+  padding-bottom: 5px;
+}
+
+.sowingCard__name:hover {
+  color: #073b4cff;
+  border-bottom: #073b4cff;
+}
+
+.sowingCard__deleteIcon {
+  width: 25px;
+  background-color: #fcc139;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .green {
-    background-color: #06d6a0ff;
+  background-color: #06d6a0ff;
 }
 
 a {
-    text-decoration: none
+  text-decoration: none;
 }
-
-/* TODO: hacer height responsive para que en mobile se vea bien. */
+/*# sourceMappingURL=SowingCard.css.map */

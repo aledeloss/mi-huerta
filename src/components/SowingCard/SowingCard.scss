@@ -1,0 +1,47 @@
+@import '../../assets/styles/mainStyles.scss';
+
+.sowingCard {
+    background-color: $naranja;
+    max-width: 1050px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 5px;
+    font-size: 14px;
+}
+
+.sowingCard__content {
+    width: 97%;
+}
+
+.sowingCard__name {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+    color: $azul;
+    padding-bottom: 5px;
+
+    &:hover {
+        color: $azul;
+        border-bottom: $azul;
+    }
+}
+
+.sowingCard__deleteIcon {
+    width: 25px;
+    background-color: rgb(252, 193, 57);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.green {
+    background-color: $verde;
+}
+
+a {
+    text-decoration: none
+}
