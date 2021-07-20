@@ -14,6 +14,9 @@ TODOS:
 
 * Demo: https://mi-huerta.vercel.app/
 * Notes about what Mi Huerta means to me (in Spanish): https://www.notion.so/Notas-sobre-el-proceso-de-Mi-Huerta-d2e9331e2ce744a6a6817a36bf61c25a
+* This project was bootstrapped with Create React App, so available scripts are usual CRA scripts.
+
+Thanks for stopping by! 👋
 
 ![Desktop vew of State page](public/demo-imgs/desktop-view-StartPage.png)
 
