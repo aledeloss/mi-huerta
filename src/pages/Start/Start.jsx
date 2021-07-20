@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Start.scss";
 import Layout from "../../components/Layout/Layout";
 import PlantsList from "../../components/PlantsList/PlantsList";
