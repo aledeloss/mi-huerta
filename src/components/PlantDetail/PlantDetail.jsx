@@ -4,11 +4,9 @@ import { useParams } from "react-router-dom";
 import data from "../../assets/data/data.js";
 import SowingsContext from "../../contexts/SowingsContext";
 import SaveRecordButton from "../SaveRecordButton/SaveRecordButton";
-import PlantImage from "../../components/PlantImage/PlantImage";
 import DayJS from "react-dayjs";
 
 const PlantDetail = ({ handleShow }) => {
-
   const { vegetable } = useParams();
 
   const vegetableData = data.find((e) => e.name === vegetable);

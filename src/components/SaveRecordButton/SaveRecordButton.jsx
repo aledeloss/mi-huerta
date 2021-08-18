@@ -2,7 +2,6 @@ import { useState, useContext } from "react";
 import GenericButton from "../GenericButton/GenericButton";
 import GenericModal from "../GenericModal/GenericModal";
 import SowingsContext from "../../contexts/SowingsContext";
-import { SowingsProvider } from "../../contexts/SowingsContext";
 
 const SaveRecordButton = ({ vegetable }) => {
   let [show, setShow] = useState(false);

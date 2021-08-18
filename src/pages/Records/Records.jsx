@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Records.scss";
 import Layout from "../../components/Layout/Layout";
 import SowingCard from "../../components/SowingCard/SowingCard";
-import { Container, Col, Row } from "react-bootstrap/";
+import { Container } from "react-bootstrap/";
 import DeleteAllButton from "../../components/DeleteAllButton/DeleteAllButton";
 import GoBackButton from "../../components/GoBackButton/GoBackButton";
 import SowingsContext from "../../contexts/SowingsContext";
@@ -33,14 +33,18 @@ const Records = ({ history }) => {
           sowingsList
         )}
         <div className="records__deleteAll-container">
-        {state.records.length ? <DeleteAllButton /> : ""}
+          {state.records.length ? <DeleteAllButton /> : ""}
         </div>
       </div>
     </Container>
   );
 
   return (
-    <Layout mainContent={recordsPageContent} bgColor="#ef476fff" history={history}/>
+    <Layout
+      mainContent={recordsPageContent}
+      bgColor="#ef476fff"
+      history={history}
+    />
   );
 };
 
