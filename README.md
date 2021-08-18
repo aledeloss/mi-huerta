@@ -1,3 +1,5 @@
+# MI HUERTA
+
 Website for home vegetable gardening. This project was developed for learning React, so all feedback is welcome :).
 
 It was created with Create Reaact App, and it uses several features: SASS, api context, useReducer, localStorage and react router, among others. It´s still a work in progress, although it´s currently stand by so I can focus in other projects.
