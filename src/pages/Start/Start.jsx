@@ -9,7 +9,7 @@ const Start = ({ history }) => {
   const date = new Date();
 
   const [filters, setFilters] = useState([
-    date.toLocaleString("default", { month: "long" })
+    date.toLocaleString("es", { month: "long" }),
   ]);
 
   const handleInputChange = (evt) => {
@@ -19,17 +19,13 @@ const Start = ({ history }) => {
       setFilters([...filters, evt.target.name]);
     }
     console.log(filters);
-    return filters
+    return filters;
   };
-
 
   const startPageContent = (
     <Container fluid="md" className="start-content">
       <div className="main">
-        <FiltersForm
-          handleInputChange={handleInputChange}
-          filters={filters}
-        />
+        <FiltersForm handleInputChange={handleInputChange} filters={filters} />
         <PlantsList filters={filters} />
       </div>
     </Container>

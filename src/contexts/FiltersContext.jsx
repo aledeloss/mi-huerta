@@ -2,17 +2,16 @@ import React, { createContext, useState } from "react";
 
 const FiltersContext = createContext();
 
-export const FiltersProvider = ({children}) => {
+export const FiltersProvider = ({ children }) => {
+  const date = new Date();
+  const [filters, setFilters] = useState([
+    date.toLocaleString("es", { month: "long" }),
+  ]);
 
-    const date = new Date();
-    const [filters, setFilters] = useState([
-      date.toLocaleString("default", { month: "long" }),
-    ]);
-  
   return (
-      <FiltersContext.Provider value={[ filters,setFilters ]}>
-        {children}
-      </FiltersContext.Provider>
+    <FiltersContext.Provider value={[filters, setFilters]}>
+      {children}
+    </FiltersContext.Provider>
   );
 };
 
