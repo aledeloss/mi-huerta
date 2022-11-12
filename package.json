@@ -10,6 +10,10 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
+    "@types/jest": "^29.2.2",
+    "@types/node": "^18.11.9",
+    "@types/react": "^17.0.52",
+    "@types/react-dom": "^18.0.8",
     "bootstrap": "^4.5.3",
     "dayjs": "^1.9.6",
     "lottie-web": "^5.7.4",
@@ -22,6 +26,7 @@
     "react-lottie": "^1.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "typescript": "^3.9.10",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
