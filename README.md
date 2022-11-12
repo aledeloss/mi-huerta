@@ -15,6 +15,7 @@ TODOS:
  -----
 
 * Demo: https://mi-huerta.vercel.app/
+* Notes about what I've learnt doing Mi huerta (in English): https://www.notion.so/Deep-diving-into-Mi-Huerta-s-process-14907f79688d4820ae2cea1df92bb4b7
 * Notes about what Mi Huerta means to me (in Spanish): https://www.notion.so/Notas-sobre-el-proceso-de-Mi-Huerta-d2e9331e2ce744a6a6817a36bf61c25a
 * This project was bootstrapped with Create React App, so available scripts are usual CRA scripts.
 
